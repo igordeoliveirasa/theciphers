@@ -1,13 +1,9 @@
 language: cc
-compiler:
-  - gcc
-  - clang
+compiler: clang
 branches:
-  only:
-    - master
+  only: master
 notifications:
-  recipients:
-    - igordeoliveirasa@gmail.com
+  recipients: igordeoliveirasa@gmail.com
   email:
     on_success: change
     on_failure: always
