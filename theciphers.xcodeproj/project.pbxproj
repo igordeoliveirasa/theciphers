@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7884DCFC18DF4510003AAB5D /* CipherFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7884DCFA18DF4510003AAB5D /* CipherFactory.cpp */; };
+		7884DCFD18DF4510003AAB5D /* CipherFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 7884DCFB18DF4510003AAB5D /* CipherFactory.h */; };
+		7884DD0518DF4585003AAB5D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7884DD0418DF4585003AAB5D /* main.cpp */; };
+		7884DD0718DF4585003AAB5D /* SystemTest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7884DD0618DF4585003AAB5D /* SystemTest.1 */; };
+		7884DD1118DF498B003AAB5D /* CipherFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7884DCFA18DF4510003AAB5D /* CipherFactory.cpp */; };
+		7884DD1718DF4C0C003AAB5D /* libgtest_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7884DCEB18DF43DA003AAB5D /* libgtest_main.a */; };
+		7884DD1818DF4C0F003AAB5D /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7884DCE918DF43DA003AAB5D /* libgtest.a */; };
+		7884DD1918DF4C92003AAB5D /* gtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7884DCE718DF43DA003AAB5D /* gtest.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7884DCE618DF43DA003AAB5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7884DCDA18DF43DA003AAB5D /* gtest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4539C8FF0EC27F6400A70F4C;
+			remoteInfo = "gtest-framework";
+		};
+		7884DCE818DF43DA003AAB5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7884DCDA18DF43DA003AAB5D /* gtest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 40C848FA101A209C0083642A;
+			remoteInfo = "gtest-static";
+		};
+		7884DCEA18DF43DA003AAB5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7884DCDA18DF43DA003AAB5D /* gtest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 40C8490B101A217E0083642A;
+			remoteInfo = "gtest_main-static";
+		};
+		7884DCEC18DF43DA003AAB5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7884DCDA18DF43DA003AAB5D /* gtest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 40899F430FFA7184000B29AE;
+			remoteInfo = "gtest_unittest-framework";
+		};
+		7884DCEE18DF43DA003AAB5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7884DCDA18DF43DA003AAB5D /* gtest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 40C84987101A36850083642A;
+			remoteInfo = "gtest_unittest-static";
+		};
+		7884DCF018DF43DA003AAB5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7884DCDA18DF43DA003AAB5D /* gtest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4089A0130FFACEFC000B29AE;
+			remoteInfo = "sample1_unittest-framework";
+		};
+		7884DCF218DF43DA003AAB5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7884DCDA18DF43DA003AAB5D /* gtest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 40C84997101A36A60083642A;
+			remoteInfo = "sample1_unittest-static";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7884DD0018DF4585003AAB5D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				7884DD0718DF4585003AAB5D /* SystemTest.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		78316F4818DF4246009823AC /* libtheciphers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtheciphers.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7884DCDA18DF43DA003AAB5D /* gtest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gtest.xcodeproj; path = "deps/gmock-1.7.0/gtest/xcode/gtest.xcodeproj"; sourceTree = "<group>"; };
+		7884DCFA18DF4510003AAB5D /* CipherFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CipherFactory.cpp; sourceTree = "<group>"; };
+		7884DCFB18DF4510003AAB5D /* CipherFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherFactory.h; sourceTree = "<group>"; };
+		7884DD0218DF4585003AAB5D /* system_tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = system_tests; sourceTree = BUILT_PRODUCTS_DIR; };
+		7884DD0418DF4585003AAB5D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		7884DD0618DF4585003AAB5D /* SystemTest.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = SystemTest.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78316F4518DF4246009823AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7884DCFF18DF4585003AAB5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7884DD1918DF4C92003AAB5D /* gtest.framework in Frameworks */,
+				7884DD1818DF4C0F003AAB5D /* libgtest.a in Frameworks */,
+				7884DD1718DF4C0C003AAB5D /* libgtest_main.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78316F3F18DF4246009823AC = {
+			isa = PBXGroup;
+			children = (
+				7884DCDA18DF43DA003AAB5D /* gtest.xcodeproj */,
+				7884DCD818DF4284003AAB5D /* includes */,
+				7884DCD918DF4284003AAB5D /* src */,
+				7884DD0318DF4585003AAB5D /* SystemTest */,
+				78316F4918DF4246009823AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		78316F4918DF4246009823AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78316F4818DF4246009823AC /* libtheciphers.a */,
+				7884DD0218DF4585003AAB5D /* system_tests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7884DCD818DF4284003AAB5D /* includes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = includes;
+			sourceTree = "<group>";
+		};
+		7884DCD918DF4284003AAB5D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				7884DCFA18DF4510003AAB5D /* CipherFactory.cpp */,
+				7884DCFB18DF4510003AAB5D /* CipherFactory.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		7884DCDB18DF43DA003AAB5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7884DCE718DF43DA003AAB5D /* gtest.framework */,
+				7884DCE918DF43DA003AAB5D /* libgtest.a */,
+				7884DCEB18DF43DA003AAB5D /* libgtest_main.a */,
+				7884DCED18DF43DA003AAB5D /* gtest_unittest-framework */,
+				7884DCEF18DF43DA003AAB5D /* gtest_unittest */,
+				7884DCF118DF43DA003AAB5D /* sample1_unittest-framework */,
+				7884DCF318DF43DA003AAB5D /* sample1_unittest-static */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7884DD0318DF4585003AAB5D /* SystemTest */ = {
+			isa = PBXGroup;
+			children = (
+				7884DD0418DF4585003AAB5D /* main.cpp */,
+				7884DD0618DF4585003AAB5D /* SystemTest.1 */,
+			);
+			path = SystemTest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		78316F4618DF4246009823AC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7884DCFD18DF4510003AAB5D /* CipherFactory.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		78316F4718DF4246009823AC /* theciphers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78316F4C18DF4246009823AC /* Build configuration list for PBXNativeTarget "theciphers" */;
+			buildPhases = (
+				78316F4418DF4246009823AC /* Sources */,
+				78316F4518DF4246009823AC /* Frameworks */,
+				78316F4618DF4246009823AC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = theciphers;
+			productName = theciphers;
+			productReference = 78316F4818DF4246009823AC /* libtheciphers.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7884DD0118DF4585003AAB5D /* system_tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7884DD0818DF4585003AAB5D /* Build configuration list for PBXNativeTarget "system_tests" */;
+			buildPhases = (
+				7884DCFE18DF4585003AAB5D /* Sources */,
+				7884DCFF18DF4585003AAB5D /* Frameworks */,
+				7884DD0018DF4585003AAB5D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = system_tests;
+			productName = SystemTest;
+			productReference = 7884DD0218DF4585003AAB5D /* system_tests */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78316F4018DF4246009823AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Igor de Oliveira Sa";
+			};
+			buildConfigurationList = 78316F4318DF4246009823AC /* Build configuration list for PBXProject "theciphers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 78316F3F18DF4246009823AC;
+			productRefGroup = 78316F4918DF4246009823AC /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7884DCDB18DF43DA003AAB5D /* Products */;
+					ProjectRef = 7884DCDA18DF43DA003AAB5D /* gtest.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				78316F4718DF4246009823AC /* theciphers */,
+				7884DD0118DF4585003AAB5D /* system_tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7884DCE718DF43DA003AAB5D /* gtest.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = gtest.framework;
+			remoteRef = 7884DCE618DF43DA003AAB5D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7884DCE918DF43DA003AAB5D /* libgtest.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libgtest.a;
+			remoteRef = 7884DCE818DF43DA003AAB5D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7884DCEB18DF43DA003AAB5D /* libgtest_main.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libgtest_main.a;
+			remoteRef = 7884DCEA18DF43DA003AAB5D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7884DCED18DF43DA003AAB5D /* gtest_unittest-framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "gtest_unittest-framework";
+			remoteRef = 7884DCEC18DF43DA003AAB5D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7884DCEF18DF43DA003AAB5D /* gtest_unittest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = gtest_unittest;
+			remoteRef = 7884DCEE18DF43DA003AAB5D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7884DCF118DF43DA003AAB5D /* sample1_unittest-framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "sample1_unittest-framework";
+			remoteRef = 7884DCF018DF43DA003AAB5D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7884DCF318DF43DA003AAB5D /* sample1_unittest-static */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "sample1_unittest-static";
+			remoteRef = 7884DCF218DF43DA003AAB5D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78316F4418DF4246009823AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7884DCFC18DF4510003AAB5D /* CipherFactory.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7884DCFE18DF4585003AAB5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7884DD0518DF4585003AAB5D /* main.cpp in Sources */,
+				7884DD1118DF498B003AAB5D /* CipherFactory.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		78316F4A18DF4246009823AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		78316F4B18DF4246009823AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		78316F4D18DF4246009823AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		78316F4E18DF4246009823AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7884DD0918DF4585003AAB5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/deps/gmock-1.7.0/include\"",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-D_SYSTEM_TEST",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7884DD0A18DF4585003AAB5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/deps/gmock-1.7.0/include\"",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-D_SYSTEM_TEST",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78316F4318DF4246009823AC /* Build configuration list for PBXProject "theciphers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78316F4A18DF4246009823AC /* Debug */,
+				78316F4B18DF4246009823AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78316F4C18DF4246009823AC /* Build configuration list for PBXNativeTarget "theciphers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78316F4D18DF4246009823AC /* Debug */,
+				78316F4E18DF4246009823AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7884DD0818DF4585003AAB5D /* Build configuration list for PBXNativeTarget "system_tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7884DD0918DF4585003AAB5D /* Debug */,
+				7884DD0A18DF4585003AAB5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 78316F4018DF4246009823AC /* Project object */;
+}
