@@ -21,12 +21,12 @@ t1395290455
 s478
 
 N/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/Objects-normal/x86_64/gtest-all.o
-t1395594563
+t1395598816
 s1482252
 
 N/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/Objects-normal/x86_64/gtest.LinkFileList
-c00000000532F15410000000000000095
-t1395594561
+c00000000532F25DE0000000000000095
+t1395598814
 s149
 
 N/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libgtest.a
@@ -34,8 +34,8 @@ t2
 s0
 
 N/Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/src/gtest-all.cc
-c000000004CD198660000000000000871
-t1288804454
+c00000000532F17800000000000000871
+t1395595136
 s2161
 
 CBuild AST from /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/src/gtest-all.cc
@@ -43,11 +43,11 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies4fcb3fc14cdfb841^55be4bc14cdfb841^---0#1#1#--18"Check dependencies36"0A362074-A382-4E24-8CEE-8110592C8DB3-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies6de3af5e5ddfb841^9351b55e5ddfb841^---0#1#1#--18"Check dependencies36"88C2D759-1634-4329-ADD1-1FC35225C5E0-
 
 CCompileC /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/Objects-normal/x86_64/gtest-all.o /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/src/gtest-all.cc normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s417287361.274058
-e417287363.145113
+s417291614.708935
+e417291616.592143
 r1
 xCompileC
 x/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/Objects-normal/x86_64/gtest-all.o
@@ -84,17 +84,17 @@ d/Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/src/gtest-port.cc
 d/Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/src/gtest-printers.cc
 d/Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/src/gtest-test-part.cc
 d/Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/src/gtest-typed-test.cc
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/src/gtest-all.cc294"CompileC /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/Objects-normal/x86_64/gtest-all.o /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/src/gtest-all.cc normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler924146c14cdfb841^bf2825c34cdfb841^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/src/gtest-all.cc0000000000000000^3172"CompileC /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/Objects-normal/x86_64/gtest-all.o /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/src/gtest-all.cc normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/xcode    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.4 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/gtest-generated-files.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/gtest-own-target-headers.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/gtest-all-target-headers.hmap -iquote /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/gtest-project-headers.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/include -I.. -I../include -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/DerivedSources/x86_64 -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/DerivedSources -Wall -Werror -Wendif-labels -Wnewline-eof -Wno-sign-compare -Wshadow -F/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug -DDEBUG=1 -MMD -MT dependencies -MF /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/Objects-normal/x86_64/gtest-all.d --serialize-diagnostics /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/Objects-normal/x86_64/gtest-all.dia -c /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/src/gtest-all.cc -o /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/Objects-normal/x86_64/gtest-all.o36"3594A359-3AD2-456D-A630-337D120AA4D9-
-bACD584AE-C7D3-443C-81E5-F3A4E1D921CA
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/src/gtest-all.cc294"CompileC /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/Objects-normal/x86_64/gtest-all.o /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/src/gtest-all.cc normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler5c90b55e5ddfb841^3d9997605ddfb841^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/src/gtest-all.cc0000000000000000^3172"CompileC /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/Objects-normal/x86_64/gtest-all.o /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/src/gtest-all.cc normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/xcode    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.4 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/gtest-generated-files.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/gtest-own-target-headers.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/gtest-all-target-headers.hmap -iquote /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/gtest-project-headers.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/include -I.. -I../include -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/DerivedSources/x86_64 -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/DerivedSources -Wall -Werror -Wendif-labels -Wnewline-eof -Wno-sign-compare -Wshadow -F/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug -DDEBUG=1 -MMD -MT dependencies -MF /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/Objects-normal/x86_64/gtest-all.d --serialize-diagnostics /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/Objects-normal/x86_64/gtest-all.dia -c /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/src/gtest-all.cc -o /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/Objects-normal/x86_64/gtest-all.o36"6EB77326-0588-47CD-93FA-89806152E5F6-
+b6AB8F85E-6C18-43F2-8CA1-17560F994D14
 
 CLibtool /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libgtest.a normal x86_64
-s417287363.145794
-e417287363.157859
+s417291616.592904
+e417291616.606679
 r1
 xLibtool
 x/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libgtest.a
 xnormal
 xx86_64
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"Libtool /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libgtest.a normal x86_64111"Libtool /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libgtest.a normal x86_64e65d25c34cdfb841^5d6a28c34cdfb841^---0#0#1#--800"Libtool /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libgtest.a normal x86_64    cd /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/xcode    export MACOSX_DEPLOYMENT_TARGET=10.4    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only x86_64 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug -filelist /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/Objects-normal/x86_64/gtest.LinkFileList -o /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libgtest.a36"97C12D48-833F-4943-A598-C14F20EDDC03-
-bACD584AE-C7D3-443C-81E5-F3A4E1D921CA
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"Libtool /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libgtest.a normal x86_64111"Libtool /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libgtest.a normal x86_6427d897605ddfb841^7f509b605ddfb841^---0#0#1#--800"Libtool /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libgtest.a normal x86_64    cd /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/xcode    export MACOSX_DEPLOYMENT_TARGET=10.4    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only x86_64 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug -filelist /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/gtest.build/Debug/gtest-static.build/Objects-normal/x86_64/gtest.LinkFileList -o /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libgtest.a36"BA3FAE9B-B070-4949-AD76-6111A0700950-
+b6AB8F85E-6C18-43F2-8CA1-17560F994D14
 
