@@ -21,7 +21,7 @@ class CipherFactory {
 public:
     CipherFactory();
     
-    static std::shared_ptr<ICipher> Build(Ciphers cipher_type, unsigned char * key, unsigned char* iv);
+    static std::shared_ptr<ICipher> Build(Ciphers cipher_type, const unsigned char * key, const unsigned char* iv);
 };
 
 #endif /* defined(__theciphers__CipherFactory__) */

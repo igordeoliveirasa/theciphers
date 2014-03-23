@@ -8,11 +8,9 @@
 
 #include "the_ciphers.h"
 
-CipherFactory::CipherFactory() {
-    
-}
+CipherFactory::CipherFactory() {}
 
-std::shared_ptr<ICipher> CipherFactory::Build(Ciphers cipher_type, unsigned char * key, unsigned char* iv) {
+std::shared_ptr<ICipher> CipherFactory::Build(Ciphers cipher_type, const unsigned char * key, const unsigned char* iv) {
     return std::shared_ptr<ICipher>(new AESCipher(key, iv));
 }
 
