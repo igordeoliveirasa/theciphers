@@ -10,15 +10,103 @@
 
 #define AES_KEYLEN 128
 
-AESCipher::AESCipher( unsigned char * key, size_t key_size) : key_(key), key_size_(key_size) {
+AESCipher::AESCipher( const unsigned char * key, const unsigned char * iv) {
+    key_ = (unsigned char*)key;
+    iv_ = (unsigned char*)iv;
+    
+    ERR_load_crypto_strings();
+    OpenSSL_add_all_algorithms();
+    OPENSSL_config(NULL);
 }
 
-std::shared_ptr<unsigned char> AESCipher::Cipher(unsigned char *message, size_t message_size, size_t * ciphered_message_size) {
-    return std::shared_ptr<unsigned char>();
+int AESCipher::Cipher(unsigned char *message, size_t message_size, unsigned char * ciphered_message) {
+
+    EVP_CIPHER_CTX *ctx;
+    
+    int len;
+    
+    int ciphertext_len;
+    
+    /* Create and initialise the context */
+    if(!(ctx = EVP_CIPHER_CTX_new()))
+        printf("erro");
+//        handleErrors();
+    
+    /* Initialise the encryption operation. IMPORTANT - ensure you use a key
+     * and IV size appropriate for your cipher
+     * In this example we are using 256 bit AES (i.e. a 256 bit key). The
+     * IV size for *most* modes is the same as the block size. For AES this
+     * is 128 bits */
+    if(1 != EVP_EncryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, key_, iv_))
+        printf("erro");
+//        handleErrors();
+    
+    /* Provide the message to be encrypted, and obtain the encrypted output.
+     * EVP_EncryptUpdate can be called multiple times if necessary
+     */
+    
+    if(1 != EVP_EncryptUpdate(ctx, ciphered_message, &len, message, message_size))
+        printf("erro");
+        //handleErrors();
+    
+    ciphertext_len = len;
+    
+    /* Finalise the encryption. Further ciphertext bytes may be written at
+     * this stage.
+     */
+    if(1 != EVP_EncryptFinal_ex(ctx, ciphered_message + len, &len))
+        printf("erro");
+//        handleErrors();
+    ciphertext_len += len;
+    
+    /* Clean up */
+    EVP_CIPHER_CTX_free(ctx);
+    
+    return ciphertext_len;
 }
 
-std::shared_ptr<unsigned char> AESCipher::Decipher(unsigned char *ciphered_message, size_t ciphered_message_size, size_t * deciphered_message_size) {
-    return std::shared_ptr<unsigned char>();
+int AESCipher::Decipher(unsigned char *ciphered_message, size_t ciphered_message_size, unsigned char * deciphered_message) {
+
+    EVP_CIPHER_CTX *ctx;
+    
+    int len;
+    
+    int plaintext_len;
+    
+    /* Create and initialise the context */
+    if(!(ctx = EVP_CIPHER_CTX_new()))
+        printf("erro");
+//        handleErrors();
+    
+    /* Initialise the decryption operation. IMPORTANT - ensure you use a key
+     * and IV size appropriate for your cipher
+     * In this example we are using 256 bit AES (i.e. a 256 bit key). The
+     * IV size for *most* modes is the same as the block size. For AES this
+     * is 128 bits */
+    if(1 != EVP_DecryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, key_, iv_))
+        printf("erro");
+    //        handleErrors();
+    
+    /* Provide the message to be decrypted, and obtain the plaintext output.
+     * EVP_DecryptUpdate can be called multiple times if necessary
+     */
+    if(1 != EVP_DecryptUpdate(ctx, deciphered_message, &len, ciphered_message, ciphered_message_size))
+        printf("erro");
+    //        handleErrors();
+    plaintext_len = len;
+    
+    /* Finalise the decryption. Further plaintext bytes may be written at
+     * this stage.
+     */
+    if(1 != EVP_DecryptFinal_ex(ctx, deciphered_message + len, &len))
+        printf("erro");
+    //        handleErrors();
+    plaintext_len += len;
+    
+    /* Clean up */
+    EVP_CIPHER_CTX_free(ctx);
+
+    return plaintext_len;
 }
 
 
@@ -26,21 +114,19 @@ std::shared_ptr<unsigned char> AESCipher::Decipher(unsigned char *ciphered_messa
 
 TEST(AESCipher, TestCipher) {
 
-    unsigned char * key = (unsigned char*)"1234567812345678";
-    size_t key_size = strlen((const char*)key);
-
-    AESCipher cipher(key, key_size);
+    AESCipher cipher((const unsigned char*)"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", (const unsigned char*)"AAAAAAAAAAAAAAAA");
     
     unsigned char * message = (unsigned char *)"Hello World";
-    size_t message_size = strlen((const char*)message);
+    size_t message_size = strlen((const char*)message) +1; // let's embbed the \0;
     
-    size_t ciphered_message_size;
-    std::shared_ptr<unsigned char> ciphered_message = cipher.Cipher(message, message_size, &ciphered_message_size);
-
-    std::shared_ptr<unsigned char> deciphered_message = cipher.Decipher(ciphered_message.get(), message_size, &ciphered_message_size);
-    printf("%s", (const char*)deciphered_message.get());
+    unsigned char ciphered_message[message_size * 2];
+    size_t ciphered_message_size = cipher.Cipher(message, message_size, ciphered_message);
     
-    ASSERT_TRUE(ciphered_message_size == 10);
+    unsigned char deciphered_message[message_size];
+    cipher.Decipher(ciphered_message, ciphered_message_size, deciphered_message);
+    
+    ASSERT_TRUE(ciphered_message_size == 16);
+    ASSERT_STREQ((const char*)message, (const char*)deciphered_message);
 }
 
 #endif

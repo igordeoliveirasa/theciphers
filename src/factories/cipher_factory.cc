@@ -12,8 +12,8 @@ CipherFactory::CipherFactory() {
     
 }
 
-std::shared_ptr<ICipher> CipherFactory::Build(Ciphers cipher_type, unsigned char * key, size_t key_size) {
-    return std::shared_ptr<ICipher>(new AESCipher(key, key_size));
+std::shared_ptr<ICipher> CipherFactory::Build(Ciphers cipher_type, unsigned char * key, unsigned char* iv) {
+    return std::shared_ptr<ICipher>(new AESCipher(key, iv));
 }
 
 #ifdef _SYSTEM_TEST

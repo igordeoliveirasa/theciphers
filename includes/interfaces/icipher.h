@@ -13,8 +13,8 @@
 
 class ICipher {
 public:
-    virtual std::shared_ptr<unsigned char> Cipher(unsigned char * message, size_t message_size, size_t * ciphered_message_size) = 0;
-    virtual std::shared_ptr<unsigned char> Decipher(unsigned char * ciphered_message, size_t ciphered_message_size, size_t * deciphered_message_size) = 0;
+    virtual int Cipher(unsigned char * message, size_t message_size, unsigned char * ciphered_message) = 0;
+    virtual int Decipher(unsigned char * ciphered_message, size_t ciphered_message_size, unsigned char * deciphered_message) = 0;
 };
 
 #endif

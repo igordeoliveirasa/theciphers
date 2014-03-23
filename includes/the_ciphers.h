@@ -13,6 +13,12 @@
 #include <iostream>
 #include <string.h>
 
+#include <openssl/ssl.h>
+#include <openssl/aes.h>
+#include <openssl/opensslconf.h>
+#include <openssl/err.h>
+#include <openssl/conf.h>
+
 #include "icipher.h"
 #include "aes_cipher.h"
 #include "cipher_factory.h"
