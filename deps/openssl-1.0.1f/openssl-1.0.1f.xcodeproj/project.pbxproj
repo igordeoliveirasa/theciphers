@@ -1,0 +1,238 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		7810A1AF18DF858600A19486 /* .DS_Store */ = {isa = PBXFileReference; lastKnownFileType = file; path = .DS_Store; sourceTree = "<group>"; };
+		7810A1B018DF858600A19486 /* ACKNOWLEDGMENTS */ = {isa = PBXFileReference; lastKnownFileType = text; path = ACKNOWLEDGMENTS; sourceTree = "<group>"; };
+		7810A1B118DF858600A19486 /* apps */ = {isa = PBXFileReference; lastKnownFileType = folder; path = apps; sourceTree = "<group>"; };
+		7810A1B218DF858600A19486 /* bugs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bugs; sourceTree = "<group>"; };
+		7810A1B318DF858600A19486 /* certs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = certs; sourceTree = "<group>"; };
+		7810A1B418DF858600A19486 /* CHANGES */ = {isa = PBXFileReference; lastKnownFileType = text; path = CHANGES; sourceTree = "<group>"; };
+		7810A1B518DF858600A19486 /* CHANGES.SSLeay */ = {isa = PBXFileReference; lastKnownFileType = text; path = CHANGES.SSLeay; sourceTree = "<group>"; };
+		7810A1B618DF858600A19486 /* config */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = config; sourceTree = "<group>"; };
+		7810A1B718DF858600A19486 /* Configure */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configure; sourceTree = "<group>"; };
+		7810A1B818DF858600A19486 /* crypto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = crypto; sourceTree = "<group>"; };
+		7810A1B918DF858600A19486 /* demos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = demos; sourceTree = "<group>"; };
+		7810A1BA18DF858600A19486 /* doc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = doc; sourceTree = "<group>"; };
+		7810A1BB18DF858600A19486 /* e_os.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = e_os.h; sourceTree = "<group>"; };
+		7810A1BC18DF858600A19486 /* e_os2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = e_os2.h; sourceTree = "<group>"; };
+		7810A1BD18DF858600A19486 /* engines */ = {isa = PBXFileReference; lastKnownFileType = folder; path = engines; sourceTree = "<group>"; };
+		7810A1BE18DF858600A19486 /* FAQ */ = {isa = PBXFileReference; lastKnownFileType = text; path = FAQ; sourceTree = "<group>"; };
+		7810A1BF18DF858600A19486 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
+		7810A1C018DF858600A19486 /* INSTALL */ = {isa = PBXFileReference; lastKnownFileType = text; path = INSTALL; sourceTree = "<group>"; };
+		7810A1C118DF858600A19486 /* install.com */ = {isa = PBXFileReference; lastKnownFileType = text; path = install.com; sourceTree = "<group>"; };
+		7810A1C218DF858600A19486 /* INSTALL.DJGPP */ = {isa = PBXFileReference; lastKnownFileType = text; path = INSTALL.DJGPP; sourceTree = "<group>"; };
+		7810A1C318DF858600A19486 /* INSTALL.MacOS */ = {isa = PBXFileReference; lastKnownFileType = text; path = INSTALL.MacOS; sourceTree = "<group>"; };
+		7810A1C418DF858600A19486 /* INSTALL.NW */ = {isa = PBXFileReference; lastKnownFileType = text; path = INSTALL.NW; sourceTree = "<group>"; };
+		7810A1C518DF858600A19486 /* INSTALL.OS2 */ = {isa = PBXFileReference; lastKnownFileType = text; path = INSTALL.OS2; sourceTree = "<group>"; };
+		7810A1C618DF858600A19486 /* INSTALL.VMS */ = {isa = PBXFileReference; lastKnownFileType = text; path = INSTALL.VMS; sourceTree = "<group>"; };
+		7810A1C718DF858600A19486 /* INSTALL.W32 */ = {isa = PBXFileReference; lastKnownFileType = text; path = INSTALL.W32; sourceTree = "<group>"; };
+		7810A1C818DF858600A19486 /* INSTALL.W64 */ = {isa = PBXFileReference; lastKnownFileType = text; path = INSTALL.W64; sourceTree = "<group>"; };
+		7810A1C918DF858600A19486 /* INSTALL.WCE */ = {isa = PBXFileReference; lastKnownFileType = text; path = INSTALL.WCE; sourceTree = "<group>"; };
+		7810A1CA18DF858600A19486 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		7810A1CB18DF858600A19486 /* MacOS */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MacOS; sourceTree = "<group>"; };
+		7810A1CC18DF858600A19486 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		7810A1CD18DF858600A19486 /* Makefile.bak */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.bak; sourceTree = "<group>"; };
+		7810A1CE18DF858600A19486 /* Makefile.org */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.org; sourceTree = "<group>"; };
+		7810A1CF18DF858600A19486 /* Makefile.shared */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.shared; sourceTree = "<group>"; };
+		7810A1D018DF858600A19486 /* makevms.com */ = {isa = PBXFileReference; lastKnownFileType = text; path = makevms.com; sourceTree = "<group>"; };
+		7810A1D118DF858600A19486 /* ms */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ms; sourceTree = "<group>"; };
+		7810A1D218DF858600A19486 /* Netware */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Netware; sourceTree = "<group>"; };
+		7810A1D318DF858600A19486 /* NEWS */ = {isa = PBXFileReference; lastKnownFileType = text; path = NEWS; sourceTree = "<group>"; };
+		7810A1D418DF858600A19486 /* openssl.doxy */ = {isa = PBXFileReference; lastKnownFileType = text; path = openssl.doxy; sourceTree = "<group>"; };
+		7810A1D518DF858600A19486 /* openssl.spec */ = {isa = PBXFileReference; lastKnownFileType = text; path = openssl.spec; sourceTree = "<group>"; };
+		7810A1D618DF858600A19486 /* os2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = os2; sourceTree = "<group>"; };
+		7810A1D718DF858600A19486 /* perl */ = {isa = PBXFileReference; lastKnownFileType = folder; path = perl; sourceTree = "<group>"; };
+		7810A1D818DF858600A19486 /* PROBLEMS */ = {isa = PBXFileReference; lastKnownFileType = text; path = PROBLEMS; sourceTree = "<group>"; };
+		7810A1D918DF858600A19486 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		7810A1DA18DF858600A19486 /* README.ASN1 */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.ASN1; sourceTree = "<group>"; };
+		7810A1DB18DF858600A19486 /* README.ENGINE */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.ENGINE; sourceTree = "<group>"; };
+		7810A1DC18DF858600A19486 /* shlib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = shlib; sourceTree = "<group>"; };
+		7810A1DD18DF858600A19486 /* ssl */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ssl; sourceTree = "<group>"; };
+		7810A1DE18DF858600A19486 /* test */ = {isa = PBXFileReference; lastKnownFileType = folder; path = test; sourceTree = "<group>"; };
+		7810A1DF18DF858600A19486 /* times */ = {isa = PBXFileReference; lastKnownFileType = folder; path = times; sourceTree = "<group>"; };
+		7810A1E018DF858600A19486 /* tools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tools; sourceTree = "<group>"; };
+		7810A1E118DF858600A19486 /* util */ = {isa = PBXFileReference; lastKnownFileType = folder; path = util; sourceTree = "<group>"; };
+		7810A1E218DF858600A19486 /* VMS */ = {isa = PBXFileReference; lastKnownFileType = folder; path = VMS; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		7810A1A918DF858600A19486 = {
+			isa = PBXGroup;
+			children = (
+				7810A1AF18DF858600A19486 /* .DS_Store */,
+				7810A1B018DF858600A19486 /* ACKNOWLEDGMENTS */,
+				7810A1B118DF858600A19486 /* apps */,
+				7810A1B218DF858600A19486 /* bugs */,
+				7810A1B318DF858600A19486 /* certs */,
+				7810A1B418DF858600A19486 /* CHANGES */,
+				7810A1B518DF858600A19486 /* CHANGES.SSLeay */,
+				7810A1B618DF858600A19486 /* config */,
+				7810A1B718DF858600A19486 /* Configure */,
+				7810A1B818DF858600A19486 /* crypto */,
+				7810A1B918DF858600A19486 /* demos */,
+				7810A1BA18DF858600A19486 /* doc */,
+				7810A1BB18DF858600A19486 /* e_os.h */,
+				7810A1BC18DF858600A19486 /* e_os2.h */,
+				7810A1BD18DF858600A19486 /* engines */,
+				7810A1BE18DF858600A19486 /* FAQ */,
+				7810A1BF18DF858600A19486 /* include */,
+				7810A1C018DF858600A19486 /* INSTALL */,
+				7810A1C118DF858600A19486 /* install.com */,
+				7810A1C218DF858600A19486 /* INSTALL.DJGPP */,
+				7810A1C318DF858600A19486 /* INSTALL.MacOS */,
+				7810A1C418DF858600A19486 /* INSTALL.NW */,
+				7810A1C518DF858600A19486 /* INSTALL.OS2 */,
+				7810A1C618DF858600A19486 /* INSTALL.VMS */,
+				7810A1C718DF858600A19486 /* INSTALL.W32 */,
+				7810A1C818DF858600A19486 /* INSTALL.W64 */,
+				7810A1C918DF858600A19486 /* INSTALL.WCE */,
+				7810A1CA18DF858600A19486 /* LICENSE */,
+				7810A1CB18DF858600A19486 /* MacOS */,
+				7810A1CC18DF858600A19486 /* Makefile */,
+				7810A1CD18DF858600A19486 /* Makefile.bak */,
+				7810A1CE18DF858600A19486 /* Makefile.org */,
+				7810A1CF18DF858600A19486 /* Makefile.shared */,
+				7810A1D018DF858600A19486 /* makevms.com */,
+				7810A1D118DF858600A19486 /* ms */,
+				7810A1D218DF858600A19486 /* Netware */,
+				7810A1D318DF858600A19486 /* NEWS */,
+				7810A1D418DF858600A19486 /* openssl.doxy */,
+				7810A1D518DF858600A19486 /* openssl.spec */,
+				7810A1D618DF858600A19486 /* os2 */,
+				7810A1D718DF858600A19486 /* perl */,
+				7810A1D818DF858600A19486 /* PROBLEMS */,
+				7810A1D918DF858600A19486 /* README */,
+				7810A1DA18DF858600A19486 /* README.ASN1 */,
+				7810A1DB18DF858600A19486 /* README.ENGINE */,
+				7810A1DC18DF858600A19486 /* shlib */,
+				7810A1DD18DF858600A19486 /* ssl */,
+				7810A1DE18DF858600A19486 /* test */,
+				7810A1DF18DF858600A19486 /* times */,
+				7810A1E018DF858600A19486 /* tools */,
+				7810A1E118DF858600A19486 /* util */,
+				7810A1E218DF858600A19486 /* VMS */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		7810A1AE18DF858600A19486 /* openssl-1.0.1f */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 7810A1E318DF858600A19486 /* Build configuration list for PBXLegacyTarget "openssl-1.0.1f" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "/Users/igor/Development/theciphers/deps/openssl-1.0.1f";
+			dependencies = (
+			);
+			name = "openssl-1.0.1f";
+			passBuildSettingsInEnvironment = 1;
+			productName = "openssl-1.0.1f";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		7810A1AA18DF858600A19486 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = 7810A1AD18DF858600A19486 /* Build configuration list for PBXProject "openssl-1.0.1f" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7810A1A918DF858600A19486;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7810A1AE18DF858600A19486 /* openssl-1.0.1f */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		7810A1AB18DF858600A19486 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		7810A1AC18DF858600A19486 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		7810A1E418DF858600A19486 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "openssl-1.0.1f";
+			};
+			name = Debug;
+		};
+		7810A1E518DF858600A19486 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "openssl-1.0.1f";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7810A1AD18DF858600A19486 /* Build configuration list for PBXProject "openssl-1.0.1f" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7810A1AB18DF858600A19486 /* Debug */,
+				7810A1AC18DF858600A19486 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7810A1E318DF858600A19486 /* Build configuration list for PBXLegacyTarget "openssl-1.0.1f" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7810A1E418DF858600A19486 /* Debug */,
+				7810A1E518DF858600A19486 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7810A1AA18DF858600A19486 /* Project object */;
+}

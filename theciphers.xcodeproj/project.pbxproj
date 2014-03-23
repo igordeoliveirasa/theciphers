@@ -19,17 +19,15 @@
 		7810A19718DF7BAA00A19486 /* cipher_factory.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7810A18118DF79FE00A19486 /* cipher_factory.cc */; };
 		7810A19818DF7BAA00A19486 /* aes_cipher.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7810A18318DF79FE00A19486 /* aes_cipher.cc */; };
 		7810A19A18DF7BAA00A19486 /* gtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7884DCE718DF43DA003AAB5D /* gtest.framework */; };
-		7810A19B18DF7BAA00A19486 /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7884DCE918DF43DA003AAB5D /* libgtest.a */; };
-		7810A19C18DF7BAA00A19486 /* libgtest_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7884DCEB18DF43DA003AAB5D /* libgtest_main.a */; };
 		7810A19E18DF7BAA00A19486 /* SystemTest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7884DD0618DF4585003AAB5D /* SystemTest.1 */; };
-		7810A1A418DF7F9000A19486 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7810A1A318DF7F9000A19486 /* libssl.dylib */; };
-		7810A1A618DF7F9500A19486 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7810A1A518DF7F9500A19486 /* libcrypto.dylib */; };
-		7810A1A718DF811200A19486 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7810A1A318DF7F9000A19486 /* libssl.dylib */; };
-		7810A1A818DF811800A19486 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7810A1A518DF7F9500A19486 /* libcrypto.dylib */; };
+		7810B1A918DF86CB00A19486 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7810B1A818DF86CB00A19486 /* libssl.dylib */; };
+		7810B1AB18DF86CF00A19486 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7810B1AA18DF86CF00A19486 /* libcrypto.dylib */; };
+		7810B1AC18DF86D600A19486 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7810B1A818DF86CB00A19486 /* libssl.dylib */; };
+		7810B1AD18DF86DA00A19486 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7810B1AA18DF86CF00A19486 /* libcrypto.dylib */; };
+		7810B1AE18DF86DF00A19486 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7810B1A818DF86CB00A19486 /* libssl.dylib */; };
+		7810B1AF18DF86E300A19486 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7810B1AA18DF86CF00A19486 /* libcrypto.dylib */; };
 		7884DD0518DF4585003AAB5D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7884DD0418DF4585003AAB5D /* main.cpp */; };
 		7884DD0718DF4585003AAB5D /* SystemTest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7884DD0618DF4585003AAB5D /* SystemTest.1 */; };
-		7884DD1718DF4C0C003AAB5D /* libgtest_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7884DCEB18DF43DA003AAB5D /* libgtest_main.a */; };
-		7884DD1818DF4C0F003AAB5D /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7884DCE918DF43DA003AAB5D /* libgtest.a */; };
 		7884DD1918DF4C92003AAB5D /* gtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7884DCE718DF43DA003AAB5D /* gtest.framework */; };
 /* End PBXBuildFile section */
 
@@ -116,8 +114,8 @@
 		7810A18E18DF7A1300A19486 /* icipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icipher.h; sourceTree = "<group>"; };
 		7810A18F18DF7A1300A19486 /* the_ciphers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = the_ciphers.h; sourceTree = "<group>"; };
 		7810A1A218DF7BAA00A19486 /* unit_tests copy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "unit_tests copy"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7810A1A318DF7F9000A19486 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = usr/lib/libssl.dylib; sourceTree = SDKROOT; };
-		7810A1A518DF7F9500A19486 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
+		7810B1A818DF86CB00A19486 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = usr/lib/libssl.dylib; sourceTree = SDKROOT; };
+		7810B1AA18DF86CF00A19486 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
 		78316F4818DF4246009823AC /* libtheciphers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtheciphers.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7884DCDA18DF43DA003AAB5D /* gtest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gtest.xcodeproj; path = "deps/gmock-1.7.0/gtest/xcode/gtest.xcodeproj"; sourceTree = "<group>"; };
 		7884DD0218DF4585003AAB5D /* system_tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = system_tests; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,11 +128,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7810A1A818DF811800A19486 /* libcrypto.dylib in Frameworks */,
-				7810A1A718DF811200A19486 /* libssl.dylib in Frameworks */,
+				7810B1AF18DF86E300A19486 /* libcrypto.dylib in Frameworks */,
+				7810B1AE18DF86DF00A19486 /* libssl.dylib in Frameworks */,
 				7810A19A18DF7BAA00A19486 /* gtest.framework in Frameworks */,
-				7810A19B18DF7BAA00A19486 /* libgtest.a in Frameworks */,
-				7810A19C18DF7BAA00A19486 /* libgtest_main.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +138,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7810A1A618DF7F9500A19486 /* libcrypto.dylib in Frameworks */,
-				7810A1A418DF7F9000A19486 /* libssl.dylib in Frameworks */,
+				7810B1AB18DF86CF00A19486 /* libcrypto.dylib in Frameworks */,
+				7810B1A918DF86CB00A19486 /* libssl.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,9 +147,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7810B1AD18DF86DA00A19486 /* libcrypto.dylib in Frameworks */,
+				7810B1AC18DF86D600A19486 /* libssl.dylib in Frameworks */,
 				7884DD1918DF4C92003AAB5D /* gtest.framework in Frameworks */,
-				7884DD1818DF4C0F003AAB5D /* libgtest.a in Frameworks */,
-				7884DD1718DF4C0C003AAB5D /* libgtest_main.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,8 +219,8 @@
 		78316F3F18DF4246009823AC = {
 			isa = PBXGroup;
 			children = (
-				7810A1A518DF7F9500A19486 /* libcrypto.dylib */,
-				7810A1A318DF7F9000A19486 /* libssl.dylib */,
+				7810B1AA18DF86CF00A19486 /* libcrypto.dylib */,
+				7810B1A818DF86CB00A19486 /* libssl.dylib */,
 				7884DCDA18DF43DA003AAB5D /* gtest.xcodeproj */,
 				7810A18818DF7A1300A19486 /* includes */,
 				7810A17F18DF79FE00A19486 /* src */,
