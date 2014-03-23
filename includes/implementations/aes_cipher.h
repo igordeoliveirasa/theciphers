@@ -10,13 +10,14 @@
 #define __theciphers__AESCipher__
 
 #include "the_ciphers.h"
+#include "openssl/aes.h"
 
 class AESCipher : public ICipher {
     
 private:
     byte * key_;
     size_t key_size_;
-    
+    AES_KEY aes_key;
 public:
     AESCipher(byte * key, size_t key_size);
     std::shared_ptr<byte> Cipher(byte * message, size_t message_size, size_t * ciphered_message_size);

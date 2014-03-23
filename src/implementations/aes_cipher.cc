@@ -11,19 +11,15 @@
 
 
 AESCipher::AESCipher( byte * key, size_t key_size) : key_(key), key_size_(key_size) {
-    
-    AES_KEY aes_key;
     AES_set_encrypt_key((const unsigned char*)key_, 128, &aes_key);
-    
 }
 
 std::shared_ptr<byte> AESCipher::Cipher(byte *message, size_t message_size, size_t * ciphered_message_size) {
-    
-    
-    
-    
+    std::shared_ptr<byte> ret(new byte);
+    AES_encrypt((const unsigned char*)message, (unsigned char*)ret.get(), &aes_key);
+
     *ciphered_message_size = 10;
-    return std::shared_ptr<byte>(new byte);
+    return ret;
 }
 
 std::shared_ptr<byte> AESCipher::Decipher(byte *ciphered_message, size_t ciphered_message_size, size_t * deciphered_message_size) {
