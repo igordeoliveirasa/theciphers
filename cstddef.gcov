@@ -1,0 +1,108 @@
+        -:    0:Source:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/cstddef
+        -:    0:Graph:./DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/unit_tests.build/Objects-normal/x86_64/main.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Programs:0
+        -:    1:// -*- C++ -*-
+        -:    2://===--------------------------- cstddef ----------------------------------===//
+        -:    3://
+        -:    4://                     The LLVM Compiler Infrastructure
+        -:    5://
+        -:    6:// This file is dual licensed under the MIT and the University of Illinois Open
+        -:    7:// Source Licenses. See LICENSE.TXT for details.
+        -:    8://
+        -:    9://===----------------------------------------------------------------------===//
+        -:   10:
+        -:   11:#ifndef _LIBCPP_CSTDDEF
+        -:   12:#define _LIBCPP_CSTDDEF
+        -:   13:
+        -:   14:/*
+        -:   15:    cstddef synopsis
+        -:   16:
+        -:   17:Macros:
+        -:   18:
+        -:   19:    offsetof(type,member-designator)
+        -:   20:    NULL
+        -:   21:
+        -:   22:namespace std
+        -:   23:{
+        -:   24:
+        -:   25:Types:
+        -:   26:
+        -:   27:    ptrdiff_t
+        -:   28:    size_t
+        -:   29:    max_align_t
+        -:   30:    nullptr_t
+        -:   31:
+        -:   32:}  // std
+        -:   33:
+        -:   34:*/
+        -:   35:
+        -:   36:#include <__config>
+        -:   37:
+        -:   38:#ifdef __GLIBC__
+        -:   39:#define __need_NULL
+        -:   40:#define __need_ptrdiff_t
+        -:   41:#define __need_size_t
+        -:   42:#endif  // __GLIBC__
+        -:   43:
+        -:   44:#include <stddef.h>
+        -:   45:
+        -:   46:#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
+        -:   47:#pragma GCC system_header
+        -:   48:#endif
+        -:   49:
+        -:   50:_LIBCPP_BEGIN_NAMESPACE_STD
+        -:   51:
+        -:   52:using ::ptrdiff_t;
+        -:   53:using ::size_t;
+        -:   54:
+        -:   55:typedef long double max_align_t;
+        -:   56:
+        -:   57:#ifdef _LIBCPP_HAS_NO_NULLPTR
+        -:   58:
+        -:   59:struct _LIBCPP_TYPE_VIS_ONLY nullptr_t
+        -:   60:{
+        -:   61:    void* __lx;
+        -:   62:
+        -:   63:    struct __nat {int __for_bool_;};
+        -:   64:
+        -:   65:    _LIBCPP_ALWAYS_INLINE _LIBCPP_CONSTEXPR nullptr_t() : __lx(0) {}
+    #####:   66:    _LIBCPP_ALWAYS_INLINE _LIBCPP_CONSTEXPR nullptr_t(int __nat::*) : __lx(0) {}
+        -:   67:
+        -:   68:    _LIBCPP_ALWAYS_INLINE _LIBCPP_CONSTEXPR operator int __nat::*() const {return 0;}
+        -:   69:
+        -:   70:    template <class _Tp>
+        -:   71:        _LIBCPP_ALWAYS_INLINE _LIBCPP_CONSTEXPR
+    #####:   72:        operator _Tp* () const {return 0;}
+        -:   73:
+        -:   74:    template <class _Tp, class _Up>
+        -:   75:        _LIBCPP_ALWAYS_INLINE
+        -:   76:        operator _Tp _Up::* () const {return 0;}
+        -:   77:
+        -:   78:    friend _LIBCPP_ALWAYS_INLINE _LIBCPP_CONSTEXPR bool operator==(nullptr_t, nullptr_t) {return true;}
+        -:   79:    friend _LIBCPP_ALWAYS_INLINE _LIBCPP_CONSTEXPR bool operator!=(nullptr_t, nullptr_t) {return false;}
+        -:   80:    friend _LIBCPP_ALWAYS_INLINE _LIBCPP_CONSTEXPR bool operator<(nullptr_t, nullptr_t) {return false;}
+        -:   81:    friend _LIBCPP_ALWAYS_INLINE _LIBCPP_CONSTEXPR bool operator<=(nullptr_t, nullptr_t) {return true;}
+        -:   82:    friend _LIBCPP_ALWAYS_INLINE _LIBCPP_CONSTEXPR bool operator>(nullptr_t, nullptr_t) {return false;}
+        -:   83:    friend _LIBCPP_ALWAYS_INLINE _LIBCPP_CONSTEXPR bool operator>=(nullptr_t, nullptr_t) {return true;}
+        -:   84:};
+        -:   85:
+    #####:   86:inline _LIBCPP_ALWAYS_INLINE _LIBCPP_CONSTEXPR nullptr_t __get_nullptr_t() {return nullptr_t(0);}
+        -:   87:
+        -:   88:#define nullptr _VSTD::__get_nullptr_t()
+        -:   89:
+        -:   90:#endif  // _LIBCPP_HAS_NO_NULLPTR
+        -:   91:
+        -:   92:_LIBCPP_END_NAMESPACE_STD
+        -:   93:
+        -:   94:#ifndef _LIBCPP_HAS_NO_NULLPTR
+        -:   95:
+        -:   96:namespace std
+        -:   97:{
+        -:   98:    typedef decltype(nullptr) nullptr_t;
+        -:   99:}
+        -:  100:
+        -:  101:#endif  // _LIBCPP_HAS_NO_NULLPTR
+        -:  102:
+        -:  103:#endif  // _LIBCPP_CSTDDEF

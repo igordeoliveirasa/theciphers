@@ -1,0 +1,40 @@
+        -:    0:Source:/Users/igor/Development/theciphers/src/factories/cipher_factory.cc
+        -:    0:Graph:./DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/unit_tests.build/Objects-normal/x86_64/cipher_factory.gcno
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Programs:0
+        -:    1://
+        -:    2://  CipherFactory.cpp
+        -:    3://  theciphers
+        -:    4://
+        -:    5://  Created by Igor de Oliveira Sa on 23/03/14.
+        -:    6://  Copyright (c) 2014 Igor de Oliveira Sa. All rights reserved.
+        -:    7://
+        -:    8:
+        -:    9:#include "the_ciphers.h"
+        -:   10:
+    #####:   11:CipherFactory::CipherFactory() {}
+        -:   12:
+    #####:   13:std::shared_ptr<ICipher> CipherFactory::Build(Ciphers cipher_type, const unsigned char * key, const unsigned char* iv) {
+    #####:   14:    return std::shared_ptr<ICipher>(new AESCipher(key, iv));
+    #####:   15:}
+        -:   16:
+        -:   17:#ifdef _SYSTEM_TEST
+        -:   18:
+        -:   19:TEST(CipherFactory, CipherFactoryShouldInstance) {
+        -:   20:    std::shared_ptr<ICipher> cipher = CipherFactory::Build(AES, (unsigned char*)"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", (unsigned char*)"AAAAAAAAAAAAAAAA");
+        -:   21:    
+        -:   22:    unsigned char* message = (unsigned char*)"Hello World";
+        -:   23:    size_t message_size = strlen((const char*)message) + 1; // let's embbed the \0
+        -:   24:    
+        -:   25:    unsigned char ciphered_message[message_size * 2];
+        -:   26:    size_t ciphered_message_size = cipher->Cipher(message, message_size, ciphered_message);
+        -:   27:    
+        -:   28:    unsigned char deciphered_message[message_size];
+        -:   29:    size_t deciphered_message_size = cipher->Decipher(ciphered_message, ciphered_message_size, deciphered_message);
+        -:   30:    
+        -:   31:    ASSERT_TRUE(ciphered_message_size==16);
+        -:   32:    ASSERT_STREQ((const char*)message, (const char*)deciphered_message);
+        -:   33:}
+        -:   34:
+        -:   35:#endif
