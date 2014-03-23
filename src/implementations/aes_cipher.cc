@@ -113,7 +113,6 @@ int AESCipher::Decipher(unsigned char *ciphered_message, size_t ciphered_message
 #ifdef _UNIT_TEST
 
 TEST(AESCipher, TestCipher) {
-
     AESCipher cipher((const unsigned char*)"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", (const unsigned char*)"AAAAAAAAAAAAAAAA");
     
     unsigned char * message = (unsigned char *)"Hello World";

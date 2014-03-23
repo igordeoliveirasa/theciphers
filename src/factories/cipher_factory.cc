@@ -19,20 +19,19 @@ std::shared_ptr<ICipher> CipherFactory::Build(Ciphers cipher_type, unsigned char
 #ifdef _SYSTEM_TEST
 
 TEST(CipherFactory, CipherFactoryShouldInstance) {
-    byte * key = (byte*)"1234567812345678";
-    size_t key_size = strlen((const char*)key);
+    std::shared_ptr<ICipher> cipher = CipherFactory::Build(AES, (unsigned char*)"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", (unsigned char*)"AAAAAAAAAAAAAAAA");
     
-    std::shared_ptr<ICipher> aes_cipher = CipherFactory::Build(AES, key, key_size);
+    unsigned char* message = (unsigned char*)"Hello World";
+    size_t message_size = strlen((const char*)message) + 1; // let's embbed the \0
     
-    byte * message = (byte *)"Hello World";
-    size_t message_size = strlen((const char*)message);
+    unsigned char ciphered_message[message_size * 2];
+    size_t ciphered_message_size = cipher->Cipher(message, message_size, ciphered_message);
     
-    size_t ciphered_message_size;
-    std::shared_ptr<byte> ciphered_message = aes_cipher->Cipher(message, message_size, &ciphered_message_size);
+    unsigned char deciphered_message[message_size];
+    size_t deciphered_message_size = cipher->Decipher(ciphered_message, ciphered_message_size, deciphered_message);
     
-    size_t deciphered_message_size;
-    
-    std::shared_ptr<byte> deciphered_message = aes_cipher->Decipher(ciphered_message.get(), ciphered_message_size, &deciphered_message_size);
+    ASSERT_TRUE(ciphered_message_size==16);
+    ASSERT_STREQ((const char*)message, (const char*)deciphered_message);
 }
 
 #endif
