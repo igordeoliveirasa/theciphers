@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7884DCFC18DF4510003AAB5D /* cipher_factory.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7884DCFA18DF4510003AAB5D /* cipher_factory.cc */; };
+		7810A18418DF79FE00A19486 /* cipher_factory.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7810A18118DF79FE00A19486 /* cipher_factory.cc */; };
+		7810A18518DF79FE00A19486 /* cipher_factory.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7810A18118DF79FE00A19486 /* cipher_factory.cc */; };
+		7810A18618DF79FE00A19486 /* aes_cipher.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7810A18318DF79FE00A19486 /* aes_cipher.cc */; };
+		7810A18718DF79FE00A19486 /* aes_cipher.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7810A18318DF79FE00A19486 /* aes_cipher.cc */; };
+		7810A19018DF7A1300A19486 /* cipher_factory.h in Headers */ = {isa = PBXBuildFile; fileRef = 7810A18A18DF7A1300A19486 /* cipher_factory.h */; };
+		7810A19118DF7A1300A19486 /* aes_cipher.h in Headers */ = {isa = PBXBuildFile; fileRef = 7810A18C18DF7A1300A19486 /* aes_cipher.h */; };
+		7810A19218DF7A1300A19486 /* icipher.h in Headers */ = {isa = PBXBuildFile; fileRef = 7810A18E18DF7A1300A19486 /* icipher.h */; };
+		7810A19318DF7A1300A19486 /* the_ciphers.h in Headers */ = {isa = PBXBuildFile; fileRef = 7810A18F18DF7A1300A19486 /* the_ciphers.h */; };
 		7884DD0518DF4585003AAB5D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7884DD0418DF4585003AAB5D /* main.cpp */; };
 		7884DD0718DF4585003AAB5D /* SystemTest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7884DD0618DF4585003AAB5D /* SystemTest.1 */; };
-		7884DD1118DF498B003AAB5D /* cipher_factory.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7884DCFA18DF4510003AAB5D /* cipher_factory.cc */; };
 		7884DD1718DF4C0C003AAB5D /* libgtest_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7884DCEB18DF43DA003AAB5D /* libgtest_main.a */; };
 		7884DD1818DF4C0F003AAB5D /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7884DCE918DF43DA003AAB5D /* libgtest.a */; };
 		7884DD1918DF4C92003AAB5D /* gtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7884DCE718DF43DA003AAB5D /* gtest.framework */; };
-		78C59E8718DF511B00D1D45F /* cipher_factory.h in Headers */ = {isa = PBXBuildFile; fileRef = 78C59E8618DF511B00D1D45F /* cipher_factory.h */; };
-		78C59E8918DF513D00D1D45F /* the_ciphers.h in Headers */ = {isa = PBXBuildFile; fileRef = 78C59E8818DF513D00D1D45F /* the_ciphers.h */; };
-		78C59E8B18DF545F00D1D45F /* icipher.h in Headers */ = {isa = PBXBuildFile; fileRef = 78C59E8A18DF545F00D1D45F /* icipher.h */; };
-		78C59E8E18DF5A8400D1D45F /* aes_cipher.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C59E8C18DF5A8400D1D45F /* aes_cipher.cc */; };
-		78C59E8F18DF5A8400D1D45F /* aes_cipher.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78C59E8C18DF5A8400D1D45F /* aes_cipher.cc */; };
-		78C59E9018DF5A8400D1D45F /* aes_cipher.h in Headers */ = {isa = PBXBuildFile; fileRef = 78C59E8D18DF5A8400D1D45F /* aes_cipher.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,17 +88,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7810A18118DF79FE00A19486 /* cipher_factory.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cipher_factory.cc; sourceTree = "<group>"; };
+		7810A18318DF79FE00A19486 /* aes_cipher.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = aes_cipher.cc; sourceTree = "<group>"; };
+		7810A18A18DF7A1300A19486 /* cipher_factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cipher_factory.h; sourceTree = "<group>"; };
+		7810A18C18DF7A1300A19486 /* aes_cipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes_cipher.h; sourceTree = "<group>"; };
+		7810A18E18DF7A1300A19486 /* icipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icipher.h; sourceTree = "<group>"; };
+		7810A18F18DF7A1300A19486 /* the_ciphers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = the_ciphers.h; sourceTree = "<group>"; };
 		78316F4818DF4246009823AC /* libtheciphers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtheciphers.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7884DCDA18DF43DA003AAB5D /* gtest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gtest.xcodeproj; path = "deps/gmock-1.7.0/gtest/xcode/gtest.xcodeproj"; sourceTree = "<group>"; };
-		7884DCFA18DF4510003AAB5D /* cipher_factory.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cipher_factory.cc; sourceTree = "<group>"; };
 		7884DD0218DF4585003AAB5D /* system_tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = system_tests; sourceTree = BUILT_PRODUCTS_DIR; };
 		7884DD0418DF4585003AAB5D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		7884DD0618DF4585003AAB5D /* SystemTest.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = SystemTest.1; sourceTree = "<group>"; };
-		78C59E8618DF511B00D1D45F /* cipher_factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cipher_factory.h; sourceTree = "<group>"; };
-		78C59E8818DF513D00D1D45F /* the_ciphers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = the_ciphers.h; sourceTree = "<group>"; };
-		78C59E8A18DF545F00D1D45F /* icipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icipher.h; sourceTree = "<group>"; };
-		78C59E8C18DF5A8400D1D45F /* aes_cipher.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = aes_cipher.cc; sourceTree = "<group>"; };
-		78C59E8D18DF5A8400D1D45F /* aes_cipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aes_cipher.h; path = ../src/aes_cipher.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,12 +122,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7810A17F18DF79FE00A19486 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				7810A18018DF79FE00A19486 /* factories */,
+				7810A18218DF79FE00A19486 /* implementations */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		7810A18018DF79FE00A19486 /* factories */ = {
+			isa = PBXGroup;
+			children = (
+				7810A18118DF79FE00A19486 /* cipher_factory.cc */,
+			);
+			path = factories;
+			sourceTree = "<group>";
+		};
+		7810A18218DF79FE00A19486 /* implementations */ = {
+			isa = PBXGroup;
+			children = (
+				7810A18318DF79FE00A19486 /* aes_cipher.cc */,
+			);
+			path = implementations;
+			sourceTree = "<group>";
+		};
+		7810A18818DF7A1300A19486 /* includes */ = {
+			isa = PBXGroup;
+			children = (
+				7810A18918DF7A1300A19486 /* factories */,
+				7810A18B18DF7A1300A19486 /* implementations */,
+				7810A18D18DF7A1300A19486 /* interfaces */,
+				7810A18F18DF7A1300A19486 /* the_ciphers.h */,
+			);
+			path = includes;
+			sourceTree = "<group>";
+		};
+		7810A18918DF7A1300A19486 /* factories */ = {
+			isa = PBXGroup;
+			children = (
+				7810A18A18DF7A1300A19486 /* cipher_factory.h */,
+			);
+			path = factories;
+			sourceTree = "<group>";
+		};
+		7810A18B18DF7A1300A19486 /* implementations */ = {
+			isa = PBXGroup;
+			children = (
+				7810A18C18DF7A1300A19486 /* aes_cipher.h */,
+			);
+			path = implementations;
+			sourceTree = "<group>";
+		};
+		7810A18D18DF7A1300A19486 /* interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				7810A18E18DF7A1300A19486 /* icipher.h */,
+			);
+			path = interfaces;
+			sourceTree = "<group>";
+		};
 		78316F3F18DF4246009823AC = {
 			isa = PBXGroup;
 			children = (
 				7884DCDA18DF43DA003AAB5D /* gtest.xcodeproj */,
-				7884DCD818DF4284003AAB5D /* includes */,
-				7884DCD918DF4284003AAB5D /* src */,
+				7810A18818DF7A1300A19486 /* includes */,
+				7810A17F18DF79FE00A19486 /* src */,
 				7884DD0318DF4585003AAB5D /* SystemTest */,
 				78316F4918DF4246009823AC /* Products */,
 			);
@@ -140,26 +200,6 @@
 				7884DD0218DF4585003AAB5D /* system_tests */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		7884DCD818DF4284003AAB5D /* includes */ = {
-			isa = PBXGroup;
-			children = (
-				78C59E8D18DF5A8400D1D45F /* aes_cipher.h */,
-				78C59E8618DF511B00D1D45F /* cipher_factory.h */,
-				78C59E8818DF513D00D1D45F /* the_ciphers.h */,
-				78C59E8A18DF545F00D1D45F /* icipher.h */,
-			);
-			path = includes;
-			sourceTree = "<group>";
-		};
-		7884DCD918DF4284003AAB5D /* src */ = {
-			isa = PBXGroup;
-			children = (
-				7884DCFA18DF4510003AAB5D /* cipher_factory.cc */,
-				78C59E8C18DF5A8400D1D45F /* aes_cipher.cc */,
-			);
-			path = src;
 			sourceTree = "<group>";
 		};
 		7884DCDB18DF43DA003AAB5D /* Products */ = {
@@ -192,10 +232,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78C59E8718DF511B00D1D45F /* cipher_factory.h in Headers */,
-				78C59E9018DF5A8400D1D45F /* aes_cipher.h in Headers */,
-				78C59E8B18DF545F00D1D45F /* icipher.h in Headers */,
-				78C59E8918DF513D00D1D45F /* the_ciphers.h in Headers */,
+				7810A19018DF7A1300A19486 /* cipher_factory.h in Headers */,
+				7810A19318DF7A1300A19486 /* the_ciphers.h in Headers */,
+				7810A19118DF7A1300A19486 /* aes_cipher.h in Headers */,
+				7810A19218DF7A1300A19486 /* icipher.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,8 +366,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78C59E8E18DF5A8400D1D45F /* aes_cipher.cc in Sources */,
-				7884DCFC18DF4510003AAB5D /* cipher_factory.cc in Sources */,
+				7810A18618DF79FE00A19486 /* aes_cipher.cc in Sources */,
+				7810A18418DF79FE00A19486 /* cipher_factory.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,9 +375,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78C59E8F18DF5A8400D1D45F /* aes_cipher.cc in Sources */,
 				7884DD0518DF4585003AAB5D /* main.cpp in Sources */,
-				7884DD1118DF498B003AAB5D /* cipher_factory.cc in Sources */,
+				7810A18518DF79FE00A19486 /* cipher_factory.cc in Sources */,
+				7810A18718DF79FE00A19486 /* aes_cipher.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
