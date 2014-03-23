@@ -1,4 +1,4 @@
-language: cc
+language: cpp
 compiler: clang
 branches:
   only: master
