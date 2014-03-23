@@ -29,12 +29,12 @@ TEST(CipherFactory, CipherFactoryShouldInstance) {
     byte * message = (byte *)"Hello World";
     size_t message_size = strlen((const char*)message);
     
-    size_t * ciphered_message_size;
-    std::shared_ptr<byte> ciphered_message = aes_cipher->Cipher(message, message_size, ciphered_message_size);
+    size_t ciphered_message_size;
+    std::shared_ptr<byte> ciphered_message = aes_cipher->Cipher(message, message_size, &ciphered_message_size);
     
-    size_t * deciphered_message_size;
+    size_t deciphered_message_size;
     
-    std::shared_ptr<byte> deciphered_message = aes_cipher->Decipher(ciphered_message.get(), *ciphered_message_size, deciphered_message_size);
+    std::shared_ptr<byte> deciphered_message = aes_cipher->Decipher(ciphered_message.get(), ciphered_message_size, &deciphered_message_size);
 }
 
 #endif
