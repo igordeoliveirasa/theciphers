@@ -15,6 +15,13 @@
 		7810A19118DF7A1300A19486 /* aes_cipher.h in Headers */ = {isa = PBXBuildFile; fileRef = 7810A18C18DF7A1300A19486 /* aes_cipher.h */; };
 		7810A19218DF7A1300A19486 /* icipher.h in Headers */ = {isa = PBXBuildFile; fileRef = 7810A18E18DF7A1300A19486 /* icipher.h */; };
 		7810A19318DF7A1300A19486 /* the_ciphers.h in Headers */ = {isa = PBXBuildFile; fileRef = 7810A18F18DF7A1300A19486 /* the_ciphers.h */; };
+		7810A19618DF7BAA00A19486 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7884DD0418DF4585003AAB5D /* main.cpp */; };
+		7810A19718DF7BAA00A19486 /* cipher_factory.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7810A18118DF79FE00A19486 /* cipher_factory.cc */; };
+		7810A19818DF7BAA00A19486 /* aes_cipher.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7810A18318DF79FE00A19486 /* aes_cipher.cc */; };
+		7810A19A18DF7BAA00A19486 /* gtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7884DCE718DF43DA003AAB5D /* gtest.framework */; };
+		7810A19B18DF7BAA00A19486 /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7884DCE918DF43DA003AAB5D /* libgtest.a */; };
+		7810A19C18DF7BAA00A19486 /* libgtest_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7884DCEB18DF43DA003AAB5D /* libgtest_main.a */; };
+		7810A19E18DF7BAA00A19486 /* SystemTest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7884DD0618DF4585003AAB5D /* SystemTest.1 */; };
 		7884DD0518DF4585003AAB5D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7884DD0418DF4585003AAB5D /* main.cpp */; };
 		7884DD0718DF4585003AAB5D /* SystemTest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7884DD0618DF4585003AAB5D /* SystemTest.1 */; };
 		7884DD1718DF4C0C003AAB5D /* libgtest_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7884DCEB18DF43DA003AAB5D /* libgtest_main.a */; };
@@ -75,6 +82,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		7810A19D18DF7BAA00A19486 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				7810A19E18DF7BAA00A19486 /* SystemTest.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		7884DD0018DF4585003AAB5D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -94,6 +111,7 @@
 		7810A18C18DF7A1300A19486 /* aes_cipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes_cipher.h; sourceTree = "<group>"; };
 		7810A18E18DF7A1300A19486 /* icipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icipher.h; sourceTree = "<group>"; };
 		7810A18F18DF7A1300A19486 /* the_ciphers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = the_ciphers.h; sourceTree = "<group>"; };
+		7810A1A218DF7BAA00A19486 /* unit_tests copy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "unit_tests copy"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78316F4818DF4246009823AC /* libtheciphers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtheciphers.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7884DCDA18DF43DA003AAB5D /* gtest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gtest.xcodeproj; path = "deps/gmock-1.7.0/gtest/xcode/gtest.xcodeproj"; sourceTree = "<group>"; };
 		7884DD0218DF4585003AAB5D /* system_tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = system_tests; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +120,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7810A19918DF7BAA00A19486 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7810A19A18DF7BAA00A19486 /* gtest.framework in Frameworks */,
+				7810A19B18DF7BAA00A19486 /* libgtest.a in Frameworks */,
+				7810A19C18DF7BAA00A19486 /* libgtest_main.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78316F4518DF4246009823AC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -198,6 +226,7 @@
 			children = (
 				78316F4818DF4246009823AC /* libtheciphers.a */,
 				7884DD0218DF4585003AAB5D /* system_tests */,
+				7810A1A218DF7BAA00A19486 /* unit_tests copy */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,6 +271,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		7810A19418DF7BAA00A19486 /* unit_tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7810A19F18DF7BAA00A19486 /* Build configuration list for PBXNativeTarget "unit_tests" */;
+			buildPhases = (
+				7810A19518DF7BAA00A19486 /* Sources */,
+				7810A19918DF7BAA00A19486 /* Frameworks */,
+				7810A19D18DF7BAA00A19486 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = unit_tests;
+			productName = SystemTest;
+			productReference = 7810A1A218DF7BAA00A19486 /* unit_tests copy */;
+			productType = "com.apple.product-type.tool";
+		};
 		78316F4718DF4246009823AC /* theciphers */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78316F4C18DF4246009823AC /* Build configuration list for PBXNativeTarget "theciphers" */;
@@ -305,6 +351,7 @@
 			targets = (
 				78316F4718DF4246009823AC /* theciphers */,
 				7884DD0118DF4585003AAB5D /* system_tests */,
+				7810A19418DF7BAA00A19486 /* unit_tests */,
 			);
 		};
 /* End PBXProject section */
@@ -362,6 +409,16 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7810A19518DF7BAA00A19486 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7810A19618DF7BAA00A19486 /* main.cpp in Sources */,
+				7810A19718DF7BAA00A19486 /* cipher_factory.cc in Sources */,
+				7810A19818DF7BAA00A19486 /* aes_cipher.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78316F4418DF4246009823AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -384,6 +441,42 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		7810A1A018DF7BAA00A19486 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/deps/gmock-1.7.0/include\"",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-D_UNIT_TEST",
+				);
+				PRODUCT_NAME = "unit_tests copy";
+			};
+			name = Debug;
+		};
+		7810A1A118DF7BAA00A19486 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/deps/gmock-1.7.0/include\"",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-D_UNIT_TEST",
+				);
+				PRODUCT_NAME = "unit_tests copy";
+			};
+			name = Release;
+		};
 		78316F4A18DF4246009823AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -513,6 +606,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7810A19F18DF7BAA00A19486 /* Build configuration list for PBXNativeTarget "unit_tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7810A1A018DF7BAA00A19486 /* Debug */,
+				7810A1A118DF7BAA00A19486 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		78316F4318DF4246009823AC /* Build configuration list for PBXProject "theciphers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

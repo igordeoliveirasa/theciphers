@@ -13,12 +13,10 @@ CipherFactory::CipherFactory() {
 }
 
 std::shared_ptr<ICipher> CipherFactory::Build(Ciphers cipher_type, byte * key, size_t key_size) {
-    return std::shared_ptr<ICipher>(new AESCipher());
+    return std::shared_ptr<ICipher>(new AESCipher(key, key_size));
 }
 
 #ifdef _SYSTEM_TEST
-
-#include "gtest/gtest.h"
 
 TEST(CipherFactory, CipherFactoryShouldInstance) {
     byte * key = (byte*)"1234567812345678";

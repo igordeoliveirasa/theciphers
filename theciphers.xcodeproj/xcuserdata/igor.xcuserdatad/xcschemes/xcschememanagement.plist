@@ -14,9 +14,19 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>unit_tests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>7810A19418DF7BAA00A19486</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>78316F4718DF4246009823AC</key>
 		<dict>
 			<key>primary</key>

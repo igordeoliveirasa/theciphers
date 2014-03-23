@@ -12,6 +12,13 @@
 #include "the_ciphers.h"
 
 class AESCipher : public ICipher {
+    
+private:
+    byte * key_;
+    size_t key_size_;
+    
+public:
+    AESCipher(byte * key, size_t key_size);
     std::shared_ptr<byte> Cipher(byte * message, size_t message_size, size_t * ciphered_message_size);
     std::shared_ptr<byte> Decipher(byte * ciphered_message, size_t ciphered_message_size, size_t * deciphered_message_size);
 };

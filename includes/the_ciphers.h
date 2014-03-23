@@ -19,7 +19,9 @@ typedef unsigned char byte;
 #include "aes_cipher.h"
 #include "cipher_factory.h"
 
-
+#if defined(_SYSTEM_TEST) || defined(_UNIT_TEST)
+#include "gtest/gtest.h"
+#endif
 
 
 #endif
