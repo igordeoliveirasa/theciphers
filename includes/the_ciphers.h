@@ -15,9 +15,9 @@ typedef unsigned char byte;
 #include <iostream>
 #include <string.h>
 
-#include "ICipher.h"
-#include "AESCipher.h"
-#include "CipherFactory.h"
+#include "icipher.h"
+#include "aes_cipher.h"
+#include "cipher_factory.h"
 
 
 
