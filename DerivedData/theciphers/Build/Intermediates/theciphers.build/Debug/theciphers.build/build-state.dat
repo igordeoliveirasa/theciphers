@@ -1,79 +1,0 @@
-Ttheciphers
-v6
-r1
-cCheck dependencies
-cCompileC DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/theciphers.build/Objects-normal/x86_64/CipherFactory.o /Users/igor/Development/theciphers/src/CipherFactory.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cLibtool /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libtheciphers.a normal x86_64
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
-c00000000532A716C00000000000000AA
-t1395290476
-s170
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/SDKSettings.plist
-c000000005289D6D5000000000000044C
-t1384765141
-s1100
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/CoreServices/SystemVersion.plist
-c00000000532A715700000000000001DE
-t1395290455
-s478
-
-N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/include/module.map
-c00000000532A715A0000000000000ADC
-t1395290458
-s2780
-
-N/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/theciphers.build/Objects-normal/x86_64/CipherFactory.o
-t1395594309
-s2948
-
-N/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/theciphers.build/Objects-normal/x86_64/theciphers.LinkFileList
-c00000000532F1444000000000000009C
-t1395594308
-s156
-
-N/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libtheciphers.a
-t2
-s0
-
-N/Users/igor/Development/theciphers/src/CipherFactory.cpp
-c00000000532F137F0000000000000154
-t1395594111
-s340
-
-CBuild AST from /Users/igor/Development/theciphers/src/CipherFactory.cpp
-r0
-
-CCheck dependencies
-r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies952af5c44bdfb841^e17ef8c44bdfb841^---0#1#1#--18"Check dependencies36"19BE5E04-549B-4C58-A023-11ABB2EDAAF3-
-
-CCompileC DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/theciphers.build/Objects-normal/x86_64/CipherFactory.o /Users/igor/Development/theciphers/src/CipherFactory.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s417287108.971087
-e417287109.323798
-r1
-xCompileC
-xDerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/theciphers.build/Objects-normal/x86_64/CipherFactory.o
-x/Users/igor/Development/theciphers/src/CipherFactory.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/igor/Development/theciphers/src/CipherFactory.cpp
-d/Users/igor/Development/theciphers/src/CipherFactory.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Compile /Users/igor/Development/theciphers/src/CipherFactory.cpp213"CompileC DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/theciphers.build/Objects-normal/x86_64/CipherFactory.o src/CipherFactory.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler7ea8f8c44bdfb841^97e652c54bdfb841^---0#0#1#-19%DVTDocumentLocation2@63"file:///Users/igor/Development/theciphers/src/CipherFactory.cpp0000000000000000^3196"CompileC DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/theciphers.build/Objects-normal/x86_64/CipherFactory.o src/CipherFactory.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/igor/Development/theciphers    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fmodules -fmodules-cache-path=/Users/igor/Development/theciphers/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -Wno-sign-conversion -iquote /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/theciphers.build/theciphers-generated-files.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/theciphers.build/theciphers-own-target-headers.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/theciphers.build/theciphers-all-target-headers.hmap -iquote /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/theciphers.build/theciphers-project-headers.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/theciphers.build/DerivedSources/x86_64 -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/theciphers.build/DerivedSources -F/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug -MMD -MT dependencies -MF /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/theciphers.build/Objects-normal/x86_64/CipherFactory.d --serialize-diagnostics /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/theciphers.build/Objects-normal/x86_64/CipherFactory.dia -c /Users/igor/Development/theciphers/src/CipherFactory.cpp -o /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/theciphers.build/Objects-normal/x86_64/CipherFactory.o36"CAF0AA74-3BC6-4586-8308-B4DC70E70C11-
-b230421F7-01C6-479D-BA7E-3A7732BBA8BD
-
-CLibtool /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libtheciphers.a normal x86_64
-s417287109.324420
-e417287109.329757
-r1
-xLibtool
-x/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libtheciphers.a
-xnormal
-xx86_64
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Libtool DerivedData/theciphers/Build/Products/Debug/libtheciphers.a normal x86_6481"Libtool DerivedData/theciphers/Build/Products/Debug/libtheciphers.a normal x86_64321c53c54bdfb841^cf6b54c54bdfb841^---0#0#1#--754"Libtool DerivedData/theciphers/Build/Products/Debug/libtheciphers.a normal x86_64    cd /Users/igor/Development/theciphers    export MACOSX_DEPLOYMENT_TARGET=10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only x86_64 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug -filelist /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/theciphers.build/Objects-normal/x86_64/theciphers.LinkFileList -o /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libtheciphers.a36"0B084288-D96B-4D7D-83EC-A0878A62B2F1-
-b230421F7-01C6-479D-BA7E-3A7732BBA8BD
-
