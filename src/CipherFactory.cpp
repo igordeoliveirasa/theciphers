@@ -12,25 +12,29 @@ CipherFactory::CipherFactory() {
     
 }
 
-boost::shared_ptr<ICipher> CipherFactory::Build(Ciphers cipher_type, byte * key, size_t key_size) {
-    boost::shared_ptr<ICipher> cipher(new AESCipher());
-    return cipher;
+std::shared_ptr<ICipher> CipherFactory::Build(Ciphers cipher_type, byte * key, size_t key_size) {
+    return std::shared_ptr<ICipher>(new AESCipher());
 }
 
 #ifdef _SYSTEM_TEST
+
 #include "gtest/gtest.h"
 
 TEST(CipherFactory, CipherFactoryShouldInstance) {
     byte * key = (byte*)"1234567812345678";
     size_t key_size = strlen((const char*)key);
     
-    boost::shared_ptr<ICipher> aes_cipher = CipherFactory::Build(AES, key, key_size);
+    std::shared_ptr<ICipher> aes_cipher = CipherFactory::Build(AES, key, key_size);
+    
     byte * message = (byte *)"Hello World";
     size_t message_size = strlen((const char*)message);
-    boost::shared_ptr<byte> ciphered = aes_cipher->Cipher(message, message_size);
-    size_t ciphered_message_size = 9;
-    boost::shared_ptr<byte> plain_text = aes_cipher->Decipher(ciphered.get(), ciphered_message_size);
+    
+    size_t * ciphered_message_size;
+    std::shared_ptr<byte> ciphered_message = aes_cipher->Cipher(message, message_size, ciphered_message_size);
+    
+    size_t * deciphered_message_size;
+    
+    std::shared_ptr<byte> deciphered_message = aes_cipher->Decipher(ciphered_message.get(), *ciphered_message_size, deciphered_message_size);
 }
 
 #endif
-

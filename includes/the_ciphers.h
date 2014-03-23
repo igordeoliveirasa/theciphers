@@ -15,8 +15,6 @@ typedef unsigned char byte;
 #include <iostream>
 #include <string.h>
 
-#include "boost/shared_ptr.hpp"
-
 #include "ICipher.h"
 #include "AESCipher.h"
 #include "CipherFactory.h"

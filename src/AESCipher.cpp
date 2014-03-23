@@ -8,12 +8,11 @@
 
 #include "the_ciphers.h"
 
-boost::shared_ptr<byte> AESCipher::Cipher(byte *message, size_t message_size) {
-    boost::shared_ptr<byte> ret;
-    return ret;
+std::shared_ptr<byte> AESCipher::Cipher(byte *message, size_t message_size, size_t * ciphered_message_size) {
+    return std::shared_ptr<byte>(new byte());
 }
 
-boost::shared_ptr<byte> AESCipher::Decipher(byte *message, size_t message_size) {
-    boost::shared_ptr<byte> ret;
-    return ret;
+std::shared_ptr<byte> AESCipher::Decipher(byte *ciphered_message, size_t ciphered_message_size, size_t * deciphered_message_size) {
+    return std::shared_ptr<byte>(new byte());
 }
+

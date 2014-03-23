@@ -1,39 +1,5 @@
 dependencies: /Users/igor/Development/theciphers/src/AESCipher.cpp \
   /Users/igor/Development/theciphers/includes/the_ciphers.h \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/shared_ptr.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/user.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/select_compiler_config.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/compiler/clang.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/select_stdlib_config.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/no_tr1/utility.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/stdlib/libcpp.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/select_platform_config.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/platform/macos.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/posix_features.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/suffix.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/no_tr1/memory.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/assert.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/current_function.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/checked_delete.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/throw_exception.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/shared_count.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/bad_weak_ptr.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/sp_counted_base.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/sp_has_sync.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/sp_counted_base_gcc_x86.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/detail/sp_typeinfo.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/sp_counted_impl.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/utility/addressof.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/sp_convertible.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/sp_nullptr_t.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/spinlock_pool.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/spinlock.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/spinlock_sync.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/yield_k.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/memory_order.hpp \
-  /Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/operator_bool.hpp \
   /Users/igor/Development/theciphers/includes/ICipher.h \
   /Users/igor/Development/theciphers/includes/../src/AESCipher.h \
   /Users/igor/Development/theciphers/includes/CipherFactory.h

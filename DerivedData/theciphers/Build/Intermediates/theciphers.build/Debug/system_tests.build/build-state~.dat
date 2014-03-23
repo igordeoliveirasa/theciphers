@@ -28,35 +28,35 @@ t1395290458
 s2780
 
 N/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/AESCipher.o
-t1395598818
-s16524
+t1395603151
+s36740
 
 N/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/CipherFactory.o
-t1395598819
-s120552
+t1395603151
+s127620
 
 N/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/main.o
-t1395598819
+t1395603151
 s70372
 
 N/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/system_tests.LinkFileList
-c00000000532F25E200000000000001CD
-t1395598818
+c00000000532F36CF00000000000001CD
+t1395603151
 s461
 
 N/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/gtest.framework/gtest
-c00000000532F25E200000000000C79F4
-t1395598818
+c00000000532F36CF00000000000C79F4
+t1395603151
 s817652
 
 N/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libgtest.a
-c00000000532F25E00000000000187D18
-t1395598816
+c00000000532F36CD0000000000187D18
+t1395603149
 s1604888
 
 N/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libgtest_main.a
-c00000000532F25DF000000000000A3E8
-t1395598815
+c00000000532F36CB000000000000A3E8
+t1395603147
 s41960
 
 N/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/system_tests
@@ -69,14 +69,14 @@ t1395595136
 s381
 
 N/Users/igor/Development/theciphers/src/AESCipher.cpp
-c00000000532F242900000000000001BE
-t1395598377
-s446
+c00000000532F3683000000000000020A
+t1395603075
+s522
 
 N/Users/igor/Development/theciphers/src/CipherFactory.cpp
-c00000000532F246800000000000003FA
-t1395598440
-s1018
+c00000000532F36C90000000000000432
+t1395603145
+s1074
 
 CBuild AST from /Users/igor/Development/theciphers/SystemTest/main.cpp
 r0
@@ -89,11 +89,11 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencieseca082625ddfb841^2bdc82625ddfb841^---0#1#1#--18"Check dependencies36"D84707A4-5956-4AD0-A08F-E365704408BE-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies51a50a4f6edfb841^cae20a4f6edfb841^---0#1#1#--18"Check dependencies36"2A9EF83A-6630-4738-BABE-B544155CEBC9-
 
 CCompileC DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/AESCipher.o /Users/igor/Development/theciphers/src/AESCipher.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s417291618.511597
-e417291618.911043
+s417295951.042937
+e417295951.457692
 r1
 xCompileC
 xDerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/AESCipher.o
@@ -104,49 +104,15 @@ xc++
 xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/igor/Development/theciphers/src/AESCipher.cpp
 d/Users/igor/Development/theciphers/includes/the_ciphers.h
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/shared_ptr.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/user.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/select_compiler_config.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/compiler/clang.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/select_stdlib_config.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/no_tr1/utility.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/stdlib/libcpp.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/select_platform_config.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/platform/macos.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/posix_features.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/suffix.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/no_tr1/memory.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/assert.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/current_function.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/checked_delete.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/throw_exception.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/shared_count.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/bad_weak_ptr.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/sp_counted_base.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/sp_has_sync.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/sp_counted_base_gcc_x86.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/detail/sp_typeinfo.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/sp_counted_impl.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/utility/addressof.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/sp_convertible.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/sp_nullptr_t.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/spinlock_pool.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/spinlock.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/spinlock_sync.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/yield_k.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/memory_order.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/operator_bool.hpp
 d/Users/igor/Development/theciphers/includes/ICipher.h
 d/Users/igor/Development/theciphers/src/AESCipher.h
 d/Users/igor/Development/theciphers/includes/CipherFactory.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Compile /Users/igor/Development/theciphers/src/AESCipher.cpp207"CompileC DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/AESCipher.o src/AESCipher.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compilere10783625ddfb841^473ce9625ddfb841^---0#0#1#-19%DVTDocumentLocation2@59"file:///Users/igor/Development/theciphers/src/AESCipher.cpp0000000000000000^3370"CompileC DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/AESCipher.o src/AESCipher.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/igor/Development/theciphers    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fmodules -fmodules-cache-path=/Users/igor/Development/theciphers/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-generated-files.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-own-target-headers.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-all-target-headers.hmap -iquote /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-project-headers.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/igor/Development/theciphers/deps/boost_1_55_0 -I/Users/igor/Development/theciphers/deps/gmock-1.7.0/include -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/DerivedSources/x86_64 -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/DerivedSources -F/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug -D_SYSTEM_TEST -MMD -MT dependencies -MF /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/AESCipher.d --serialize-diagnostics /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/AESCipher.dia -c /Users/igor/Development/theciphers/src/AESCipher.cpp -o /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/AESCipher.o36"D4F6D4DB-EE1B-40B6-B6FA-098837BC96CE-
-b7B8121B6-669B-43D9-B48E-841EFD0938B4
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Compile /Users/igor/Development/theciphers/src/AESCipher.cpp207"CompileC DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/AESCipher.o src/AESCipher.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compilerc70d0b4f6edfb841^022d754f6edfb841^---0#0#1#-19%DVTDocumentLocation2@59"file:///Users/igor/Development/theciphers/src/AESCipher.cpp0000000000000000^3315"CompileC DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/AESCipher.o src/AESCipher.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/igor/Development/theciphers    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fmodules -fmodules-cache-path=/Users/igor/Development/theciphers/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-generated-files.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-own-target-headers.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-all-target-headers.hmap -iquote /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-project-headers.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/igor/Development/theciphers/deps/gmock-1.7.0/include -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/DerivedSources/x86_64 -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/DerivedSources -F/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug -D_SYSTEM_TEST -MMD -MT dependencies -MF /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/AESCipher.d --serialize-diagnostics /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/AESCipher.dia -c /Users/igor/Development/theciphers/src/AESCipher.cpp -o /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/AESCipher.o36"3A1961D8-9085-4AF6-AA43-078407D882DE-
+b4781786D-79C6-466A-A19D-9492EF34357D
 
 CCompileC DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/CipherFactory.o /Users/igor/Development/theciphers/src/CipherFactory.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s417291618.512021
-e417291619.237009
+s417295951.043345
+e417295951.751388
 r1
 xCompileC
 xDerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/CipherFactory.o
@@ -157,40 +123,6 @@ xc++
 xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/igor/Development/theciphers/src/CipherFactory.cpp
 d/Users/igor/Development/theciphers/includes/the_ciphers.h
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/shared_ptr.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/shared_ptr.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/user.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/select_compiler_config.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/compiler/clang.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/select_stdlib_config.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/no_tr1/utility.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/stdlib/libcpp.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/select_platform_config.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/platform/macos.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/posix_features.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/suffix.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/config/no_tr1/memory.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/assert.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/current_function.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/checked_delete.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/throw_exception.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/shared_count.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/bad_weak_ptr.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/sp_counted_base.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/sp_has_sync.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/sp_counted_base_gcc_x86.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/detail/sp_typeinfo.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/sp_counted_impl.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/utility/addressof.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/sp_convertible.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/sp_nullptr_t.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/spinlock_pool.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/spinlock.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/spinlock_sync.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/yield_k.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/memory_order.hpp
-d/Users/igor/Development/theciphers/deps/boost_1_55_0/boost/smart_ptr/detail/operator_bool.hpp
 d/Users/igor/Development/theciphers/includes/ICipher.h
 d/Users/igor/Development/theciphers/src/AESCipher.h
 d/Users/igor/Development/theciphers/includes/CipherFactory.h
@@ -213,12 +145,12 @@ d/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/
 d/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/gtest.framework/Headers/gtest-test-part.h
 d/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/gtest.framework/Headers/gtest-typed-test.h
 d/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/gtest.framework/Headers/gtest_pred_impl.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Compile /Users/igor/Development/theciphers/src/CipherFactory.cpp215"CompileC DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/CipherFactory.o src/CipherFactory.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler802983625ddfb841^eaae3c635ddfb841^---0#0#1#-19%DVTDocumentLocation2@63"file:///Users/igor/Development/theciphers/src/CipherFactory.cpp0000000000000000^3394"CompileC DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/CipherFactory.o src/CipherFactory.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/igor/Development/theciphers    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fmodules -fmodules-cache-path=/Users/igor/Development/theciphers/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-generated-files.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-own-target-headers.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-all-target-headers.hmap -iquote /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-project-headers.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/igor/Development/theciphers/deps/boost_1_55_0 -I/Users/igor/Development/theciphers/deps/gmock-1.7.0/include -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/DerivedSources/x86_64 -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/DerivedSources -F/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug -D_SYSTEM_TEST -MMD -MT dependencies -MF /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/CipherFactory.d --serialize-diagnostics /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/CipherFactory.dia -c /Users/igor/Development/theciphers/src/CipherFactory.cpp -o /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/CipherFactory.o36"757C1A9A-0CD3-49E4-8680-E7D95C89A55D-
-b7B8121B6-669B-43D9-B48E-841EFD0938B4
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Compile /Users/igor/Development/theciphers/src/CipherFactory.cpp215"CompileC DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/CipherFactory.o src/CipherFactory.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler46270b4f6edfb841^53ebc14f6edfb841^---0#0#1#-19%DVTDocumentLocation2@63"file:///Users/igor/Development/theciphers/src/CipherFactory.cpp0000000000000000^3339"CompileC DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/CipherFactory.o src/CipherFactory.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/igor/Development/theciphers    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fmodules -fmodules-cache-path=/Users/igor/Development/theciphers/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-generated-files.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-own-target-headers.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-all-target-headers.hmap -iquote /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-project-headers.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/igor/Development/theciphers/deps/gmock-1.7.0/include -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/DerivedSources/x86_64 -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/DerivedSources -F/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug -D_SYSTEM_TEST -MMD -MT dependencies -MF /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/CipherFactory.d --serialize-diagnostics /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/CipherFactory.dia -c /Users/igor/Development/theciphers/src/CipherFactory.cpp -o /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/CipherFactory.o36"DC185261-DE79-4ACE-BDFB-F58A14072968-
+b4781786D-79C6-466A-A19D-9492EF34357D
 
 CCompileC DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/main.o /Users/igor/Development/theciphers/SystemTest/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s417291618.511822
-e417291619.207898
+s417295951.043141
+e417295951.733356
 r1
 xCompileC
 xDerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/main.o
@@ -247,12 +179,12 @@ d/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/
 d/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/gtest.framework/Headers/gtest-test-part.h
 d/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/gtest.framework/Headers/gtest-typed-test.h
 d/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/gtest.framework/Headers/gtest_pred_impl.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Compile /Users/igor/Development/theciphers/SystemTest/main.cpp204"CompileC DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/main.o SystemTest/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compilerb11683625ddfb841^4b3b35635ddfb841^---0#0#1#-19%DVTDocumentLocation2@61"file:///Users/igor/Development/theciphers/SystemTest/main.cpp0000000000000000^3354"CompileC DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/main.o SystemTest/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/igor/Development/theciphers    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fmodules -fmodules-cache-path=/Users/igor/Development/theciphers/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-generated-files.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-own-target-headers.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-all-target-headers.hmap -iquote /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-project-headers.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/igor/Development/theciphers/deps/boost_1_55_0 -I/Users/igor/Development/theciphers/deps/gmock-1.7.0/include -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/DerivedSources/x86_64 -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/DerivedSources -F/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug -D_SYSTEM_TEST -MMD -MT dependencies -MF /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/main.dia -c /Users/igor/Development/theciphers/SystemTest/main.cpp -o /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/main.o36"B80F13EB-5C39-450A-A61B-A917518DA850-
-b7B8121B6-669B-43D9-B48E-841EFD0938B4
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Compile /Users/igor/Development/theciphers/SystemTest/main.cpp204"CompileC DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/main.o SystemTest/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler151b0b4f6edfb841^a5bfbb4f6edfb841^---0#0#1#-19%DVTDocumentLocation2@61"file:///Users/igor/Development/theciphers/SystemTest/main.cpp0000000000000000^3299"CompileC DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/main.o SystemTest/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/igor/Development/theciphers    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fmodules -fmodules-cache-path=/Users/igor/Development/theciphers/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-generated-files.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-own-target-headers.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-all-target-headers.hmap -iquote /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/system_tests-project-headers.hmap -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/igor/Development/theciphers/deps/gmock-1.7.0/include -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/DerivedSources/x86_64 -I/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/DerivedSources -F/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug -D_SYSTEM_TEST -MMD -MT dependencies -MF /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/main.dia -c /Users/igor/Development/theciphers/SystemTest/main.cpp -o /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/main.o36"C5D480E5-E1B8-41EB-A7AC-71763D600A0B-
+b4781786D-79C6-466A-A19D-9492EF34357D
 
 CLd /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/system_tests normal x86_64
-s417291619.237760
-e417291619.266166
+s417295951.752281
+e417295951.777214
 r1
 xLd
 x/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/system_tests
@@ -268,8 +200,6 @@ d/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libc++.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
 d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.osx.a
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libstdc++.6.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libgcc_s.1.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
@@ -300,6 +230,8 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Link /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/system_tests73"Ld DerivedData/theciphers/Build/Products/Debug/system_tests normal x86_64bff23c635ddfb841^812444635ddfb841^---0#0#1#--1335"Ld DerivedData/theciphers/Build/Products/Debug/system_tests normal x86_64    cd /Users/igor/Development/theciphers    export MACOSX_DEPLOYMENT_TARGET=10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug -F/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug -filelist /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/system_tests.LinkFileList -mmacosx-version-min=10.9 /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/gtest.framework/gtest /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libgtest.a /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libgtest_main.a -Xlinker -dependency_info -Xlinker /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/system_tests_dependency_info.dat -o /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/system_tests36"42F0B15D-1A05-414B-B217-5A65D98C1B5C-
-b7B8121B6-669B-43D9-B48E-841EFD0938B4
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libstdc++.6.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libgcc_s.1.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Link /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/system_tests73"Ld DerivedData/theciphers/Build/Products/Debug/system_tests normal x86_64f4a4c04f6edfb841^59a5c84f6edfb841^---0#0#1#--1335"Ld DerivedData/theciphers/Build/Products/Debug/system_tests normal x86_64    cd /Users/igor/Development/theciphers    export MACOSX_DEPLOYMENT_TARGET=10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug -F/Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug -filelist /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/system_tests.LinkFileList -mmacosx-version-min=10.9 /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/gtest.framework/gtest /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libgtest.a /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/libgtest_main.a -Xlinker -dependency_info -Xlinker /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Intermediates/theciphers.build/Debug/system_tests.build/Objects-normal/x86_64/system_tests_dependency_info.dat -o /Users/igor/Development/theciphers/DerivedData/theciphers/Build/Products/Debug/system_tests36"2E38E953-E1E8-4E2C-8DA2-AD6899FFD48A-
+b4781786D-79C6-466A-A19D-9492EF34357D
 

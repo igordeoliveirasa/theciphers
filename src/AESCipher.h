@@ -12,8 +12,8 @@
 #include "the_ciphers.h"
 
 class AESCipher : public ICipher {
-    boost::shared_ptr<byte> Cipher(byte*message, size_t message_size);
-    boost::shared_ptr<byte> Decipher(byte*ciphered_message, size_t ciphered_message_size);
+    std::shared_ptr<byte> Cipher(byte * message, size_t message_size, size_t * ciphered_message_size);
+    std::shared_ptr<byte> Decipher(byte * ciphered_message, size_t ciphered_message_size, size_t * deciphered_message_size);
 };
 
 

@@ -13,8 +13,8 @@
 
 class ICipher {
 public:
-    virtual boost::shared_ptr<byte> Cipher(byte*message, size_t message_size) = 0;
-    virtual boost::shared_ptr<byte> Decipher(byte*ciphered_message, size_t ciphered_message_size) = 0;
+    virtual std::shared_ptr<byte> Cipher(byte * message, size_t message_size, size_t * ciphered_message_size) = 0;
+    virtual std::shared_ptr<byte> Decipher(byte * ciphered_message, size_t ciphered_message_size, size_t * deciphered_message_size) = 0;
 };
 
 #endif
