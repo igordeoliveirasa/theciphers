@@ -449,13 +449,13 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = aclocal-1.13
+ACLOCAL = ${SHELL} /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/build-aux/missing aclocal-1.13
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AR = ar
-AUTOCONF = autoconf
-AUTOHEADER = autoheader
-AUTOMAKE = automake-1.13
+AUTOCONF = ${SHELL} /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/build-aux/missing autoconf
+AUTOHEADER = ${SHELL} /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/build-aux/missing autoheader
+AUTOMAKE = ${SHELL} /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/build-aux/missing automake-1.13
 AWK = awk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -492,7 +492,7 @@ LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = lipo
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = makeinfo
+MAKEINFO = ${SHELL} /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/build-aux/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = build-aux/install-sh -c -d
 NM = /usr/bin/nm
