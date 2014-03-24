@@ -10,7 +10,8 @@
 #define __theciphers__CipherFactory__
 
 
-#include "the_ciphers.h"
+#include "../commons.h"
+#include "../interfaces/icipher.h"
 
 enum Ciphers {
     AES,

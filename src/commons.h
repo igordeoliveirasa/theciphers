@@ -19,10 +19,6 @@
 #include <openssl/err.h>
 #include <openssl/conf.h>
 
-#include "icipher.h"
-#include "aes_cipher.h"
-#include "cipher_factory.h"
-
 #if defined(_SYSTEM_TEST) || defined(_UNIT_TEST)
 #include "gtest/gtest.h"
 #endif

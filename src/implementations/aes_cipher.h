@@ -9,7 +9,8 @@
 #ifndef __theciphers__AESCipher__
 #define __theciphers__AESCipher__
 
-#include "the_ciphers.h"
+#include "../commons.h"
+#include "../interfaces/icipher.h"
 
 class AESCipher : public ICipher {
     

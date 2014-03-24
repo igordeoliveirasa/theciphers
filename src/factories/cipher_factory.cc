@@ -6,7 +6,11 @@
 //  Copyright (c) 2014 Igor de Oliveira Sa. All rights reserved.
 //
 
-#include "the_ciphers.h"
+#include "../commons.h"
+#include "cipher_factory.h"
+#include "../interfaces/icipher.h"
+#include "../implementations/aes_cipher.h"
+#include "../factories/cipher_factory.h"
 
 CipherFactory::CipherFactory() {}
 

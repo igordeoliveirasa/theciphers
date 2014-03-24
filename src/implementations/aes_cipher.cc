@@ -6,7 +6,8 @@
 //  Copyright (c) 2014 Igor de Oliveira Sa. All rights reserved.
 //
 
-#include "the_ciphers.h"
+#include "../commons.h"
+#include "aes_cipher.h"
 
 #define AES_KEYLEN 128
 
