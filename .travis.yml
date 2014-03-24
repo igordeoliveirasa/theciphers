@@ -4,7 +4,7 @@ branches:
   only: master
 
 before_install:
-- sudo apt-get install automake autoconf
+- autoreconf --install --force
 
 notifications:
   recipients: igordeoliveirasa@gmail.com
