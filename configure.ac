@@ -9,7 +9,7 @@ AC_PROG_RANLIB
 AM_INIT_AUTOMAKE
 AC_CONFIG_MACRO_DIR([m4])
 AM_MAINTAINER_MODE([disable])
-CXXFLAGS([-std=c++11])
+CXXFLAGS="-std=c++11 -stdlib=libc++"
 # Checks for libraries.
 
 # Checks for header files.
