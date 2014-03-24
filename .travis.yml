@@ -3,9 +3,21 @@ compiler: clang
 branches:
   only: master
 
+
 before_install:
 - autoconf --version
 - autoreconf --install --force
+
+
+install:
+#libstdc++-4.8-dev
+- sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
+
+# clang++-3.2
+- sudo add-apt-repository --yes ppa:h-rayflood/llvm
+- sudo apt-get -qq update
+- sudo apt-get -qq install libstdc++-4.8-dev clang-3.2
+
 
 notifications:
   recipients: igordeoliveirasa@gmail.com
