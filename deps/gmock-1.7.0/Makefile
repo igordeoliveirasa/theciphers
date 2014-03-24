@@ -18,7 +18,6 @@
 
 
 
-
 am__make_dryrun = \
   { \
     am__dry=no; \
@@ -36,10 +35,10 @@ am__make_dryrun = \
     esac; \
     test $$am__dry = yes; \
   }
-pkgdatadir = $(datadir)/gtest
-pkgincludedir = $(includedir)/gtest
-pkglibdir = $(libdir)/gtest
-pkglibexecdir = $(libexecdir)/gtest
+pkgdatadir = $(datadir)/gmock
+pkgincludedir = $(includedir)/gmock
+pkglibdir = $(libdir)/gmock
+pkglibexecdir = $(libexecdir)/gmock
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -54,19 +53,17 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-apple-darwin13.1.0
 host_triplet = x86_64-apple-darwin13.1.0
-TESTS = samples/sample1_unittest$(EXEEXT) \
-	samples/sample10_unittest$(EXEEXT) \
-	test/gtest_all_test$(EXEEXT) $(am__EXEEXT_1)
-check_PROGRAMS = samples/sample1_unittest$(EXEEXT) \
-	samples/sample10_unittest$(EXEEXT) \
-	test/gtest_all_test$(EXEEXT) $(am__EXEEXT_1)
-am__append_1 = test/fused_gtest_test
-am__append_2 = test/fused_gtest_test
+TESTS = test/gmock-spec-builders_test$(EXEEXT) \
+	test/gmock_link_test$(EXEEXT) $(am__EXEEXT_1)
+check_PROGRAMS = test/gmock-spec-builders_test$(EXEEXT) \
+	test/gmock_link_test$(EXEEXT) $(am__EXEEXT_1)
+am__append_1 = test/gmock_fused_test
+am__append_2 = test/gmock_fused_test
 subdir = .
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/configure $(am__configure_deps) \
 	$(top_srcdir)/build-aux/config.h.in \
-	$(top_srcdir)/scripts/gtest-config.in \
+	$(top_srcdir)/scripts/gmock-config.in \
 	$(top_srcdir)/build-aux/depcomp $(pkginclude_HEADERS) \
 	$(pkginclude_internal_HEADERS) \
 	$(top_srcdir)/build-aux/test-driver README \
@@ -78,17 +75,15 @@ DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/build-aux/ltmain.sh \
 	$(top_srcdir)/build-aux/missing
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/libtool.m4 \
-	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
-	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
-	$(top_srcdir)/m4/acx_pthread.m4 $(top_srcdir)/configure.ac
+am__aclocal_m4_deps = $(top_srcdir)/gtest/m4/acx_pthread.m4 \
+	$(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
  configure.lineno config.status.lineno
 mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = $(top_builddir)/build-aux/config.h
-CONFIG_CLEAN_FILES = scripts/gtest-config
+CONFIG_CLEAN_FILES = scripts/gmock-config
 CONFIG_CLEAN_VPATH_FILES =
 am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
 am__vpath_adj = case $$p in \
@@ -117,52 +112,41 @@ am__uninstall_files_from_dir = { \
     || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
          $(am__cd) "$$dir" && rm -f $$files; }; \
   }
-am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(m4datadir)" \
-	"$(DESTDIR)$(pkgincludedir)" \
+am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(pkgincludedir)" \
 	"$(DESTDIR)$(pkginclude_internaldir)"
-LTLIBRARIES = $(lib_LTLIBRARIES) $(noinst_LTLIBRARIES)
-lib_libgtest_la_LIBADD =
+LTLIBRARIES = $(lib_LTLIBRARIES)
+lib_libgmock_la_LIBADD =
 am__dirstamp = $(am__leading_dot)dirstamp
-am_lib_libgtest_la_OBJECTS = src/gtest-all.lo
-lib_libgtest_la_OBJECTS = $(am_lib_libgtest_la_OBJECTS)
+am_lib_libgmock_la_OBJECTS = src/gmock-all.lo
+lib_libgmock_la_OBJECTS = $(am_lib_libgmock_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
 am__v_lt_1 = 
-lib_libgtest_main_la_DEPENDENCIES = lib/libgtest.la
-am_lib_libgtest_main_la_OBJECTS = src/gtest_main.lo
-lib_libgtest_main_la_OBJECTS = $(am_lib_libgtest_main_la_OBJECTS)
-samples_libsamples_la_LIBADD =
-am_samples_libsamples_la_OBJECTS = samples/sample1.lo \
-	samples/sample2.lo samples/sample4.lo
-samples_libsamples_la_OBJECTS = $(am_samples_libsamples_la_OBJECTS)
-am__EXEEXT_1 = test/fused_gtest_test$(EXEEXT)
-am_samples_sample10_unittest_OBJECTS =  \
-	samples/sample10_unittest.$(OBJEXT)
-samples_sample10_unittest_OBJECTS =  \
-	$(am_samples_sample10_unittest_OBJECTS)
-samples_sample10_unittest_DEPENDENCIES = lib/libgtest.la
-am_samples_sample1_unittest_OBJECTS =  \
-	samples/sample1_unittest.$(OBJEXT)
-samples_sample1_unittest_OBJECTS =  \
-	$(am_samples_sample1_unittest_OBJECTS)
-samples_sample1_unittest_DEPENDENCIES = lib/libgtest_main.la \
-	lib/libgtest.la samples/libsamples.la
-am__test_fused_gtest_test_SOURCES_DIST = fused-src/gtest/gtest-all.cc \
-	fused-src/gtest/gtest.h fused-src/gtest/gtest_main.cc \
-	samples/sample1.cc samples/sample1_unittest.cc
-am__objects_1 =  \
-	fused-src/gtest/test_fused_gtest_test-gtest-all.$(OBJEXT) \
-	fused-src/gtest/test_fused_gtest_test-gtest_main.$(OBJEXT)
-am_test_fused_gtest_test_OBJECTS = $(am__objects_1) \
-	samples/test_fused_gtest_test-sample1.$(OBJEXT) \
-	samples/test_fused_gtest_test-sample1_unittest.$(OBJEXT)
-test_fused_gtest_test_OBJECTS = $(am_test_fused_gtest_test_OBJECTS)
-test_fused_gtest_test_LDADD = $(LDADD)
-am_test_gtest_all_test_OBJECTS = test/gtest_all_test.$(OBJEXT)
-test_gtest_all_test_OBJECTS = $(am_test_gtest_all_test_OBJECTS)
-test_gtest_all_test_DEPENDENCIES = lib/libgtest_main.la \
-	lib/libgtest.la
+lib_libgmock_main_la_DEPENDENCIES = lib/libgmock.la
+am_lib_libgmock_main_la_OBJECTS = src/gmock_main.lo
+lib_libgmock_main_la_OBJECTS = $(am_lib_libgmock_main_la_OBJECTS)
+am__EXEEXT_1 = test/gmock_fused_test$(EXEEXT)
+am_test_gmock_spec_builders_test_OBJECTS =  \
+	test/gmock-spec-builders_test.$(OBJEXT)
+test_gmock_spec_builders_test_OBJECTS =  \
+	$(am_test_gmock_spec_builders_test_OBJECTS)
+am__DEPENDENCIES_1 =
+test_gmock_spec_builders_test_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	lib/libgmock.la
+am__test_gmock_fused_test_SOURCES_DIST = fused-src/gmock-gtest-all.cc \
+	fused-src/gmock/gmock.h fused-src/gmock_main.cc \
+	fused-src/gtest/gtest.h test/gmock_test.cc
+am_test_gmock_fused_test_OBJECTS = fused-src/test_gmock_fused_test-gmock-gtest-all.$(OBJEXT) \
+	fused-src/test_gmock_fused_test-gmock_main.$(OBJEXT) \
+	test/test_gmock_fused_test-gmock_test.$(OBJEXT)
+test_gmock_fused_test_OBJECTS = $(am_test_gmock_fused_test_OBJECTS)
+test_gmock_fused_test_LDADD = $(LDADD)
+am_test_gmock_link_test_OBJECTS = test/gmock_link2_test.$(OBJEXT) \
+	test/gmock_link_test.$(OBJEXT)
+test_gmock_link_test_OBJECTS = $(am_test_gmock_link_test_OBJECTS)
+test_gmock_link_test_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+	lib/libgmock_main.la lib/libgmock.la
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
@@ -215,26 +199,37 @@ AM_V_CCLD = $(am__v_CCLD_$(V))
 am__v_CCLD_ = $(am__v_CCLD_$(AM_DEFAULT_VERBOSITY))
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(lib_libgtest_la_SOURCES) $(lib_libgtest_main_la_SOURCES) \
-	$(samples_libsamples_la_SOURCES) \
-	$(samples_sample10_unittest_SOURCES) \
-	$(samples_sample1_unittest_SOURCES) \
-	$(test_fused_gtest_test_SOURCES) \
-	$(test_gtest_all_test_SOURCES)
-DIST_SOURCES = $(lib_libgtest_la_SOURCES) \
-	$(lib_libgtest_main_la_SOURCES) \
-	$(samples_libsamples_la_SOURCES) \
-	$(samples_sample10_unittest_SOURCES) \
-	$(samples_sample1_unittest_SOURCES) \
-	$(am__test_fused_gtest_test_SOURCES_DIST) \
-	$(test_gtest_all_test_SOURCES)
+SOURCES = $(lib_libgmock_la_SOURCES) $(lib_libgmock_main_la_SOURCES) \
+	$(test_gmock_spec_builders_test_SOURCES) \
+	$(test_gmock_fused_test_SOURCES) \
+	$(test_gmock_link_test_SOURCES)
+DIST_SOURCES = $(lib_libgmock_la_SOURCES) \
+	$(lib_libgmock_main_la_SOURCES) \
+	$(test_gmock_spec_builders_test_SOURCES) \
+	$(am__test_gmock_fused_test_SOURCES_DIST) \
+	$(test_gmock_link_test_SOURCES)
+RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
+	ctags-recursive dvi-recursive html-recursive info-recursive \
+	install-data-recursive install-dvi-recursive \
+	install-exec-recursive install-html-recursive \
+	install-info-recursive install-pdf-recursive \
+	install-ps-recursive install-recursive installcheck-recursive \
+	installdirs-recursive pdf-recursive ps-recursive \
+	tags-recursive uninstall-recursive
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
     *) (install-info --version) >/dev/null 2>&1;; \
   esac
-DATA = $(m4data_DATA)
 HEADERS = $(pkginclude_HEADERS) $(pkginclude_internal_HEADERS)
+RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
+  distclean-recursive maintainer-clean-recursive
+am__recursive_targets = \
+  $(RECURSIVE_TARGETS) \
+  $(RECURSIVE_CLEAN_TARGETS) \
+  $(am__extra_recursive_targets)
+AM_RECURSIVE_TARGETS = $(am__recursive_targets:-recursive=) TAGS CTAGS \
+	cscope check recheck distdir dist dist-all distcheck
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
 # Read a list of newline-separated strings from the standard input,
 # and print each of them once, without duplicates.  Input order is
@@ -255,7 +250,6 @@ am__define_uniq_tagged_files = \
 ETAGS = etags
 CTAGS = ctags
 CSCOPE = cscope
-AM_RECURSIVE_TARGETS = cscope check recheck
 am__tty_colors_dummy = \
   mgn= red= grn= lgn= blu= brg= std=; \
   am__color_tests=no
@@ -432,6 +426,7 @@ TEST_LOGS = $(am__test_logs2:.test.log=.log)
 TEST_LOG_DRIVER = $(SHELL) $(top_srcdir)/build-aux/test-driver
 TEST_LOG_COMPILE = $(TEST_LOG_COMPILER) $(AM_TEST_LOG_FLAGS) \
 	$(TEST_LOG_FLAGS)
+DIST_SUBDIRS = $(SUBDIRS)
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -442,6 +437,31 @@ am__remove_distdir = \
       || { sleep 5 && rm -rf "$(distdir)"; }; \
   else :; fi
 am__post_remove_distdir = $(am__remove_distdir)
+am__relativize = \
+  dir0=`pwd`; \
+  sed_first='s,^\([^/]*\)/.*$$,\1,'; \
+  sed_rest='s,^[^/]*/*,,'; \
+  sed_last='s,^.*/\([^/]*\)$$,\1,'; \
+  sed_butlast='s,/*[^/]*$$,,'; \
+  while test -n "$$dir1"; do \
+    first=`echo "$$dir1" | sed -e "$$sed_first"`; \
+    if test "$$first" != "."; then \
+      if test "$$first" = ".."; then \
+        dir2=`echo "$$dir0" | sed -e "$$sed_last"`/"$$dir2"; \
+        dir0=`echo "$$dir0" | sed -e "$$sed_butlast"`; \
+      else \
+        first2=`echo "$$dir2" | sed -e "$$sed_first"`; \
+        if test "$$first2" = "$$first"; then \
+          dir2=`echo "$$dir2" | sed -e "$$sed_rest"`; \
+        else \
+          dir2="../$$dir2"; \
+        fi; \
+        dir0="$$dir0"/"$$first"; \
+      fi; \
+    fi; \
+    dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
+  done; \
+  reldir="$$dir2"
 DIST_ARCHIVES = $(distdir).tar.gz $(distdir).tar.bz2 $(distdir).zip
 GZIP_ENV = --best
 DIST_TARGETS = dist-bzip2 dist-gzip dist-zip
@@ -479,6 +499,12 @@ EGREP = /usr/bin/grep -E
 EXEEXT = 
 FGREP = /usr/bin/grep -F
 GREP = /usr/bin/grep
+GTEST_CONFIG = /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/scripts/gtest-config
+GTEST_CPPFLAGS = -I$(top_srcdir)/gtest/include
+GTEST_CXXFLAGS = -g
+GTEST_LDFLAGS = 
+GTEST_LIBS = $(top_builddir)/gtest/lib/libgtest.la
+GTEST_VERSION = 1.7.0
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
@@ -501,11 +527,11 @@ OBJDUMP = false
 OBJEXT = o
 OTOOL = otool
 OTOOL64 = :
-PACKAGE = gtest
-PACKAGE_BUGREPORT = googletestframework@googlegroups.com
-PACKAGE_NAME = Google C++ Testing Framework
-PACKAGE_STRING = Google C++ Testing Framework 1.7.0
-PACKAGE_TARNAME = gtest
+PACKAGE = gmock
+PACKAGE_BUGREPORT = googlemock@googlegroups.com
+PACKAGE_NAME = Google C++ Mocking Framework
+PACKAGE_STRING = Google C++ Mocking Framework 1.7.0
+PACKAGE_TARNAME = gmock
 PACKAGE_URL = 
 PACKAGE_VERSION = 1.7.0
 PATH_SEPARATOR = :
@@ -519,10 +545,10 @@ SET_MAKE =
 SHELL = /bin/sh
 STRIP = strip
 VERSION = 1.7.0
-abs_builddir = /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest
-abs_srcdir = /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest
-abs_top_builddir = /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest
-abs_top_srcdir = /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest
+abs_builddir = /Users/igor/Development/theciphers/deps/gmock-1.7.0
+abs_srcdir = /Users/igor/Development/theciphers/deps/gmock-1.7.0
+abs_top_builddir = /Users/igor/Development/theciphers/deps/gmock-1.7.0
+abs_top_srcdir = /Users/igor/Development/theciphers/deps/gmock-1.7.0
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -553,7 +579,7 @@ host_vendor = apple
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /Users/igor/Development/theciphers/deps/gmock-1.7.0/gtest/build-aux/install-sh
+install_sh = ${SHELL} /Users/igor/Development/theciphers/deps/gmock-1.7.0/build-aux/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -568,205 +594,135 @@ psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
 srcdir = .
+subdirs =  gtest
 sysconfdir = ${prefix}/etc
 target_alias = 
 top_build_prefix = 
 top_builddir = .
 top_srcdir = .
-ACLOCAL_AMFLAGS = -I m4
 
-# Nonstandard package files for distribution
+# Nonstandard package files for distribution.
 
-# Sample files that we don't compile.
+# C++ tests that we don't compile using autotools.
 
-# C++ test files that we don't compile directly.
+# Python tests, which we don't run using autotools.
 
-# Python tests that we don't run.
+# Nonstandard package files for distribution.
 
-# CMake script
+# Pump scripts for generating Google Mock headers.
+# TODO(chandlerc@google.com): automate the generation of *.h from *.h.pump.
 
-# MSVC project files
+# Script for fusing Google Mock and Google Test source files.
 
-# xcode project files
+# The Google Mock Generator tool from the cppclean project.
 
-# xcode sample files
+# CMake scripts.
 
-# C++Builder project files
-EXTRA_DIST = CHANGES CONTRIBUTORS LICENSE \
-	include/gtest/gtest-param-test.h.pump \
-	include/gtest/internal/gtest-param-util-generated.h.pump \
-	include/gtest/internal/gtest-tuple.h.pump \
-	include/gtest/internal/gtest-type-util.h.pump make/Makefile \
-	scripts/fuse_gtest_files.py scripts/gen_gtest_pred_impl.py \
-	scripts/pump.py scripts/test/Makefile $(GTEST_SRC) \
-	samples/prime_tables.h samples/sample2_unittest.cc \
-	samples/sample3_unittest.cc samples/sample4_unittest.cc \
-	samples/sample5_unittest.cc samples/sample6_unittest.cc \
-	samples/sample7_unittest.cc samples/sample8_unittest.cc \
-	samples/sample9_unittest.cc test/gtest-death-test_ex_test.cc \
-	test/gtest-death-test_test.cc test/gtest-filepath_test.cc \
-	test/gtest-linked_ptr_test.cc test/gtest-listener_test.cc \
-	test/gtest-message_test.cc test/gtest-options_test.cc \
-	test/gtest-param-test2_test.cc test/gtest-param-test2_test.cc \
-	test/gtest-param-test_test.cc test/gtest-param-test_test.cc \
-	test/gtest-param-test_test.h test/gtest-port_test.cc \
-	test/gtest_premature_exit_test.cc test/gtest-printers_test.cc \
-	test/gtest-test-part_test.cc test/gtest-tuple_test.cc \
-	test/gtest-typed-test2_test.cc test/gtest-typed-test_test.cc \
-	test/gtest-typed-test_test.h test/gtest-unittest-api_test.cc \
-	test/gtest_break_on_failure_unittest_.cc \
-	test/gtest_catch_exceptions_test_.cc test/gtest_color_test_.cc \
-	test/gtest_env_var_test_.cc test/gtest_environment_test.cc \
-	test/gtest_filter_unittest_.cc test/gtest_help_test_.cc \
-	test/gtest_list_tests_unittest_.cc test/gtest_main_unittest.cc \
-	test/gtest_no_test_unittest.cc test/gtest_output_test_.cc \
-	test/gtest_pred_impl_unittest.cc test/gtest_prod_test.cc \
-	test/gtest_repeat_test.cc test/gtest_shuffle_test_.cc \
-	test/gtest_sole_header_test.cc test/gtest_stress_test.cc \
-	test/gtest_throw_on_failure_ex_test.cc \
-	test/gtest_throw_on_failure_test_.cc \
-	test/gtest_uninitialized_test_.cc test/gtest_unittest.cc \
-	test/gtest_unittest.cc test/gtest_xml_outfile1_test_.cc \
-	test/gtest_xml_outfile2_test_.cc \
-	test/gtest_xml_output_unittest_.cc test/production.cc \
-	test/production.h test/gtest_break_on_failure_unittest.py \
-	test/gtest_catch_exceptions_test.py test/gtest_color_test.py \
-	test/gtest_env_var_test.py test/gtest_filter_unittest.py \
-	test/gtest_help_test.py test/gtest_list_tests_unittest.py \
-	test/gtest_output_test.py \
-	test/gtest_output_test_golden_lin.txt \
-	test/gtest_shuffle_test.py test/gtest_test_utils.py \
-	test/gtest_throw_on_failure_test.py \
-	test/gtest_uninitialized_test.py \
-	test/gtest_xml_outfiles_test.py \
-	test/gtest_xml_output_unittest.py test/gtest_xml_test_utils.py \
-	CMakeLists.txt cmake/internal_utils.cmake msvc/gtest-md.sln \
-	msvc/gtest-md.vcproj msvc/gtest.sln msvc/gtest.vcproj \
-	msvc/gtest_main-md.vcproj msvc/gtest_main.vcproj \
-	msvc/gtest_prod_test-md.vcproj msvc/gtest_prod_test.vcproj \
-	msvc/gtest_unittest-md.vcproj msvc/gtest_unittest.vcproj \
-	xcode/Config/DebugProject.xcconfig \
-	xcode/Config/FrameworkTarget.xcconfig \
-	xcode/Config/General.xcconfig \
-	xcode/Config/ReleaseProject.xcconfig \
-	xcode/Config/StaticLibraryTarget.xcconfig \
-	xcode/Config/TestTarget.xcconfig xcode/Resources/Info.plist \
-	xcode/Scripts/runtests.sh xcode/Scripts/versiongenerate.py \
-	xcode/gtest.xcodeproj/project.pbxproj \
-	xcode/Samples/FrameworkSample/Info.plist \
-	xcode/Samples/FrameworkSample/WidgetFramework.xcodeproj/project.pbxproj \
-	xcode/Samples/FrameworkSample/runtests.sh \
-	xcode/Samples/FrameworkSample/widget.cc \
-	xcode/Samples/FrameworkSample/widget.h \
-	xcode/Samples/FrameworkSample/widget_test.cc \
-	codegear/gtest.cbproj codegear/gtest.groupproj \
-	codegear/gtest_all.cc codegear/gtest_link.cc \
-	codegear/gtest_main.cbproj codegear/gtest_unittest.cbproj \
-	$(m4data_DATA)
+# Microsoft Visual Studio 2005 projects.
 
-# gtest source files that we don't compile directly.  They are
-# #included by gtest-all.cc.
-GTEST_SRC = \
-  src/gtest-death-test.cc \
-  src/gtest-filepath.cc \
-  src/gtest-internal-inl.h \
-  src/gtest-port.cc \
-  src/gtest-printers.cc \
-  src/gtest-test-part.cc \
-  src/gtest-typed-test.cc \
-  src/gtest.cc
+# Microsoft Visual Studio 2010 projects.
+EXTRA_DIST = LICENSE $(GMOCK_SOURCE_INGLUDES) \
+	test/gmock-actions_test.cc test/gmock_all_test.cc \
+	test/gmock-cardinalities_test.cc test/gmock_ex_test.cc \
+	test/gmock-generated-actions_test.cc \
+	test/gmock-generated-function-mockers_test.cc \
+	test/gmock-generated-internal-utils_test.cc \
+	test/gmock-generated-matchers_test.cc \
+	test/gmock-internal-utils_test.cc test/gmock-matchers_test.cc \
+	test/gmock-more-actions_test.cc test/gmock-nice-strict_test.cc \
+	test/gmock-port_test.cc test/gmock_stress_test.cc \
+	test/gmock_leak_test.py test/gmock_leak_test_.cc \
+	test/gmock_output_test.py test/gmock_output_test_.cc \
+	test/gmock_output_test_golden.txt test/gmock_test_utils.py \
+	CHANGES CONTRIBUTORS make/Makefile \
+	include/gmock/gmock-generated-actions.h.pump \
+	include/gmock/gmock-generated-function-mockers.h.pump \
+	include/gmock/gmock-generated-matchers.h.pump \
+	include/gmock/gmock-generated-nice-strict.h.pump \
+	include/gmock/internal/gmock-generated-internal-utils.h.pump \
+	scripts/fuse_gmock_files.py scripts/generator/LICENSE \
+	scripts/generator/README scripts/generator/README.cppclean \
+	scripts/generator/cpp/__init__.py scripts/generator/cpp/ast.py \
+	scripts/generator/cpp/gmock_class.py \
+	scripts/generator/cpp/keywords.py \
+	scripts/generator/cpp/tokenize.py \
+	scripts/generator/cpp/utils.py scripts/generator/gmock_gen.py \
+	CMakeLists.txt msvc/2005/gmock.sln msvc/2005/gmock.vcproj \
+	msvc/2005/gmock_config.vsprops msvc/2005/gmock_main.vcproj \
+	msvc/2005/gmock_test.vcproj msvc/2010/gmock.sln \
+	msvc/2010/gmock.vcxproj msvc/2010/gmock_config.props \
+	msvc/2010/gmock_main.vcxproj msvc/2010/gmock_test.vcxproj
 
+# We may need to build our internally packaged gtest. If so, it will be
+# included in the 'subdirs' variable.
+SUBDIRS = $(subdirs)
 
-# Distribute and install M4 macro
-m4datadir = $(datadir)/aclocal
-m4data_DATA = m4/gtest.m4
+# This is generated by the configure script, so clean it for distribution.
+DISTCLEANFILES = scripts/gmock-config
 
 # We define the global AM_CPPFLAGS as everything we compile includes from these
 # directories.
-AM_CPPFLAGS = -I$(srcdir) -I$(srcdir)/include
-#AM_CXXFLAGS = -DGTEST_HAS_PTHREAD=0
+AM_CPPFLAGS = $(GTEST_CPPFLAGS) -I$(srcdir)/include
 
 # Modifies compiler and linker flags for pthreads compatibility.
 AM_CXXFLAGS = -D_THREAD_SAFE  -DGTEST_HAS_PTHREAD=1
 AM_LIBS = 
 
 # Build rules for libraries.
-lib_LTLIBRARIES = lib/libgtest.la lib/libgtest_main.la
-lib_libgtest_la_SOURCES = src/gtest-all.cc
+lib_LTLIBRARIES = lib/libgmock.la lib/libgmock_main.la
+lib_libgmock_la_SOURCES = src/gmock-all.cc
 pkginclude_HEADERS = \
-  include/gtest/gtest-death-test.h \
-  include/gtest/gtest-message.h \
-  include/gtest/gtest-param-test.h \
-  include/gtest/gtest-printers.h \
-  include/gtest/gtest-spi.h \
-  include/gtest/gtest-test-part.h \
-  include/gtest/gtest-typed-test.h \
-  include/gtest/gtest.h \
-  include/gtest/gtest_pred_impl.h \
-  include/gtest/gtest_prod.h
+  include/gmock/gmock-actions.h \
+  include/gmock/gmock-cardinalities.h \
+  include/gmock/gmock-generated-actions.h \
+  include/gmock/gmock-generated-function-mockers.h \
+  include/gmock/gmock-generated-matchers.h \
+  include/gmock/gmock-generated-nice-strict.h \
+  include/gmock/gmock-matchers.h \
+  include/gmock/gmock-more-actions.h \
+  include/gmock/gmock-more-matchers.h \
+  include/gmock/gmock-spec-builders.h \
+  include/gmock/gmock.h
 
 pkginclude_internaldir = $(pkgincludedir)/internal
 pkginclude_internal_HEADERS = \
-  include/gtest/internal/gtest-death-test-internal.h \
-  include/gtest/internal/gtest-filepath.h \
-  include/gtest/internal/gtest-internal.h \
-  include/gtest/internal/gtest-linked_ptr.h \
-  include/gtest/internal/gtest-param-util-generated.h \
-  include/gtest/internal/gtest-param-util.h \
-  include/gtest/internal/gtest-port.h \
-  include/gtest/internal/gtest-string.h \
-  include/gtest/internal/gtest-tuple.h \
-  include/gtest/internal/gtest-type-util.h
+  include/gmock/internal/gmock-generated-internal-utils.h \
+  include/gmock/internal/gmock-internal-utils.h \
+  include/gmock/internal/gmock-port.h
 
-lib_libgtest_main_la_SOURCES = src/gtest_main.cc
-lib_libgtest_main_la_LIBADD = lib/libgtest.la
+lib_libgmock_main_la_SOURCES = src/gmock_main.cc
+lib_libgmock_main_la_LIBADD = lib/libgmock.la
+AM_LDFLAGS = $(GTEST_LDFLAGS)
+test_gmock_spec_builders_test_SOURCES = test/gmock-spec-builders_test.cc
+test_gmock_spec_builders_test_LDADD = $(GTEST_LIBS) lib/libgmock.la
+test_gmock_link_test_SOURCES = \
+  test/gmock_link2_test.cc \
+  test/gmock_link_test.cc \
+  test/gmock_link_test.h
 
-# Bulid rules for samples and tests. Automake's naming for some of
-# these variables isn't terribly obvious, so this is a brief
-# reference:
-#
-# TESTS -- Programs run automatically by "make check"
-# check_PROGRAMS -- Programs built by "make check" but not necessarily run
-noinst_LTLIBRARIES = samples/libsamples.la
-samples_libsamples_la_SOURCES = \
-  samples/sample1.cc \
-  samples/sample1.h \
-  samples/sample2.cc \
-  samples/sample2.h \
-  samples/sample3-inl.h \
-  samples/sample4.cc \
-  samples/sample4.h
+test_gmock_link_test_LDADD = $(GTEST_LIBS) lib/libgmock_main.la  lib/libgmock.la
+test_gmock_fused_test_SOURCES = \
+    fused-src/gmock-gtest-all.cc \
+    fused-src/gmock/gmock.h \
+    fused-src/gmock_main.cc \
+    fused-src/gtest/gtest.h \
+    test/gmock_test.cc
 
-TESTS_ENVIRONMENT = GTEST_SOURCE_DIR="$(srcdir)/test" \
-                    GTEST_BUILD_DIR="$(top_builddir)/test"
+test_gmock_fused_test_CPPFLAGS = -I"$(srcdir)/fused-src"
 
-samples_sample1_unittest_SOURCES = samples/sample1_unittest.cc
-samples_sample1_unittest_LDADD = lib/libgtest_main.la \
-                                 lib/libgtest.la \
-                                 samples/libsamples.la
+# Google Mock source files that we don't compile directly.
+GMOCK_SOURCE_INGLUDES = \
+  src/gmock-cardinalities.cc \
+  src/gmock-internal-utils.cc \
+  src/gmock-matchers.cc \
+  src/gmock-spec-builders.cc \
+  src/gmock.cc
 
-samples_sample10_unittest_SOURCES = samples/sample10_unittest.cc
-samples_sample10_unittest_LDADD = lib/libgtest.la
-test_gtest_all_test_SOURCES = test/gtest_all_test.cc
-test_gtest_all_test_LDADD = lib/libgtest_main.la \
-                            lib/libgtest.la
-
-
-# Tests that fused gtest files compile and work.
-FUSED_GTEST_SRC = \
-  fused-src/gtest/gtest-all.cc \
-  fused-src/gtest/gtest.h \
-  fused-src/gtest/gtest_main.cc
-
-test_fused_gtest_test_SOURCES = $(FUSED_GTEST_SRC) \
-                                samples/sample1.cc samples/sample1_unittest.cc
-
-test_fused_gtest_test_CPPFLAGS = -I"$(srcdir)/fused-src"
 
 # Death tests may produce core dumps in the build directory. In case
 # this happens, clean them to keep distcleancheck happy.
 CLEANFILES = core
-all: all-am
+all: all-recursive
 
 .SUFFIXES:
 .SUFFIXES: .cc .lo .log .o .obj .test .test$(EXEEXT) .trs
@@ -819,7 +775,7 @@ $(top_srcdir)/build-aux/config.h.in:  $(am__configure_deps)
 
 distclean-hdr:
 	-rm -f build-aux/config.h build-aux/stamp-h1
-scripts/gtest-config: $(top_builddir)/config.status $(top_srcdir)/scripts/gtest-config.in
+scripts/gmock-config: $(top_builddir)/config.status $(top_srcdir)/scripts/gmock-config.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
 
 install-libLTLIBRARIES: $(lib_LTLIBRARIES)
@@ -856,46 +812,21 @@ clean-libLTLIBRARIES:
 	  echo rm -f $${locs}; \
 	  rm -f $${locs}; \
 	}
-
-clean-noinstLTLIBRARIES:
-	-test -z "$(noinst_LTLIBRARIES)" || rm -f $(noinst_LTLIBRARIES)
-	@list='$(noinst_LTLIBRARIES)'; \
-	locs=`for p in $$list; do echo $$p; done | \
-	      sed 's|^[^/]*$$|.|; s|/[^/]*$$||; s|$$|/so_locations|' | \
-	      sort -u`; \
-	test -z "$$locs" || { \
-	  echo rm -f $${locs}; \
-	  rm -f $${locs}; \
-	}
 src/$(am__dirstamp):
 	@$(MKDIR_P) src
 	@: > src/$(am__dirstamp)
 src/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) src/$(DEPDIR)
 	@: > src/$(DEPDIR)/$(am__dirstamp)
-src/gtest-all.lo: src/$(am__dirstamp) src/$(DEPDIR)/$(am__dirstamp)
+src/gmock-all.lo: src/$(am__dirstamp) src/$(DEPDIR)/$(am__dirstamp)
 lib/$(am__dirstamp):
 	@$(MKDIR_P) lib
 	@: > lib/$(am__dirstamp)
-lib/libgtest.la: $(lib_libgtest_la_OBJECTS) $(lib_libgtest_la_DEPENDENCIES) $(EXTRA_lib_libgtest_la_DEPENDENCIES) lib/$(am__dirstamp)
-	$(AM_V_CXXLD)$(CXXLINK) -rpath $(libdir) $(lib_libgtest_la_OBJECTS) $(lib_libgtest_la_LIBADD) $(LIBS)
-src/gtest_main.lo: src/$(am__dirstamp) src/$(DEPDIR)/$(am__dirstamp)
-lib/libgtest_main.la: $(lib_libgtest_main_la_OBJECTS) $(lib_libgtest_main_la_DEPENDENCIES) $(EXTRA_lib_libgtest_main_la_DEPENDENCIES) lib/$(am__dirstamp)
-	$(AM_V_CXXLD)$(CXXLINK) -rpath $(libdir) $(lib_libgtest_main_la_OBJECTS) $(lib_libgtest_main_la_LIBADD) $(LIBS)
-samples/$(am__dirstamp):
-	@$(MKDIR_P) samples
-	@: > samples/$(am__dirstamp)
-samples/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) samples/$(DEPDIR)
-	@: > samples/$(DEPDIR)/$(am__dirstamp)
-samples/sample1.lo: samples/$(am__dirstamp) \
-	samples/$(DEPDIR)/$(am__dirstamp)
-samples/sample2.lo: samples/$(am__dirstamp) \
-	samples/$(DEPDIR)/$(am__dirstamp)
-samples/sample4.lo: samples/$(am__dirstamp) \
-	samples/$(DEPDIR)/$(am__dirstamp)
-samples/libsamples.la: $(samples_libsamples_la_OBJECTS) $(samples_libsamples_la_DEPENDENCIES) $(EXTRA_samples_libsamples_la_DEPENDENCIES) samples/$(am__dirstamp)
-	$(AM_V_CXXLD)$(CXXLINK)  $(samples_libsamples_la_OBJECTS) $(samples_libsamples_la_LIBADD) $(LIBS)
+lib/libgmock.la: $(lib_libgmock_la_OBJECTS) $(lib_libgmock_la_DEPENDENCIES) $(EXTRA_lib_libgmock_la_DEPENDENCIES) lib/$(am__dirstamp)
+	$(AM_V_CXXLD)$(CXXLINK) -rpath $(libdir) $(lib_libgmock_la_OBJECTS) $(lib_libgmock_la_LIBADD) $(LIBS)
+src/gmock_main.lo: src/$(am__dirstamp) src/$(DEPDIR)/$(am__dirstamp)
+lib/libgmock_main.la: $(lib_libgmock_main_la_OBJECTS) $(lib_libgmock_main_la_DEPENDENCIES) $(EXTRA_lib_libgmock_main_la_DEPENDENCIES) lib/$(am__dirstamp)
+	$(AM_V_CXXLD)$(CXXLINK) -rpath $(libdir) $(lib_libgmock_main_la_OBJECTS) $(lib_libgmock_main_la_LIBADD) $(LIBS)
 
 clean-checkPROGRAMS:
 	@list='$(check_PROGRAMS)'; test -n "$$list" || exit 0; \
@@ -905,52 +836,43 @@ clean-checkPROGRAMS:
 	list=`for p in $$list; do echo "$$p"; done | sed 's/$(EXEEXT)$$//'`; \
 	echo " rm -f" $$list; \
 	rm -f $$list
-samples/sample10_unittest.$(OBJEXT): samples/$(am__dirstamp) \
-	samples/$(DEPDIR)/$(am__dirstamp)
-samples/sample10_unittest$(EXEEXT): $(samples_sample10_unittest_OBJECTS) $(samples_sample10_unittest_DEPENDENCIES) $(EXTRA_samples_sample10_unittest_DEPENDENCIES) samples/$(am__dirstamp)
-	@rm -f samples/sample10_unittest$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(samples_sample10_unittest_OBJECTS) $(samples_sample10_unittest_LDADD) $(LIBS)
-samples/sample1_unittest.$(OBJEXT): samples/$(am__dirstamp) \
-	samples/$(DEPDIR)/$(am__dirstamp)
-samples/sample1_unittest$(EXEEXT): $(samples_sample1_unittest_OBJECTS) $(samples_sample1_unittest_DEPENDENCIES) $(EXTRA_samples_sample1_unittest_DEPENDENCIES) samples/$(am__dirstamp)
-	@rm -f samples/sample1_unittest$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(samples_sample1_unittest_OBJECTS) $(samples_sample1_unittest_LDADD) $(LIBS)
-fused-src/gtest/$(am__dirstamp):
-	@$(MKDIR_P) fused-src/gtest
-	@: > fused-src/gtest/$(am__dirstamp)
-fused-src/gtest/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) fused-src/gtest/$(DEPDIR)
-	@: > fused-src/gtest/$(DEPDIR)/$(am__dirstamp)
-fused-src/gtest/test_fused_gtest_test-gtest-all.$(OBJEXT):  \
-	fused-src/gtest/$(am__dirstamp) \
-	fused-src/gtest/$(DEPDIR)/$(am__dirstamp)
-fused-src/gtest/test_fused_gtest_test-gtest_main.$(OBJEXT):  \
-	fused-src/gtest/$(am__dirstamp) \
-	fused-src/gtest/$(DEPDIR)/$(am__dirstamp)
-samples/test_fused_gtest_test-sample1.$(OBJEXT):  \
-	samples/$(am__dirstamp) samples/$(DEPDIR)/$(am__dirstamp)
-samples/test_fused_gtest_test-sample1_unittest.$(OBJEXT):  \
-	samples/$(am__dirstamp) samples/$(DEPDIR)/$(am__dirstamp)
 test/$(am__dirstamp):
 	@$(MKDIR_P) test
 	@: > test/$(am__dirstamp)
-test/fused_gtest_test$(EXEEXT): $(test_fused_gtest_test_OBJECTS) $(test_fused_gtest_test_DEPENDENCIES) $(EXTRA_test_fused_gtest_test_DEPENDENCIES) test/$(am__dirstamp)
-	@rm -f test/fused_gtest_test$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(test_fused_gtest_test_OBJECTS) $(test_fused_gtest_test_LDADD) $(LIBS)
 test/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) test/$(DEPDIR)
 	@: > test/$(DEPDIR)/$(am__dirstamp)
-test/gtest_all_test.$(OBJEXT): test/$(am__dirstamp) \
+test/gmock-spec-builders_test.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/gtest_all_test$(EXEEXT): $(test_gtest_all_test_OBJECTS) $(test_gtest_all_test_DEPENDENCIES) $(EXTRA_test_gtest_all_test_DEPENDENCIES) test/$(am__dirstamp)
-	@rm -f test/gtest_all_test$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(test_gtest_all_test_OBJECTS) $(test_gtest_all_test_LDADD) $(LIBS)
+test/gmock-spec-builders_test$(EXEEXT): $(test_gmock_spec_builders_test_OBJECTS) $(test_gmock_spec_builders_test_DEPENDENCIES) $(EXTRA_test_gmock_spec_builders_test_DEPENDENCIES) test/$(am__dirstamp)
+	@rm -f test/gmock-spec-builders_test$(EXEEXT)
+	$(AM_V_CXXLD)$(CXXLINK) $(test_gmock_spec_builders_test_OBJECTS) $(test_gmock_spec_builders_test_LDADD) $(LIBS)
+fused-src/$(am__dirstamp):
+	@$(MKDIR_P) fused-src
+	@: > fused-src/$(am__dirstamp)
+fused-src/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) fused-src/$(DEPDIR)
+	@: > fused-src/$(DEPDIR)/$(am__dirstamp)
+fused-src/test_gmock_fused_test-gmock-gtest-all.$(OBJEXT):  \
+	fused-src/$(am__dirstamp) fused-src/$(DEPDIR)/$(am__dirstamp)
+fused-src/test_gmock_fused_test-gmock_main.$(OBJEXT):  \
+	fused-src/$(am__dirstamp) fused-src/$(DEPDIR)/$(am__dirstamp)
+test/test_gmock_fused_test-gmock_test.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/gmock_fused_test$(EXEEXT): $(test_gmock_fused_test_OBJECTS) $(test_gmock_fused_test_DEPENDENCIES) $(EXTRA_test_gmock_fused_test_DEPENDENCIES) test/$(am__dirstamp)
+	@rm -f test/gmock_fused_test$(EXEEXT)
+	$(AM_V_CXXLD)$(CXXLINK) $(test_gmock_fused_test_OBJECTS) $(test_gmock_fused_test_LDADD) $(LIBS)
+test/gmock_link2_test.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/gmock_link_test.$(OBJEXT): test/$(am__dirstamp) \
+	test/$(DEPDIR)/$(am__dirstamp)
+test/gmock_link_test$(EXEEXT): $(test_gmock_link_test_OBJECTS) $(test_gmock_link_test_DEPENDENCIES) $(EXTRA_test_gmock_link_test_DEPENDENCIES) test/$(am__dirstamp)
+	@rm -f test/gmock_link_test$(EXEEXT)
+	$(AM_V_CXXLD)$(CXXLINK) $(test_gmock_link_test_OBJECTS) $(test_gmock_link_test_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
-	-rm -f fused-src/gtest/*.$(OBJEXT)
-	-rm -f samples/*.$(OBJEXT)
-	-rm -f samples/*.lo
+	-rm -f fused-src/*.$(OBJEXT)
 	-rm -f src/*.$(OBJEXT)
 	-rm -f src/*.lo
 	-rm -f test/*.$(OBJEXT)
@@ -958,18 +880,14 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include fused-src/gtest/$(DEPDIR)/test_fused_gtest_test-gtest-all.Po
-include fused-src/gtest/$(DEPDIR)/test_fused_gtest_test-gtest_main.Po
-include samples/$(DEPDIR)/sample1.Plo
-include samples/$(DEPDIR)/sample10_unittest.Po
-include samples/$(DEPDIR)/sample1_unittest.Po
-include samples/$(DEPDIR)/sample2.Plo
-include samples/$(DEPDIR)/sample4.Plo
-include samples/$(DEPDIR)/test_fused_gtest_test-sample1.Po
-include samples/$(DEPDIR)/test_fused_gtest_test-sample1_unittest.Po
-include src/$(DEPDIR)/gtest-all.Plo
-include src/$(DEPDIR)/gtest_main.Plo
-include test/$(DEPDIR)/gtest_all_test.Po
+include fused-src/$(DEPDIR)/test_gmock_fused_test-gmock-gtest-all.Po
+include fused-src/$(DEPDIR)/test_gmock_fused_test-gmock_main.Po
+include src/$(DEPDIR)/gmock-all.Plo
+include src/$(DEPDIR)/gmock_main.Plo
+include test/$(DEPDIR)/gmock-spec-builders_test.Po
+include test/$(DEPDIR)/gmock_link2_test.Po
+include test/$(DEPDIR)/gmock_link_test.Po
+include test/$(DEPDIR)/test_gmock_fused_test-gmock_test.Po
 
 .cc.o:
 	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -995,61 +913,47 @@ include test/$(DEPDIR)/gtest_all_test.Po
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(LTCXXCOMPILE) -c -o $@ $<
 
-fused-src/gtest/test_fused_gtest_test-gtest-all.o: fused-src/gtest/gtest-all.cc
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_fused_gtest_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT fused-src/gtest/test_fused_gtest_test-gtest-all.o -MD -MP -MF fused-src/gtest/$(DEPDIR)/test_fused_gtest_test-gtest-all.Tpo -c -o fused-src/gtest/test_fused_gtest_test-gtest-all.o `test -f 'fused-src/gtest/gtest-all.cc' || echo '$(srcdir)/'`fused-src/gtest/gtest-all.cc
-	$(AM_V_at)$(am__mv) fused-src/gtest/$(DEPDIR)/test_fused_gtest_test-gtest-all.Tpo fused-src/gtest/$(DEPDIR)/test_fused_gtest_test-gtest-all.Po
-#	$(AM_V_CXX)source='fused-src/gtest/gtest-all.cc' object='fused-src/gtest/test_fused_gtest_test-gtest-all.o' libtool=no \
+fused-src/test_gmock_fused_test-gmock-gtest-all.o: fused-src/gmock-gtest-all.cc
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_gmock_fused_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT fused-src/test_gmock_fused_test-gmock-gtest-all.o -MD -MP -MF fused-src/$(DEPDIR)/test_gmock_fused_test-gmock-gtest-all.Tpo -c -o fused-src/test_gmock_fused_test-gmock-gtest-all.o `test -f 'fused-src/gmock-gtest-all.cc' || echo '$(srcdir)/'`fused-src/gmock-gtest-all.cc
+	$(AM_V_at)$(am__mv) fused-src/$(DEPDIR)/test_gmock_fused_test-gmock-gtest-all.Tpo fused-src/$(DEPDIR)/test_gmock_fused_test-gmock-gtest-all.Po
+#	$(AM_V_CXX)source='fused-src/gmock-gtest-all.cc' object='fused-src/test_gmock_fused_test-gmock-gtest-all.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_fused_gtest_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o fused-src/gtest/test_fused_gtest_test-gtest-all.o `test -f 'fused-src/gtest/gtest-all.cc' || echo '$(srcdir)/'`fused-src/gtest/gtest-all.cc
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_gmock_fused_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o fused-src/test_gmock_fused_test-gmock-gtest-all.o `test -f 'fused-src/gmock-gtest-all.cc' || echo '$(srcdir)/'`fused-src/gmock-gtest-all.cc
 
-fused-src/gtest/test_fused_gtest_test-gtest-all.obj: fused-src/gtest/gtest-all.cc
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_fused_gtest_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT fused-src/gtest/test_fused_gtest_test-gtest-all.obj -MD -MP -MF fused-src/gtest/$(DEPDIR)/test_fused_gtest_test-gtest-all.Tpo -c -o fused-src/gtest/test_fused_gtest_test-gtest-all.obj `if test -f 'fused-src/gtest/gtest-all.cc'; then $(CYGPATH_W) 'fused-src/gtest/gtest-all.cc'; else $(CYGPATH_W) '$(srcdir)/fused-src/gtest/gtest-all.cc'; fi`
-	$(AM_V_at)$(am__mv) fused-src/gtest/$(DEPDIR)/test_fused_gtest_test-gtest-all.Tpo fused-src/gtest/$(DEPDIR)/test_fused_gtest_test-gtest-all.Po
-#	$(AM_V_CXX)source='fused-src/gtest/gtest-all.cc' object='fused-src/gtest/test_fused_gtest_test-gtest-all.obj' libtool=no \
+fused-src/test_gmock_fused_test-gmock-gtest-all.obj: fused-src/gmock-gtest-all.cc
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_gmock_fused_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT fused-src/test_gmock_fused_test-gmock-gtest-all.obj -MD -MP -MF fused-src/$(DEPDIR)/test_gmock_fused_test-gmock-gtest-all.Tpo -c -o fused-src/test_gmock_fused_test-gmock-gtest-all.obj `if test -f 'fused-src/gmock-gtest-all.cc'; then $(CYGPATH_W) 'fused-src/gmock-gtest-all.cc'; else $(CYGPATH_W) '$(srcdir)/fused-src/gmock-gtest-all.cc'; fi`
+	$(AM_V_at)$(am__mv) fused-src/$(DEPDIR)/test_gmock_fused_test-gmock-gtest-all.Tpo fused-src/$(DEPDIR)/test_gmock_fused_test-gmock-gtest-all.Po
+#	$(AM_V_CXX)source='fused-src/gmock-gtest-all.cc' object='fused-src/test_gmock_fused_test-gmock-gtest-all.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_fused_gtest_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o fused-src/gtest/test_fused_gtest_test-gtest-all.obj `if test -f 'fused-src/gtest/gtest-all.cc'; then $(CYGPATH_W) 'fused-src/gtest/gtest-all.cc'; else $(CYGPATH_W) '$(srcdir)/fused-src/gtest/gtest-all.cc'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_gmock_fused_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o fused-src/test_gmock_fused_test-gmock-gtest-all.obj `if test -f 'fused-src/gmock-gtest-all.cc'; then $(CYGPATH_W) 'fused-src/gmock-gtest-all.cc'; else $(CYGPATH_W) '$(srcdir)/fused-src/gmock-gtest-all.cc'; fi`
 
-fused-src/gtest/test_fused_gtest_test-gtest_main.o: fused-src/gtest/gtest_main.cc
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_fused_gtest_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT fused-src/gtest/test_fused_gtest_test-gtest_main.o -MD -MP -MF fused-src/gtest/$(DEPDIR)/test_fused_gtest_test-gtest_main.Tpo -c -o fused-src/gtest/test_fused_gtest_test-gtest_main.o `test -f 'fused-src/gtest/gtest_main.cc' || echo '$(srcdir)/'`fused-src/gtest/gtest_main.cc
-	$(AM_V_at)$(am__mv) fused-src/gtest/$(DEPDIR)/test_fused_gtest_test-gtest_main.Tpo fused-src/gtest/$(DEPDIR)/test_fused_gtest_test-gtest_main.Po
-#	$(AM_V_CXX)source='fused-src/gtest/gtest_main.cc' object='fused-src/gtest/test_fused_gtest_test-gtest_main.o' libtool=no \
+fused-src/test_gmock_fused_test-gmock_main.o: fused-src/gmock_main.cc
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_gmock_fused_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT fused-src/test_gmock_fused_test-gmock_main.o -MD -MP -MF fused-src/$(DEPDIR)/test_gmock_fused_test-gmock_main.Tpo -c -o fused-src/test_gmock_fused_test-gmock_main.o `test -f 'fused-src/gmock_main.cc' || echo '$(srcdir)/'`fused-src/gmock_main.cc
+	$(AM_V_at)$(am__mv) fused-src/$(DEPDIR)/test_gmock_fused_test-gmock_main.Tpo fused-src/$(DEPDIR)/test_gmock_fused_test-gmock_main.Po
+#	$(AM_V_CXX)source='fused-src/gmock_main.cc' object='fused-src/test_gmock_fused_test-gmock_main.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_fused_gtest_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o fused-src/gtest/test_fused_gtest_test-gtest_main.o `test -f 'fused-src/gtest/gtest_main.cc' || echo '$(srcdir)/'`fused-src/gtest/gtest_main.cc
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_gmock_fused_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o fused-src/test_gmock_fused_test-gmock_main.o `test -f 'fused-src/gmock_main.cc' || echo '$(srcdir)/'`fused-src/gmock_main.cc
 
-fused-src/gtest/test_fused_gtest_test-gtest_main.obj: fused-src/gtest/gtest_main.cc
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_fused_gtest_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT fused-src/gtest/test_fused_gtest_test-gtest_main.obj -MD -MP -MF fused-src/gtest/$(DEPDIR)/test_fused_gtest_test-gtest_main.Tpo -c -o fused-src/gtest/test_fused_gtest_test-gtest_main.obj `if test -f 'fused-src/gtest/gtest_main.cc'; then $(CYGPATH_W) 'fused-src/gtest/gtest_main.cc'; else $(CYGPATH_W) '$(srcdir)/fused-src/gtest/gtest_main.cc'; fi`
-	$(AM_V_at)$(am__mv) fused-src/gtest/$(DEPDIR)/test_fused_gtest_test-gtest_main.Tpo fused-src/gtest/$(DEPDIR)/test_fused_gtest_test-gtest_main.Po
-#	$(AM_V_CXX)source='fused-src/gtest/gtest_main.cc' object='fused-src/gtest/test_fused_gtest_test-gtest_main.obj' libtool=no \
+fused-src/test_gmock_fused_test-gmock_main.obj: fused-src/gmock_main.cc
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_gmock_fused_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT fused-src/test_gmock_fused_test-gmock_main.obj -MD -MP -MF fused-src/$(DEPDIR)/test_gmock_fused_test-gmock_main.Tpo -c -o fused-src/test_gmock_fused_test-gmock_main.obj `if test -f 'fused-src/gmock_main.cc'; then $(CYGPATH_W) 'fused-src/gmock_main.cc'; else $(CYGPATH_W) '$(srcdir)/fused-src/gmock_main.cc'; fi`
+	$(AM_V_at)$(am__mv) fused-src/$(DEPDIR)/test_gmock_fused_test-gmock_main.Tpo fused-src/$(DEPDIR)/test_gmock_fused_test-gmock_main.Po
+#	$(AM_V_CXX)source='fused-src/gmock_main.cc' object='fused-src/test_gmock_fused_test-gmock_main.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_fused_gtest_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o fused-src/gtest/test_fused_gtest_test-gtest_main.obj `if test -f 'fused-src/gtest/gtest_main.cc'; then $(CYGPATH_W) 'fused-src/gtest/gtest_main.cc'; else $(CYGPATH_W) '$(srcdir)/fused-src/gtest/gtest_main.cc'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_gmock_fused_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o fused-src/test_gmock_fused_test-gmock_main.obj `if test -f 'fused-src/gmock_main.cc'; then $(CYGPATH_W) 'fused-src/gmock_main.cc'; else $(CYGPATH_W) '$(srcdir)/fused-src/gmock_main.cc'; fi`
 
-samples/test_fused_gtest_test-sample1.o: samples/sample1.cc
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_fused_gtest_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT samples/test_fused_gtest_test-sample1.o -MD -MP -MF samples/$(DEPDIR)/test_fused_gtest_test-sample1.Tpo -c -o samples/test_fused_gtest_test-sample1.o `test -f 'samples/sample1.cc' || echo '$(srcdir)/'`samples/sample1.cc
-	$(AM_V_at)$(am__mv) samples/$(DEPDIR)/test_fused_gtest_test-sample1.Tpo samples/$(DEPDIR)/test_fused_gtest_test-sample1.Po
-#	$(AM_V_CXX)source='samples/sample1.cc' object='samples/test_fused_gtest_test-sample1.o' libtool=no \
+test/test_gmock_fused_test-gmock_test.o: test/gmock_test.cc
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_gmock_fused_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_gmock_fused_test-gmock_test.o -MD -MP -MF test/$(DEPDIR)/test_gmock_fused_test-gmock_test.Tpo -c -o test/test_gmock_fused_test-gmock_test.o `test -f 'test/gmock_test.cc' || echo '$(srcdir)/'`test/gmock_test.cc
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_gmock_fused_test-gmock_test.Tpo test/$(DEPDIR)/test_gmock_fused_test-gmock_test.Po
+#	$(AM_V_CXX)source='test/gmock_test.cc' object='test/test_gmock_fused_test-gmock_test.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_fused_gtest_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o samples/test_fused_gtest_test-sample1.o `test -f 'samples/sample1.cc' || echo '$(srcdir)/'`samples/sample1.cc
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_gmock_fused_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_gmock_fused_test-gmock_test.o `test -f 'test/gmock_test.cc' || echo '$(srcdir)/'`test/gmock_test.cc
 
-samples/test_fused_gtest_test-sample1.obj: samples/sample1.cc
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_fused_gtest_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT samples/test_fused_gtest_test-sample1.obj -MD -MP -MF samples/$(DEPDIR)/test_fused_gtest_test-sample1.Tpo -c -o samples/test_fused_gtest_test-sample1.obj `if test -f 'samples/sample1.cc'; then $(CYGPATH_W) 'samples/sample1.cc'; else $(CYGPATH_W) '$(srcdir)/samples/sample1.cc'; fi`
-	$(AM_V_at)$(am__mv) samples/$(DEPDIR)/test_fused_gtest_test-sample1.Tpo samples/$(DEPDIR)/test_fused_gtest_test-sample1.Po
-#	$(AM_V_CXX)source='samples/sample1.cc' object='samples/test_fused_gtest_test-sample1.obj' libtool=no \
+test/test_gmock_fused_test-gmock_test.obj: test/gmock_test.cc
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_gmock_fused_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT test/test_gmock_fused_test-gmock_test.obj -MD -MP -MF test/$(DEPDIR)/test_gmock_fused_test-gmock_test.Tpo -c -o test/test_gmock_fused_test-gmock_test.obj `if test -f 'test/gmock_test.cc'; then $(CYGPATH_W) 'test/gmock_test.cc'; else $(CYGPATH_W) '$(srcdir)/test/gmock_test.cc'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_gmock_fused_test-gmock_test.Tpo test/$(DEPDIR)/test_gmock_fused_test-gmock_test.Po
+#	$(AM_V_CXX)source='test/gmock_test.cc' object='test/test_gmock_fused_test-gmock_test.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_fused_gtest_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o samples/test_fused_gtest_test-sample1.obj `if test -f 'samples/sample1.cc'; then $(CYGPATH_W) 'samples/sample1.cc'; else $(CYGPATH_W) '$(srcdir)/samples/sample1.cc'; fi`
-
-samples/test_fused_gtest_test-sample1_unittest.o: samples/sample1_unittest.cc
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_fused_gtest_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT samples/test_fused_gtest_test-sample1_unittest.o -MD -MP -MF samples/$(DEPDIR)/test_fused_gtest_test-sample1_unittest.Tpo -c -o samples/test_fused_gtest_test-sample1_unittest.o `test -f 'samples/sample1_unittest.cc' || echo '$(srcdir)/'`samples/sample1_unittest.cc
-	$(AM_V_at)$(am__mv) samples/$(DEPDIR)/test_fused_gtest_test-sample1_unittest.Tpo samples/$(DEPDIR)/test_fused_gtest_test-sample1_unittest.Po
-#	$(AM_V_CXX)source='samples/sample1_unittest.cc' object='samples/test_fused_gtest_test-sample1_unittest.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_fused_gtest_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o samples/test_fused_gtest_test-sample1_unittest.o `test -f 'samples/sample1_unittest.cc' || echo '$(srcdir)/'`samples/sample1_unittest.cc
-
-samples/test_fused_gtest_test-sample1_unittest.obj: samples/sample1_unittest.cc
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_fused_gtest_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT samples/test_fused_gtest_test-sample1_unittest.obj -MD -MP -MF samples/$(DEPDIR)/test_fused_gtest_test-sample1_unittest.Tpo -c -o samples/test_fused_gtest_test-sample1_unittest.obj `if test -f 'samples/sample1_unittest.cc'; then $(CYGPATH_W) 'samples/sample1_unittest.cc'; else $(CYGPATH_W) '$(srcdir)/samples/sample1_unittest.cc'; fi`
-	$(AM_V_at)$(am__mv) samples/$(DEPDIR)/test_fused_gtest_test-sample1_unittest.Tpo samples/$(DEPDIR)/test_fused_gtest_test-sample1_unittest.Po
-#	$(AM_V_CXX)source='samples/sample1_unittest.cc' object='samples/test_fused_gtest_test-sample1_unittest.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_fused_gtest_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o samples/test_fused_gtest_test-sample1_unittest.obj `if test -f 'samples/sample1_unittest.cc'; then $(CYGPATH_W) 'samples/sample1_unittest.cc'; else $(CYGPATH_W) '$(srcdir)/samples/sample1_unittest.cc'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_gmock_fused_test_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o test/test_gmock_fused_test-gmock_test.obj `if test -f 'test/gmock_test.cc'; then $(CYGPATH_W) 'test/gmock_test.cc'; else $(CYGPATH_W) '$(srcdir)/test/gmock_test.cc'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo
@@ -1057,33 +961,11 @@ mostlyclean-libtool:
 clean-libtool:
 	-rm -rf .libs _libs
 	-rm -rf lib/.libs lib/_libs
-	-rm -rf samples/.libs samples/_libs
 	-rm -rf src/.libs src/_libs
 	-rm -rf test/.libs test/_libs
 
 distclean-libtool:
 	-rm -f libtool config.lt
-install-m4dataDATA: $(m4data_DATA)
-	@$(NORMAL_INSTALL)
-	@list='$(m4data_DATA)'; test -n "$(m4datadir)" || list=; \
-	if test -n "$$list"; then \
-	  echo " $(MKDIR_P) '$(DESTDIR)$(m4datadir)'"; \
-	  $(MKDIR_P) "$(DESTDIR)$(m4datadir)" || exit 1; \
-	fi; \
-	for p in $$list; do \
-	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
-	  echo "$$d$$p"; \
-	done | $(am__base_list) | \
-	while read files; do \
-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(m4datadir)'"; \
-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(m4datadir)" || exit $$?; \
-	done
-
-uninstall-m4dataDATA:
-	@$(NORMAL_UNINSTALL)
-	@list='$(m4data_DATA)'; test -n "$(m4datadir)" || list=; \
-	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
-	dir='$(DESTDIR)$(m4datadir)'; $(am__uninstall_files_from_dir)
 install-pkgincludeHEADERS: $(pkginclude_HEADERS)
 	@$(NORMAL_INSTALL)
 	@list='$(pkginclude_HEADERS)'; test -n "$(pkgincludedir)" || list=; \
@@ -1127,14 +1009,62 @@ uninstall-pkginclude_internalHEADERS:
 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
 	dir='$(DESTDIR)$(pkginclude_internaldir)'; $(am__uninstall_files_from_dir)
 
+# This directory's subdirectories are mostly independent; you can cd
+# into them and run 'make' without going through this Makefile.
+# To change the values of 'make' variables: instead of editing Makefiles,
+# (1) if the variable is set in 'config.status', edit 'config.status'
+#     (which will cause the Makefiles to be regenerated when you run 'make');
+# (2) otherwise, pass the desired values on the 'make' command line.
+$(am__recursive_targets):
+	@fail= failcom='exit 1'; \
+	for f in x $$MAKEFLAGS; do \
+	  case $$f in \
+	    *=* | --[!k]*);; \
+	    *k*) failcom='fail=yes';; \
+	  esac; \
+	done; \
+	dot_seen=no; \
+	target=`echo $@ | sed s/-recursive//`; \
+	case "$@" in \
+	  distclean-* | maintainer-clean-*) list='$(DIST_SUBDIRS)' ;; \
+	  *) list='$(SUBDIRS)' ;; \
+	esac; \
+	for subdir in $$list; do \
+	  echo "Making $$target in $$subdir"; \
+	  if test "$$subdir" = "."; then \
+	    dot_seen=yes; \
+	    local_target="$$target-am"; \
+	  else \
+	    local_target="$$target"; \
+	  fi; \
+	  ($(am__cd) $$subdir && $(MAKE) $(AM_MAKEFLAGS) $$local_target) \
+	  || eval $$failcom; \
+	done; \
+	if test "$$dot_seen" = "no"; then \
+	  $(MAKE) $(AM_MAKEFLAGS) "$$target-am" || exit 1; \
+	fi; test -z "$$fail"
+
 ID: $(am__tagged_files)
 	$(am__define_uniq_tagged_files); mkid -fID $$unique
-tags: tags-am
+tags: tags-recursive
 TAGS: tags
 
 tags-am: $(TAGS_DEPENDENCIES) $(am__tagged_files)
 	set x; \
 	here=`pwd`; \
+	if ($(ETAGS) --etags-include --version) >/dev/null 2>&1; then \
+	  include_option=--etags-include; \
+	  empty_fix=.; \
+	else \
+	  include_option=--include; \
+	  empty_fix=; \
+	fi; \
+	list='$(SUBDIRS)'; for subdir in $$list; do \
+	  if test "$$subdir" = .; then :; else \
+	    test ! -f $$subdir/TAGS || \
+	      set "$$@" "$$include_option=$$here/$$subdir/TAGS"; \
+	  fi; \
+	done; \
 	$(am__define_uniq_tagged_files); \
 	shift; \
 	if test -z "$(ETAGS_ARGS)$$*$$unique"; then :; else \
@@ -1147,7 +1077,7 @@ tags-am: $(TAGS_DEPENDENCIES) $(am__tagged_files)
 	      $$unique; \
 	  fi; \
 	fi
-ctags: ctags-am
+ctags: ctags-recursive
 
 CTAGS: ctags
 ctags-am: $(TAGS_DEPENDENCIES) $(am__tagged_files)
@@ -1166,7 +1096,7 @@ cscope: cscope.files
 clean-cscope:
 	-rm -f cscope.files
 cscope.files: clean-cscope cscopelist
-cscopelist: cscopelist-am
+cscopelist: cscopelist-recursive
 
 cscopelist-am: $(am__tagged_files)
 	list='$(am__tagged_files)'; \
@@ -1327,30 +1257,23 @@ recheck: all $(check_PROGRAMS)
 	        am__force_recheck=am--force-recheck \
 	        TEST_LOGS="$$log_list"; \
 	exit $$?
-samples/sample1_unittest.log: samples/sample1_unittest$(EXEEXT)
-	@p='samples/sample1_unittest$(EXEEXT)'; \
-	b='samples/sample1_unittest'; \
+test/gmock-spec-builders_test.log: test/gmock-spec-builders_test$(EXEEXT)
+	@p='test/gmock-spec-builders_test$(EXEEXT)'; \
+	b='test/gmock-spec-builders_test'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
-samples/sample10_unittest.log: samples/sample10_unittest$(EXEEXT)
-	@p='samples/sample10_unittest$(EXEEXT)'; \
-	b='samples/sample10_unittest'; \
+test/gmock_link_test.log: test/gmock_link_test$(EXEEXT)
+	@p='test/gmock_link_test$(EXEEXT)'; \
+	b='test/gmock_link_test'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
-test/gtest_all_test.log: test/gtest_all_test$(EXEEXT)
-	@p='test/gtest_all_test$(EXEEXT)'; \
-	b='test/gtest_all_test'; \
-	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
-	--log-file $$b.log --trs-file $$b.trs \
-	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
-	"$$tst" $(AM_TESTS_FD_REDIRECT)
-test/fused_gtest_test.log: test/fused_gtest_test$(EXEEXT)
-	@p='test/fused_gtest_test$(EXEEXT)'; \
-	b='test/fused_gtest_test'; \
+test/gmock_fused_test.log: test/gmock_fused_test$(EXEEXT)
+	@p='test/gmock_fused_test$(EXEEXT)'; \
+	b='test/gmock_fused_test'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
@@ -1400,6 +1323,31 @@ distdir: $(DISTFILES)
 	    test -f "$(distdir)/$$file" \
 	    || cp -p $$d/$$file "$(distdir)/$$file" \
 	    || exit 1; \
+	  fi; \
+	done
+	@list='$(DIST_SUBDIRS)'; for subdir in $$list; do \
+	  if test "$$subdir" = .; then :; else \
+	    $(am__make_dryrun) \
+	      || test -d "$(distdir)/$$subdir" \
+	      || $(MKDIR_P) "$(distdir)/$$subdir" \
+	      || exit 1; \
+	    dir1=$$subdir; dir2="$(distdir)/$$subdir"; \
+	    $(am__relativize); \
+	    new_distdir=$$reldir; \
+	    dir1=$$subdir; dir2="$(top_distdir)"; \
+	    $(am__relativize); \
+	    new_top_distdir=$$reldir; \
+	    echo " (cd $$subdir && $(MAKE) $(AM_MAKEFLAGS) top_distdir="$$new_top_distdir" distdir="$$new_distdir" \\"; \
+	    echo "     am__remove_distdir=: am__skip_length_check=: am__skip_mode_fix=: distdir)"; \
+	    ($(am__cd) $$subdir && \
+	      $(MAKE) $(AM_MAKEFLAGS) \
+	        top_distdir="$$new_top_distdir" \
+	        distdir="$$new_distdir" \
+		am__remove_distdir=: \
+		am__skip_length_check=: \
+		am__skip_mode_fix=: \
+	        distdir) \
+	      || exit 1; \
 	  fi; \
 	done
 	-test -n "$(am__skip_mode_fix)" \
@@ -1527,21 +1475,22 @@ distcleancheck: distclean
 check-am: all-am
 	$(MAKE) $(AM_MAKEFLAGS) $(check_PROGRAMS)
 	$(MAKE) $(AM_MAKEFLAGS) check-TESTS
-check: check-am
-all-am: Makefile $(LTLIBRARIES) $(DATA) $(HEADERS)
-installdirs:
-	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(m4datadir)" "$(DESTDIR)$(pkgincludedir)" "$(DESTDIR)$(pkginclude_internaldir)"; do \
+check: check-recursive
+all-am: Makefile $(LTLIBRARIES) $(HEADERS)
+installdirs: installdirs-recursive
+installdirs-am:
+	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(pkgincludedir)" "$(DESTDIR)$(pkginclude_internaldir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
-install: install-am
-install-exec: install-exec-am
-install-data: install-data-am
-uninstall: uninstall-am
+install: install-recursive
+install-exec: install-exec-recursive
+install-data: install-data-recursive
+uninstall: uninstall-recursive
 
 install-am: all-am
 	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
 
-installcheck: installcheck-am
+installcheck: installcheck-recursive
 install-strip:
 	if test -z '$(STRIP)'; then \
 	  $(MAKE) $(AM_MAKEFLAGS) INSTALL_PROGRAM="$(INSTALL_STRIP_PROGRAM)" \
@@ -1563,153 +1512,158 @@ clean-generic:
 distclean-generic:
 	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)
 	-test . = "$(srcdir)" || test -z "$(CONFIG_CLEAN_VPATH_FILES)" || rm -f $(CONFIG_CLEAN_VPATH_FILES)
-	-rm -f fused-src/gtest/$(DEPDIR)/$(am__dirstamp)
-	-rm -f fused-src/gtest/$(am__dirstamp)
+	-rm -f fused-src/$(DEPDIR)/$(am__dirstamp)
+	-rm -f fused-src/$(am__dirstamp)
 	-rm -f lib/$(am__dirstamp)
-	-rm -f samples/$(DEPDIR)/$(am__dirstamp)
-	-rm -f samples/$(am__dirstamp)
 	-rm -f src/$(DEPDIR)/$(am__dirstamp)
 	-rm -f src/$(am__dirstamp)
 	-rm -f test/$(DEPDIR)/$(am__dirstamp)
 	-rm -f test/$(am__dirstamp)
+	-test -z "$(DISTCLEANFILES)" || rm -f $(DISTCLEANFILES)
 
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
 	@echo "it deletes files that may require special tools to rebuild."
 #maintainer-clean-local:
-clean: clean-am
+clean: clean-recursive
 
 clean-am: clean-checkPROGRAMS clean-generic clean-libLTLIBRARIES \
-	clean-libtool clean-noinstLTLIBRARIES mostlyclean-am
+	clean-libtool mostlyclean-am
 
-distclean: distclean-am
+distclean: distclean-recursive
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
-	-rm -rf fused-src/gtest/$(DEPDIR) samples/$(DEPDIR) src/$(DEPDIR) test/$(DEPDIR)
+	-rm -rf fused-src/$(DEPDIR) src/$(DEPDIR) test/$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-hdr distclean-libtool distclean-tags
 
-dvi: dvi-am
+dvi: dvi-recursive
 
 dvi-am:
 
-html: html-am
+html: html-recursive
 
 html-am:
 
-info: info-am
+info: info-recursive
 
 info-am:
 
-install-data-am: install-data-local install-m4dataDATA \
-	install-pkgincludeHEADERS install-pkginclude_internalHEADERS
+install-data-am: install-data-local install-pkgincludeHEADERS \
+	install-pkginclude_internalHEADERS
 
-install-dvi: install-dvi-am
+install-dvi: install-dvi-recursive
 
 install-dvi-am:
 
 install-exec-am: install-exec-local install-libLTLIBRARIES
 
-install-html: install-html-am
+install-html: install-html-recursive
 
 install-html-am:
 
-install-info: install-info-am
+install-info: install-info-recursive
 
 install-info-am:
 
 install-man:
 
-install-pdf: install-pdf-am
+install-pdf: install-pdf-recursive
 
 install-pdf-am:
 
-install-ps: install-ps-am
+install-ps: install-ps-recursive
 
 install-ps-am:
 
 installcheck-am:
 
-maintainer-clean: maintainer-clean-am
+maintainer-clean: maintainer-clean-recursive
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 	-rm -rf $(top_srcdir)/autom4te.cache
-	-rm -rf fused-src/gtest/$(DEPDIR) samples/$(DEPDIR) src/$(DEPDIR) test/$(DEPDIR)
+	-rm -rf fused-src/$(DEPDIR) src/$(DEPDIR) test/$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic \
 	maintainer-clean-local
 
-mostlyclean: mostlyclean-am
+mostlyclean: mostlyclean-recursive
 
 mostlyclean-am: mostlyclean-compile mostlyclean-generic \
 	mostlyclean-libtool
 
-pdf: pdf-am
+pdf: pdf-recursive
 
 pdf-am:
 
-ps: ps-am
+ps: ps-recursive
 
 ps-am:
 
-uninstall-am: uninstall-libLTLIBRARIES uninstall-m4dataDATA \
-	uninstall-pkgincludeHEADERS \
+uninstall-am: uninstall-libLTLIBRARIES uninstall-pkgincludeHEADERS \
 	uninstall-pkginclude_internalHEADERS
 
-.MAKE: check-am install-am install-strip
+.MAKE: $(am__recursive_targets) check-am install-am install-strip
 
-.PHONY: CTAGS GTAGS TAGS all all-am am--refresh check check-TESTS \
-	check-am clean clean-checkPROGRAMS clean-cscope clean-generic \
-	clean-libLTLIBRARIES clean-libtool clean-noinstLTLIBRARIES \
-	cscope cscopelist-am ctags ctags-am dist dist-all dist-bzip2 \
-	dist-gzip dist-lzip dist-shar dist-tarZ dist-xz dist-zip \
-	distcheck distclean distclean-compile distclean-generic \
-	distclean-hdr distclean-libtool distclean-tags distcleancheck \
-	distdir distuninstallcheck dvi dvi-am html html-am info \
-	info-am install install-am install-data install-data-am \
+.PHONY: $(am__recursive_targets) CTAGS GTAGS TAGS all all-am \
+	am--refresh check check-TESTS check-am clean \
+	clean-checkPROGRAMS clean-cscope clean-generic \
+	clean-libLTLIBRARIES clean-libtool cscope cscopelist-am ctags \
+	ctags-am dist dist-all dist-bzip2 dist-gzip dist-lzip \
+	dist-shar dist-tarZ dist-xz dist-zip distcheck distclean \
+	distclean-compile distclean-generic distclean-hdr \
+	distclean-libtool distclean-tags distcleancheck distdir \
+	distuninstallcheck dvi dvi-am html html-am info info-am \
+	install install-am install-data install-data-am \
 	install-data-local install-dvi install-dvi-am install-exec \
 	install-exec-am install-exec-local install-html \
 	install-html-am install-info install-info-am \
-	install-libLTLIBRARIES install-m4dataDATA install-man \
-	install-pdf install-pdf-am install-pkgincludeHEADERS \
-	install-pkginclude_internalHEADERS install-ps install-ps-am \
-	install-strip installcheck installcheck-am installdirs \
-	maintainer-clean maintainer-clean-generic \
-	maintainer-clean-local mostlyclean mostlyclean-compile \
-	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
-	recheck tags tags-am uninstall uninstall-am \
-	uninstall-libLTLIBRARIES uninstall-m4dataDATA \
+	install-libLTLIBRARIES install-man install-pdf install-pdf-am \
+	install-pkgincludeHEADERS install-pkginclude_internalHEADERS \
+	install-ps install-ps-am install-strip installcheck \
+	installcheck-am installdirs installdirs-am maintainer-clean \
+	maintainer-clean-generic maintainer-clean-local mostlyclean \
+	mostlyclean-compile mostlyclean-generic mostlyclean-libtool \
+	pdf pdf-am ps ps-am recheck tags tags-am uninstall \
+	uninstall-am uninstall-libLTLIBRARIES \
 	uninstall-pkgincludeHEADERS \
 	uninstall-pkginclude_internalHEADERS
 
 
-# Build rules for putting fused Google Test files into the distribution
-# package. The user can also create those files by manually running
-# scripts/fuse_gtest_files.py.
-$(test_fused_gtest_test_SOURCES): fused-gtest
+  # Tests that fused gmock files compile and work.
 
-fused-gtest: $(pkginclude_HEADERS) $(pkginclude_internal_HEADERS) \
-             $(GTEST_SRC) src/gtest-all.cc src/gtest_main.cc \
-             scripts/fuse_gtest_files.py
+# gmock_test.cc does not really depend on files generated by the
+# fused-gmock-internal rule.  However, gmock_test.o does, and it is
+# important to include test/gmock_test.cc as part of this rule in order to
+# prevent compiling gmock_test.o until all dependent files have been
+# generated.
+$(test_gmock_fused_test_SOURCES): fused-gmock-internal
+
+# TODO(vladl@google.com): Find a way to add Google Tests's sources here.
+fused-gmock-internal: $(pkginclude_HEADERS) $(pkginclude_internal_HEADERS) \
+                      $(lib_libgmock_la_SOURCES) $(GMOCK_SOURCE_INGLUDES) \
+                      $(lib_libgmock_main_la_SOURCES) \
+                      scripts/fuse_gmock_files.py
 	mkdir -p "$(srcdir)/fused-src"
 	chmod -R u+w "$(srcdir)/fused-src"
-	rm -f "$(srcdir)/fused-src/gtest/gtest-all.cc"
 	rm -f "$(srcdir)/fused-src/gtest/gtest.h"
-	"$(srcdir)/scripts/fuse_gtest_files.py" "$(srcdir)/fused-src"
-	cp -f "$(srcdir)/src/gtest_main.cc" "$(srcdir)/fused-src/gtest/"
+	rm -f "$(srcdir)/fused-src/gmock/gmock.h"
+	rm -f "$(srcdir)/fused-src/gmock-gtest-all.cc"
+	"$(srcdir)/scripts/fuse_gmock_files.py" "$(srcdir)/fused-src"
+	cp -f "$(srcdir)/src/gmock_main.cc" "$(srcdir)/fused-src"
 
 maintainer-clean-local:
 	rm -rf "$(srcdir)/fused-src"
 
 # Disables 'make install' as installing a compiled version of Google
-# Test can lead to undefined behavior due to violation of the
+# Mock can lead to undefined behavior due to violation of the
 # One-Definition Rule.
 
 install-exec-local:
-	echo "'make install' is dangerous and not supported. Instead, see README for how to integrate Google Test into your build system."
+	echo "'make install' is dangerous and not supported. Instead, see README for how to integrate Google Mock into your build system."
 	false
 
 install-data-local:
-	echo "'make install' is dangerous and not supported. Instead, see README for how to integrate Google Test into your build system."
+	echo "'make install' is dangerous and not supported. Instead, see README for how to integrate Google Mock into your build system."
 	false
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
