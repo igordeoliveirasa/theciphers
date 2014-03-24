@@ -2,6 +2,6 @@ theciphers
 ==========
 
 ### Status
-[![Build Status](https://api.travis-ci.org/igordeoliveirasa/theciphers.svg)](https://api.travis-ci.org/igordeoliveirasa/theciphers.svg)
+[![Build Status](https://api.travis-ci.org/igordeoliveirasa/theciphers.svg)](https://travis-ci.org/igordeoliveirasa/theciphers)
 
 A Cryptography Framework 
