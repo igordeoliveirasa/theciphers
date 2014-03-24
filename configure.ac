@@ -12,6 +12,8 @@ AC_PROG_CC
 AC_PROG_RANLIB
 AM_INIT_AUTOMAKE
 AC_CONFIG_MACRO_DIR([m4])
+AM_MAINTAINER_MODE([disable])
+
 # Checks for libraries.
 
 # Checks for header files.
