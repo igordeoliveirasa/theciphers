@@ -30,8 +30,8 @@ Kernel configured for up to 8 processors.
 Processor type: i486 (Intel 80486)
 Processors active: 0 1 2 3 4 5 6 7
 Primary memory available: 8.00 gigabytes
-Default processor set: 204 tasks, 904 threads, 8 processors
-Load average: 2.51, Mach factor: 5.48
+Default processor set: 207 tasks, 884 threads, 8 processors
+Load average: 2.99, Mach factor: 5.00
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown

@@ -1,7 +1,7 @@
 DerivedData
 .gcov
-deps/gmock-1.7.0/config.log
-deps/gmock-1.7.0/gtest/config.log
+
+.log
 
 Makefile
 config.h
