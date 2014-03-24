@@ -4,6 +4,7 @@ branches:
   only: master
 
 before_install:
+- autoconf --version
 - autoreconf --install --force
 
 notifications:
