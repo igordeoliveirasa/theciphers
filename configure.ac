@@ -9,7 +9,7 @@ AC_PROG_RANLIB
 AM_INIT_AUTOMAKE
 AC_CONFIG_MACRO_DIR([m4])
 AM_MAINTAINER_MODE([disable])
-CXXFLAGS="$CXXFLAGS -std=c++11 -Wall -Wextra"
+CXXFLAGS="$CXXFLAGS -std=c++0x -Wall -Wextra"
 
 # Checks for libraries.
 
