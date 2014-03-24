@@ -2,6 +2,10 @@ language: cpp
 compiler: clang
 branches:
   only: master
+
+before_install:
+- sudo apt-get install automake autoconf
+
 notifications:
   recipients: igordeoliveirasa@gmail.com
   email:
