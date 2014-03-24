@@ -9,7 +9,7 @@
 #ifndef theciphers_ICipher_h
 #define theciphers_ICipher_h
 
-#include "commons.h"
+#include "../commons/commons.h"
 
 class ICipher {
 public:

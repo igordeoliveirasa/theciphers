@@ -3,7 +3,7 @@
 
 AC_PREREQ([2.69])
 AC_INIT([theciphers], [0.0.1], [igordeoliveirasa@gmail.com])
-AC_CONFIG_SRCDIR([src/commons.h])
+AC_CONFIG_SRCDIR([src/commons/commons.h])
 AC_CONFIG_HEADERS([config.h])
 
 # Checks for programs.

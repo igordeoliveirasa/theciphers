@@ -1,6 +1,6 @@
-aes_cipher.o: implementations/aes_cipher.cc implementations/../commons.h \
-  /usr/include/stdio.h /usr/include/sys/cdefs.h \
-  /usr/include/sys/_symbol_aliasing.h \
+aes_cipher.o: implementations/aes_cipher.cc \
+  implementations/../commons/commons.h /usr/include/stdio.h \
+  /usr/include/sys/cdefs.h /usr/include/sys/_symbol_aliasing.h \
   /usr/include/sys/_posix_availability.h /usr/include/Availability.h \
   /usr/include/AvailabilityInternal.h /usr/include/_types.h \
   /usr/include/sys/_types.h /usr/include/machine/_types.h \
@@ -155,7 +155,7 @@ aes_cipher.o: implementations/aes_cipher.cc implementations/../commons.h \
   /usr/include/openssl/conf.h implementations/aes_cipher.h \
   implementations/../interfaces/icipher.h
 
-implementations/../commons.h:
+implementations/../commons/commons.h:
 
 /usr/include/stdio.h:
 

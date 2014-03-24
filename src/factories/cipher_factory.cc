@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Igor de Oliveira Sa. All rights reserved.
 //
 
-#include "../commons.h"
+#include "../commons/commons.h"
 #include "cipher_factory.h"
 #include "../interfaces/icipher.h"
 #include "../implementations/aes_cipher.h"
