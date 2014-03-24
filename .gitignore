@@ -1,2 +1,14 @@
 DerivedData
 .gcov
+deps/gmock-1.7.0/config.log
+deps/gmock-1.7.0/gtest/config.log
+
+Makefile
+config.h
+config.log
+config.status
+src/Makefile
+src/aes_cipher.o
+src/cipher_factory.o
+src/libtheciphers.a
+stamp-h1
