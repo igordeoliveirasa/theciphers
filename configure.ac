@@ -16,7 +16,6 @@ AM_MAINTAINER_MODE([disable])
 AC_CHECK_HEADERS([float.h stddef.h stdlib.h string.h strings.h unistd.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
-AC_CHECK_HEADER_STDBOOL
 AC_C_INLINE
 AC_TYPE_SIZE_T
 AC_CHECK_TYPES([ptrdiff_t])
