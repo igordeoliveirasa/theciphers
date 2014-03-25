@@ -9,6 +9,7 @@
 #ifndef theciphers_the_ciphers_h
 #define theciphers_the_ciphers_h
 
+#include <memory>
 #include <stdio.h>
 #include <iostream>
 #include <string.h>
