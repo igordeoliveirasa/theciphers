@@ -5,8 +5,11 @@ compiler: gcc
 branches:
   only: master
 
-before_install:
+before_script:
 - autoreconf --install --force
+
+script:
+- make check
 
 notifications:
   recipients: igordeoliveirasa@gmail.com
