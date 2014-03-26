@@ -9,6 +9,7 @@ before_script:
 - autoreconf --install --force
 
 script:
+- ./configure
 - make check
 
 notifications:
