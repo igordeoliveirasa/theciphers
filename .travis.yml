@@ -10,7 +10,6 @@ before_script:
 
 script:
 - ./configure
-- make check
 
 notifications:
   recipients: igordeoliveirasa@gmail.com
