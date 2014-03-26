@@ -1,6 +1,13 @@
-unit_test-main.o: test/main.cc \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/iostream \
+unit_test-gtest-all.o: \
+  /Users/igor/Development/theciphers/src/../deps/gmock-1.7.0/gtest/fused-src/gtest/gtest-all.cc \
+  /Users/igor/Development/theciphers/src/../deps/gmock-1.7.0/gtest/include/gtest/gtest.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/limits \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__config \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/type_traits \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/cstddef \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.1/include/stddef.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__undef_min_max \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ostream \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ios \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/iosfwd \
   /usr/include/wchar.h /usr/include/_types.h /usr/include/sys/_types.h \
@@ -31,9 +38,6 @@ unit_test-main.o: test/main.cc \
   /usr/include/wctype.h /usr/include/_types/_wctrans_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/algorithm \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/initializer_list \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/cstddef \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.1/include/stddef.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/type_traits \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/utility \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__tuple \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/memory \
@@ -49,8 +53,6 @@ unit_test-main.o: test/main.cc \
   /usr/include/sys/_types/_uintptr_t.h /usr/include/_types/_intmax_t.h \
   /usr/include/_types/_uintmax_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/new \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/limits \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__undef_min_max \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/iterator \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__functional_base \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/tuple \
@@ -89,8 +91,6 @@ unit_test-main.o: test/main.cc \
   /usr/include/xlocale/_string.h /usr/include/xlocale/_time.h \
   /usr/include/xlocale/_wchar.h /usr/include/xlocale/_wctype.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/streambuf \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ostream \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/locale \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/cstdlib \
   /usr/include/stdlib.h /usr/include/sys/wait.h \
@@ -127,7 +127,6 @@ unit_test-main.o: test/main.cc \
   /usr/include/sys/_types/_fsfilcnt_t.h /usr/include/_types/_nl_item.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/bitset \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__bit_reference \
-  /Users/igor/Development/theciphers/src/../deps/gmock-1.7.0/gtest/include/gtest/gtest.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/vector \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__split_buffer \
   /Users/igor/Development/theciphers/src/../deps/gmock-1.7.0/gtest/include/gtest/internal/gtest-internal.h \
@@ -135,6 +134,8 @@ unit_test-main.o: test/main.cc \
   /usr/include/sys/stat.h /usr/include/sys/_types/_s_ifmt.h \
   /usr/include/sys/_types/_filesec_t.h /usr/include/AvailabilityMacros.h \
   /usr/include/TargetConditionals.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/iostream \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/sstream \
   /usr/include/unistd.h /usr/include/sys/unistd.h \
   /usr/include/sys/_types/_posix_vdisable.h \
@@ -162,11 +163,69 @@ unit_test-main.o: test/main.cc \
   /Users/igor/Development/theciphers/src/../deps/gmock-1.7.0/gtest/include/gtest/gtest_prod.h \
   /Users/igor/Development/theciphers/src/../deps/gmock-1.7.0/gtest/include/gtest/gtest-test-part.h \
   /Users/igor/Development/theciphers/src/../deps/gmock-1.7.0/gtest/include/gtest/gtest-typed-test.h \
-  /Users/igor/Development/theciphers/src/../deps/gmock-1.7.0/gtest/include/gtest/gtest_pred_impl.h
+  /Users/igor/Development/theciphers/src/../deps/gmock-1.7.0/gtest/include/gtest/gtest_pred_impl.h \
+  /usr/include/math.h /usr/include/sys/time.h /usr/include/crt_externs.h \
+  /usr/include/fcntl.h /usr/include/sys/fcntl.h \
+  /usr/include/sys/_types/_o_sync.h /usr/include/sys/_types/_o_dsync.h \
+  /usr/include/sys/mman.h /usr/include/mach/mach_init.h \
+  /usr/include/mach/mach_types.h /usr/include/mach/host_info.h \
+  /usr/include/mach/message.h /usr/include/mach/port.h \
+  /usr/include/mach/boolean.h /usr/include/mach/machine/boolean.h \
+  /usr/include/mach/i386/boolean.h /usr/include/mach/machine/vm_types.h \
+  /usr/include/mach/i386/vm_types.h /usr/include/mach/i386/vm_param.h \
+  /usr/include/mach/kern_return.h \
+  /usr/include/mach/machine/kern_return.h \
+  /usr/include/mach/i386/kern_return.h /usr/include/mach/vm_statistics.h \
+  /usr/include/mach/machine.h /usr/include/mach/time_value.h \
+  /usr/include/mach/host_notify.h /usr/include/mach/host_special_ports.h \
+  /usr/include/mach/memory_object_types.h /usr/include/mach/vm_prot.h \
+  /usr/include/mach/vm_sync.h /usr/include/mach/vm_types.h \
+  /usr/include/mach/exception_types.h \
+  /usr/include/mach/machine/exception.h \
+  /usr/include/mach/i386/exception.h /usr/include/mach/thread_status.h \
+  /usr/include/mach/machine/thread_status.h \
+  /usr/include/mach/i386/thread_status.h /usr/include/mach/i386/fp_reg.h \
+  /usr/include/mach/i386/thread_state.h /usr/include/i386/eflags.h \
+  /usr/include/mach/machine/thread_state.h \
+  /usr/include/mach/processor_info.h \
+  /usr/include/mach/machine/processor_info.h \
+  /usr/include/mach/i386/processor_info.h /usr/include/mach/task_info.h \
+  /usr/include/mach/policy.h /usr/include/mach/task_policy.h \
+  /usr/include/mach/task_special_ports.h /usr/include/mach/thread_info.h \
+  /usr/include/mach/thread_policy.h \
+  /usr/include/mach/thread_special_ports.h \
+  /usr/include/mach/clock_types.h /usr/include/mach/vm_attributes.h \
+  /usr/include/mach/vm_inherit.h /usr/include/mach/vm_purgable.h \
+  /usr/include/mach/vm_behavior.h /usr/include/mach/vm_region.h \
+  /usr/include/mach/machine/vm_param.h /usr/include/mach/kmod.h \
+  /usr/include/mach/std_types.h /usr/include/mach/mach_traps.h \
+  /usr/include/mach/task.h /usr/include/mach/ndr.h \
+  /usr/include/libkern/OSByteOrder.h \
+  /usr/include/libkern/i386/OSByteOrder.h \
+  /usr/include/sys/_types/_os_inline.h /usr/include/mach/notify.h \
+  /usr/include/mach/mig_errors.h /usr/include/mach/mig.h \
+  /usr/include/mach_debug/mach_debug_types.h \
+  /usr/include/mach_debug/ipc_info.h /usr/include/mach_debug/vm_info.h \
+  /usr/include/mach_debug/zone_info.h \
+  /usr/include/mach_debug/page_info.h \
+  /usr/include/mach_debug/hash_info.h \
+  /usr/include/mach_debug/lockgroup_info.h /usr/include/mach/vm_map.h
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/iostream:
+/Users/igor/Development/theciphers/src/../deps/gmock-1.7.0/gtest/include/gtest/gtest.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/limits:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__config:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/type_traits:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/cstddef:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.1/include/stddef.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__undef_min_max:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ostream:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ios:
 
@@ -262,12 +321,6 @@ unit_test-main.o: test/main.cc \
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/initializer_list:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/cstddef:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.1/include/stddef.h:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/type_traits:
-
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/utility:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__tuple:
@@ -309,10 +362,6 @@ unit_test-main.o: test/main.cc \
 /usr/include/_types/_uintmax_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/new:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/limits:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__undef_min_max:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/iterator:
 
@@ -411,10 +460,6 @@ unit_test-main.o: test/main.cc \
 /usr/include/xlocale/_wctype.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/streambuf:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ostream:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/locale:
 
@@ -530,8 +575,6 @@ unit_test-main.o: test/main.cc \
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__bit_reference:
 
-/Users/igor/Development/theciphers/src/../deps/gmock-1.7.0/gtest/include/gtest/gtest.h:
-
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/vector:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__split_buffer:
@@ -549,6 +592,10 @@ unit_test-main.o: test/main.cc \
 /usr/include/AvailabilityMacros.h:
 
 /usr/include/TargetConditionals.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/iostream:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/sstream:
 
@@ -613,3 +660,157 @@ unit_test-main.o: test/main.cc \
 /Users/igor/Development/theciphers/src/../deps/gmock-1.7.0/gtest/include/gtest/gtest-typed-test.h:
 
 /Users/igor/Development/theciphers/src/../deps/gmock-1.7.0/gtest/include/gtest/gtest_pred_impl.h:
+
+/usr/include/math.h:
+
+/usr/include/sys/time.h:
+
+/usr/include/crt_externs.h:
+
+/usr/include/fcntl.h:
+
+/usr/include/sys/fcntl.h:
+
+/usr/include/sys/_types/_o_sync.h:
+
+/usr/include/sys/_types/_o_dsync.h:
+
+/usr/include/sys/mman.h:
+
+/usr/include/mach/mach_init.h:
+
+/usr/include/mach/mach_types.h:
+
+/usr/include/mach/host_info.h:
+
+/usr/include/mach/message.h:
+
+/usr/include/mach/port.h:
+
+/usr/include/mach/boolean.h:
+
+/usr/include/mach/machine/boolean.h:
+
+/usr/include/mach/i386/boolean.h:
+
+/usr/include/mach/machine/vm_types.h:
+
+/usr/include/mach/i386/vm_types.h:
+
+/usr/include/mach/i386/vm_param.h:
+
+/usr/include/mach/kern_return.h:
+
+/usr/include/mach/machine/kern_return.h:
+
+/usr/include/mach/i386/kern_return.h:
+
+/usr/include/mach/vm_statistics.h:
+
+/usr/include/mach/machine.h:
+
+/usr/include/mach/time_value.h:
+
+/usr/include/mach/host_notify.h:
+
+/usr/include/mach/host_special_ports.h:
+
+/usr/include/mach/memory_object_types.h:
+
+/usr/include/mach/vm_prot.h:
+
+/usr/include/mach/vm_sync.h:
+
+/usr/include/mach/vm_types.h:
+
+/usr/include/mach/exception_types.h:
+
+/usr/include/mach/machine/exception.h:
+
+/usr/include/mach/i386/exception.h:
+
+/usr/include/mach/thread_status.h:
+
+/usr/include/mach/machine/thread_status.h:
+
+/usr/include/mach/i386/thread_status.h:
+
+/usr/include/mach/i386/fp_reg.h:
+
+/usr/include/mach/i386/thread_state.h:
+
+/usr/include/i386/eflags.h:
+
+/usr/include/mach/machine/thread_state.h:
+
+/usr/include/mach/processor_info.h:
+
+/usr/include/mach/machine/processor_info.h:
+
+/usr/include/mach/i386/processor_info.h:
+
+/usr/include/mach/task_info.h:
+
+/usr/include/mach/policy.h:
+
+/usr/include/mach/task_policy.h:
+
+/usr/include/mach/task_special_ports.h:
+
+/usr/include/mach/thread_info.h:
+
+/usr/include/mach/thread_policy.h:
+
+/usr/include/mach/thread_special_ports.h:
+
+/usr/include/mach/clock_types.h:
+
+/usr/include/mach/vm_attributes.h:
+
+/usr/include/mach/vm_inherit.h:
+
+/usr/include/mach/vm_purgable.h:
+
+/usr/include/mach/vm_behavior.h:
+
+/usr/include/mach/vm_region.h:
+
+/usr/include/mach/machine/vm_param.h:
+
+/usr/include/mach/kmod.h:
+
+/usr/include/mach/std_types.h:
+
+/usr/include/mach/mach_traps.h:
+
+/usr/include/mach/task.h:
+
+/usr/include/mach/ndr.h:
+
+/usr/include/libkern/OSByteOrder.h:
+
+/usr/include/libkern/i386/OSByteOrder.h:
+
+/usr/include/sys/_types/_os_inline.h:
+
+/usr/include/mach/notify.h:
+
+/usr/include/mach/mig_errors.h:
+
+/usr/include/mach/mig.h:
+
+/usr/include/mach_debug/mach_debug_types.h:
+
+/usr/include/mach_debug/ipc_info.h:
+
+/usr/include/mach_debug/vm_info.h:
+
+/usr/include/mach_debug/zone_info.h:
+
+/usr/include/mach_debug/page_info.h:
+
+/usr/include/mach_debug/hash_info.h:
+
+/usr/include/mach_debug/lockgroup_info.h:
+
+/usr/include/mach/vm_map.h:
