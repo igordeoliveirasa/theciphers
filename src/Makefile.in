@@ -48,6 +48,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
+check_PROGRAMS = unit_test$(EXEEXT)
 subdir = src
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/depcomp
@@ -99,6 +100,12 @@ libtheciphers_a_LIBADD =
 am_libtheciphers_a_OBJECTS = aes_cipher.$(OBJEXT) \
 	cipher_factory.$(OBJEXT)
 libtheciphers_a_OBJECTS = $(am_libtheciphers_a_OBJECTS)
+am_unit_test_OBJECTS = unit_test-main.$(OBJEXT) \
+	unit_test-aes_cipher.$(OBJEXT)
+unit_test_OBJECTS = $(am_unit_test_OBJECTS)
+unit_test_LDADD = $(LDADD)
+unit_test_LINK = $(CXXLD) $(unit_test_CXXFLAGS) $(CXXFLAGS) \
+	$(AM_LDFLAGS) $(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -132,8 +139,8 @@ AM_V_CXXLD = $(am__v_CXXLD_@AM_V@)
 am__v_CXXLD_ = $(am__v_CXXLD_@AM_DEFAULT_V@)
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
-SOURCES = $(libtheciphers_a_SOURCES)
-DIST_SOURCES = $(libtheciphers_a_SOURCES)
+SOURCES = $(libtheciphers_a_SOURCES) $(unit_test_SOURCES)
+DIST_SOURCES = $(libtheciphers_a_SOURCES) $(unit_test_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -255,6 +262,8 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 lib_LIBRARIES = libtheciphers.a
 libtheciphers_a_SOURCES = implementations/aes_cipher.cc factories/cipher_factory.cc
+unit_test_SOURCES = test/main.cc implementations/aes_cipher.cc
+unit_test_CXXFLAGS = .
 all: all-am
 
 .SUFFIXES:
@@ -325,6 +334,12 @@ libtheciphers.a: $(libtheciphers_a_OBJECTS) $(libtheciphers_a_DEPENDENCIES) $(EX
 	$(AM_V_AR)$(libtheciphers_a_AR) libtheciphers.a $(libtheciphers_a_OBJECTS) $(libtheciphers_a_LIBADD)
 	$(AM_V_at)$(RANLIB) libtheciphers.a
 
+clean-checkPROGRAMS:
+	-test -z "$(check_PROGRAMS)" || rm -f $(check_PROGRAMS)
+unit_test$(EXEEXT): $(unit_test_OBJECTS) $(unit_test_DEPENDENCIES) $(EXTRA_unit_test_DEPENDENCIES) 
+	@rm -f unit_test$(EXEEXT)
+	$(AM_V_CXXLD)$(unit_test_LINK) $(unit_test_OBJECTS) $(unit_test_LDADD) $(LIBS)
+
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
 
@@ -333,6 +348,8 @@ distclean-compile:
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/aes_cipher.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cipher_factory.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/unit_test-aes_cipher.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/unit_test-main.Po@am__quote@
 
 .cc.o:
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -375,6 +392,34 @@ cipher_factory.obj: factories/cipher_factory.cc
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='factories/cipher_factory.cc' object='cipher_factory.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o cipher_factory.obj `if test -f 'factories/cipher_factory.cc'; then $(CYGPATH_W) 'factories/cipher_factory.cc'; else $(CYGPATH_W) '$(srcdir)/factories/cipher_factory.cc'; fi`
+
+unit_test-main.o: test/main.cc
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(unit_test_CXXFLAGS) $(CXXFLAGS) -MT unit_test-main.o -MD -MP -MF $(DEPDIR)/unit_test-main.Tpo -c -o unit_test-main.o `test -f 'test/main.cc' || echo '$(srcdir)/'`test/main.cc
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/unit_test-main.Tpo $(DEPDIR)/unit_test-main.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='test/main.cc' object='unit_test-main.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(unit_test_CXXFLAGS) $(CXXFLAGS) -c -o unit_test-main.o `test -f 'test/main.cc' || echo '$(srcdir)/'`test/main.cc
+
+unit_test-main.obj: test/main.cc
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(unit_test_CXXFLAGS) $(CXXFLAGS) -MT unit_test-main.obj -MD -MP -MF $(DEPDIR)/unit_test-main.Tpo -c -o unit_test-main.obj `if test -f 'test/main.cc'; then $(CYGPATH_W) 'test/main.cc'; else $(CYGPATH_W) '$(srcdir)/test/main.cc'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/unit_test-main.Tpo $(DEPDIR)/unit_test-main.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='test/main.cc' object='unit_test-main.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(unit_test_CXXFLAGS) $(CXXFLAGS) -c -o unit_test-main.obj `if test -f 'test/main.cc'; then $(CYGPATH_W) 'test/main.cc'; else $(CYGPATH_W) '$(srcdir)/test/main.cc'; fi`
+
+unit_test-aes_cipher.o: implementations/aes_cipher.cc
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(unit_test_CXXFLAGS) $(CXXFLAGS) -MT unit_test-aes_cipher.o -MD -MP -MF $(DEPDIR)/unit_test-aes_cipher.Tpo -c -o unit_test-aes_cipher.o `test -f 'implementations/aes_cipher.cc' || echo '$(srcdir)/'`implementations/aes_cipher.cc
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/unit_test-aes_cipher.Tpo $(DEPDIR)/unit_test-aes_cipher.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='implementations/aes_cipher.cc' object='unit_test-aes_cipher.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(unit_test_CXXFLAGS) $(CXXFLAGS) -c -o unit_test-aes_cipher.o `test -f 'implementations/aes_cipher.cc' || echo '$(srcdir)/'`implementations/aes_cipher.cc
+
+unit_test-aes_cipher.obj: implementations/aes_cipher.cc
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(unit_test_CXXFLAGS) $(CXXFLAGS) -MT unit_test-aes_cipher.obj -MD -MP -MF $(DEPDIR)/unit_test-aes_cipher.Tpo -c -o unit_test-aes_cipher.obj `if test -f 'implementations/aes_cipher.cc'; then $(CYGPATH_W) 'implementations/aes_cipher.cc'; else $(CYGPATH_W) '$(srcdir)/implementations/aes_cipher.cc'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/unit_test-aes_cipher.Tpo $(DEPDIR)/unit_test-aes_cipher.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='implementations/aes_cipher.cc' object='unit_test-aes_cipher.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(unit_test_CXXFLAGS) $(CXXFLAGS) -c -o unit_test-aes_cipher.obj `if test -f 'implementations/aes_cipher.cc'; then $(CYGPATH_W) 'implementations/aes_cipher.cc'; else $(CYGPATH_W) '$(srcdir)/implementations/aes_cipher.cc'; fi`
 
 ID: $(am__tagged_files)
 	$(am__define_uniq_tagged_files); mkid -fID $$unique
@@ -459,6 +504,7 @@ distdir: $(DISTFILES)
 	  fi; \
 	done
 check-am: all-am
+	$(MAKE) $(AM_MAKEFLAGS) $(check_PROGRAMS)
 check: check-am
 all-am: Makefile $(LIBRARIES)
 installdirs:
@@ -497,7 +543,8 @@ maintainer-clean-generic:
 	@echo "it deletes files that may require special tools to rebuild."
 clean: clean-am
 
-clean-am: clean-generic clean-libLIBRARIES mostlyclean-am
+clean-am: clean-checkPROGRAMS clean-generic clean-libLIBRARIES \
+	mostlyclean-am
 
 distclean: distclean-am
 	-rm -rf ./$(DEPDIR)
@@ -564,20 +611,21 @@ ps-am:
 
 uninstall-am: uninstall-libLIBRARIES
 
-.MAKE: install-am install-strip
+.MAKE: check-am install-am install-strip
 
-.PHONY: CTAGS GTAGS TAGS all all-am check check-am clean clean-generic \
-	clean-libLIBRARIES cscopelist-am ctags ctags-am distclean \
-	distclean-compile distclean-generic distclean-tags distdir dvi \
-	dvi-am html html-am info info-am install install-am \
-	install-data install-data-am install-dvi install-dvi-am \
-	install-exec install-exec-am install-html install-html-am \
-	install-info install-info-am install-libLIBRARIES install-man \
-	install-pdf install-pdf-am install-ps install-ps-am \
-	install-strip installcheck installcheck-am installdirs \
-	maintainer-clean maintainer-clean-generic mostlyclean \
-	mostlyclean-compile mostlyclean-generic pdf pdf-am ps ps-am \
-	tags tags-am uninstall uninstall-am uninstall-libLIBRARIES
+.PHONY: CTAGS GTAGS TAGS all all-am check check-am clean \
+	clean-checkPROGRAMS clean-generic clean-libLIBRARIES \
+	cscopelist-am ctags ctags-am distclean distclean-compile \
+	distclean-generic distclean-tags distdir dvi dvi-am html \
+	html-am info info-am install install-am install-data \
+	install-data-am install-dvi install-dvi-am install-exec \
+	install-exec-am install-html install-html-am install-info \
+	install-info-am install-libLIBRARIES install-man install-pdf \
+	install-pdf-am install-ps install-ps-am install-strip \
+	installcheck installcheck-am installdirs maintainer-clean \
+	maintainer-clean-generic mostlyclean mostlyclean-compile \
+	mostlyclean-generic pdf pdf-am ps ps-am tags tags-am uninstall \
+	uninstall-am uninstall-libLIBRARIES
 
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
