@@ -1,1 +1,1 @@
-lib theciphers : : <name>theciphers <link>static ;
+lib theciphers : src/factories/cipher_factory.cc : <link>static ;
