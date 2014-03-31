@@ -1,1 +1,2 @@
 lib theciphers : src/factories/cipher_factory.cc : <link>static ;
+unit-test theciphers_test : src/test/main.cc theciphers : <cxxflags>-D_UNIT_TESTS ;
