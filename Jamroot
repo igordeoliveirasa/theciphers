@@ -1,2 +1,4 @@
 lib theciphers : src/factories/cipher_factory.cc : <link>static ;
-unit-test theciphers_test : src/test/main.cc theciphers : <cxxflags>-D_UNIT_TESTS ;
+
+using testing ;
+unit-test theciphers_test : src/tests/aes_cipher_test.cc theciphers : <cxxflags>-D_UNIT_TESTS : <include>deps/gmock-1.7.0/gtest/include ;
